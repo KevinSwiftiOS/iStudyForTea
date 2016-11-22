@@ -1,0 +1,43 @@
+<ion-view view-title="站内信">
+
+    <ion-nav-buttons side="right">
+
+        <!--写邮件的-->
+        <button class="button ion-compose" ng-click="writeEmail()" style="width: 50px"></button>
+        <!--选择信件的-->
+        <button class="button ion-more" ng-click="openPopover($event)"  style="width: 50px"></button>
+    </ion-nav-buttons>
+        <!--中间的内容-->
+
+            <ion-content>
+                <!--脚本-->
+                <script id = "station-popover.html" type="text/ng-template">
+                    <ion-popover-view style="height: 110px;width: 100px;">
+                        <ion-content>
+                            <ion-list>
+                                <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="selectStation($index)">
+                                    <i class="{{popItem.iconName}}"></i>
+                                        {{popItem.rowName}}
+                                    </div>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-popover-view>
+                </script>
+                <ion-refresher pulling-text="下拉刷新..."></ion-refresher>
+                <ion-list>
+                    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats"
+                              type="item-text-wrap" href="#/tab/StationLetter/ReadEmail/{{$index}}/{{chat.name}}">
+                        <img ng-src="{{chat.face}}">
+                        <h2>{{chat.name}}</h2>
+                        {{chat.lastText }}
+                        <p>曹凯强于2016-12-13发表</p>
+                        <!--删除的按钮-->
+                        <ion-option-button class="button-assertive">
+                            删除
+                        </ion-option-button>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+
+</ion-view>

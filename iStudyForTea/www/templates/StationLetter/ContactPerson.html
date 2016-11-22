@@ -1,0 +1,30 @@
+<ion-view view-title="联系人">
+
+    <ion-content>
+ <div class="list">
+     <div class="item item-checkbox-right" ng-repeat="class in names">
+       <div ng-click="hide($index)">
+           <p><font size="3px">{{class.label}}</font></p>
+       </div>
+         <font size="5px"><i class="{{class.icon}}" style="float: right;margin-top: -20px;margin-right: -4px" ng-click="selectGroup('{{class.label}}')"></i>
+
+</font>
+         <div class="list" style="margin-left: -20px;margin-right: -20px;margin-top: 5px">
+             <div  class="item item-avatar-left item-checkbox-right" ng-repeat="person in class.list" ng-if="class.isShow">
+
+               <img src = "{{person.image}}"/>
+                        <p style="margin-top: 10px"><font size="3px"> {{person.name}}</font></p>
+                 <div style="float: right;margin-top: -25px" >
+                      <font size="5px">
+                      <i class="{{person.icon}}" ng-click="selectPerson('{{person.id}}','{{class.label}}')"></i>
+                      </font>
+                 </div>
+                    </div>
+             </div>
+             </div>
+         </div>
+ </div>
+    </ion-content>
+
+</ion-view>
+

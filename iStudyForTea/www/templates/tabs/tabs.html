@@ -1,0 +1,79 @@
+<!--&lt;!&ndash;-->
+<!--Create tabs with an icon and label, using the tabs-positive style.-->
+<!--Each tab's child <ion-nav-view> directive will have its own-->
+<!--navigation history that also transitions its views in and out.-->
+<!--&ndash;&gt;-->
+<!--<ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-class="{'tabs-item-hide':$root.hideTabs}">-->
+<!--&lt;!&ndash;系统管理&ndash;&gt;-->
+  <!--<ion-tab title="系统管理" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/SystemManagement">-->
+
+    <!--<ion-nav-view name="tab-SystemManagement"></ion-nav-view>-->
+  <!--</ion-tab>-->
+  <!--&lt;!&ndash; 教学管理 &ndash;&gt;-->
+  <!--<ion-tab title="教学管理"  icon-off="ion-clipboard" icon-on="ion-clipboard" href="#/tab/TeachManagement">-->
+    <!--<ion-nav-view name="tab-TeachManagement"></ion-nav-view>-->
+  <!--</ion-tab>-->
+
+  <!--&lt;!&ndash; 站内信 &ndash;&gt;-->
+  <!--<ion-tab title="站内信" icon-off="ion-email" icon-on="ion-email" href="#/tab/StationLetter">-->
+    <!--<ion-nav-view name="tab-StationLetter"></ion-nav-view>-->
+  <!--</ion-tab>-->
+
+  <!--&lt;!&ndash; 个人中心&ndash;&gt;-->
+  <!--<ion-tab title="个人中心" icon-off="ion-person" icon-on="ion-person" href="#/tab/Personal">-->
+    <!--<ion-nav-view name="tab-Personal"></ion-nav-view>-->
+  <!--</ion-tab>-->
+<!--</ion-tabs>-->
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left"  expose-aside-when="(min-width:500px)" width="200">
+<ion-header-bar ng-show="false">
+
+</ion-header-bar>
+    <ion-content style="background-color: #333333">
+      <div style="height:180px";align="center" >
+        <!--头像和账号的基本信息-->
+        <div>
+          <!--主页面的链接 也是到个人中心界面-->
+          <a menu-close href="#/tab/Personal">
+          <img src={{avatar}} style="margin-left: 20px;margin-top:20px;width: 120px;height:120px;border-radius:60px 60px 60px 60px;text-align: center" ng-click = "selectFourth()" >
+          </a>
+        </div>
+        <div style="height: 30px; width: 120px; margin-left: 20px;text-align: center;">
+        <p><font color="white" size="3px" >{{username}}</font></p>
+        </div>
+        </div>
+      <ion-list class="icon-left" style="background-color: #333333">
+        <ion-item menu-close class ="item-dark" href="#/tab/TeachManagement" ng-style="firstStyle"  ng-click="selectFirst()">
+          <i class="icon ion-settings"></i>
+          <font color="white">教学管理</font>
+        </ion-item>
+        <ion-item menu-close href="#/tab/SystemManagement" class ="item-dark" ng-style="secondStyle"  ng-click="selectSecond()">
+          <font color="white">
+            <i class="icon ion-briefcase"></i>
+            系统管理</font>
+
+        </ion-item>
+        <ion-item menu-close href="#/tab/StationLetter" class ="item-dark" ng-style="thirdStyle"  ng-click="selectThird()">
+          <i class="icon ion-email"></i>
+          <font color="white">站内信</font>
+        </ion-item>
+        <ion-item menu-close href="#/tab/Personal" class ="item-dark" ng-style="fourthStyle"  ng-click="selectFourth()">
+          <i class="icon ion-person"></i>
+          <font color="white">个人中心</font>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

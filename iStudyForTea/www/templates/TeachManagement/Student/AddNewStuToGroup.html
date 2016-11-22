@@ -1,0 +1,83 @@
+<ion-view title="新建学生">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="save()">保存</button>
+    </ion-nav-buttons>
+<ion-content>
+<div class="list">
+
+    <div class="item item-avatar-left item-input">
+        <img src = "img/adam.jpg">
+        <span class="input-label"></span>
+        <input type="text" ng-model="stu.no" placeholder="学号:用户名">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">真实姓名</span>
+        <input type="text" ng-model="stu.name">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">校区：</span>
+        <input type="text" ng-model="stu.compus">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">学院：</span>
+        <input type="text" ng-model="stu.xy">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">班级：</span>
+        <input type="text" ng-model="stu.class">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">任课老师：</span>
+        <input type="text" ng-model="stu.tea">
+
+    </div>
+
+    <div class="item item-input" style="font-size: 14px">
+        <span class="input-label">性别</span>
+        <span style="font-size: 25px;text-align: right;top: 14px; ">
+            <i class="ion-woman" ng-click="selectWoman()"></i>
+            <label style="font-size: 14px" ng-if="woman.show">选中女</label>
+            <i class="ion-man" ng-style="man.icon" ng-click="selectMan()"></i>
+            <label style="font-size: 14px;margin-left: 0px" ng-if="man.show">选中男</label>
+
+
+
+
+        </span>
+
+    </div>
+
+
+
+
+    <label class="item item-input">
+        <span class="input-label">生日：</span>
+        <!--应当弄一个日期选择器-->
+        <input type="date"  ng-model="stu.birth"
+               placeholder="请输入开始时间" min="2013-01-01" max="2113-12-31" style="float: right"/>
+</label>
+
+    <div class="item item-input">
+        <span class="input-label">邮箱：</span>
+        <input type="email" ng-model="stu.email">
+    </div>
+    <div class="item item-input">
+        <span class="input-label">电话：</span>
+        <input type="tel" ng-model="stu.tel">
+
+    </div>
+    <div class="item item-input">
+        <span class="input-label">住址：</span>
+        <input type="text" ng-model="stu.address">
+
+    </div>
+
+
+</div>
+</ion-content>
+</ion-view>

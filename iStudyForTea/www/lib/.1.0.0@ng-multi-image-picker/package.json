@@ -1,0 +1,29 @@
+{
+  "name": "ng-multi-image-picker",
+  "version": "1.0.0",
+  "description": "Angular service for cordova plugin multi-image-picker",
+  "main": "index.js",
+  "author": "Tan Li Hau",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "multi-image-picker",
+    "cordova",
+    "plugin",
+    "ios",
+    "android",
+    "service",
+    "angular-service",
+    "image-picker",
+    "cross-platform"
+  ],
+  "homepage": "https://github.com/tanhauhau/cordova-plugin-imagepicker-angular",
+  "maintainers": [
+    {
+      "email": "lhtan@gmail.com",
+      "name": "tanhauhau"
+    }
+  ],
+  "_from": "ng-multi-image-picker@1.0.0",
+  "_resolved": "http://registry.npm.taobao.org/ng-multi-image-picker/download/ng-multi-image-picker-1.0.0.tgz"
+}

@@ -1,0 +1,42 @@
+<ion-view view-title="添加公告">
+    <ion-content>
+
+     <div class="list-inset">
+        <label class="item item-input-inset">
+            <span class="input-label">标题:</span>
+            <input type="text"  id="title" ng-model = "subject">
+        </label>
+        <label class="item">
+            <span class="input-label">内容:</span>
+      <textarea ng-model = "content" style="height: 200px;width: 100%;" ></textarea>
+            </label>
+   </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-light">
+        <div class="button-bar button-light">
+            <button class="button">
+                <i class="ion-compose" style="font-size: 30px"></i>
+            </button>
+            <button class="button">
+                <i class="ion-image" style="font-size: 30px"></i>
+            </button>
+            <button class="button" ng-click = "openPopover($event)">
+                <i class="ion-more" style="font-size: 30px"></i>
+            </button>
+</div>
+  <!--定义脚本-->
+        <script id = "AddAnnoucement.html" type="text/ng-template">
+            <ion-popover-view style="height: 110px;width: 100px;">
+                <ion-content>
+                    <ion-list>
+                        <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
+                            <div align="right">
+                                {{popItem.rowName}}
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-popover-view>
+        </script>
+    </ion-footer-bar>
+</ion-view>

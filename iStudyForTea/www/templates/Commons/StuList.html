@@ -1,0 +1,34 @@
+<div class="item-input">
+
+    <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="text" placeholder="搜索" ng-model="user.search">
+
+    </label>
+    <button class="button button-outline" ng-click="removeSearch()">
+        <font color="blue">取消</font>
+    </button>
+</div>
+<ion-refresher pulling-text="下拉刷新..." on-refresh="headerRefresh()"></ion-refresher>
+<div class="list">
+    <ion-item class="item-avatar item-icon-right"
+              ng-repeat="item in items | filter:user.search">
+
+        <img src = "{{item.image}}"/>
+        <div class="mwt_border">
+            <span class="arrow_l_int"></span>
+            <span class="arrow_l_out"></span>
+            <div style="margin-left:-30px;margin-top: -30px;float: left;text-align: left">
+                <p style="float:right;margin-right: 2px" ng-click="remove($index)"><font size="2px" color="red">删除</font></p>
+                <p style="float:right;margin-right: 10px" ng-click="resetPassword($index)"><font size="2px" color="aqua">重置密码</font></p>
+                <p>{{item.userno}}</p>
+                <p style="width: 200px"><font size="2px">姓名:{{item.username}}</font></p>
+
+                <p><font size="2px">性别:{{item.sex}}</font></p>
+                <p><font size="2px">邮箱:{{item.email}}</font></p>
+                <p style="float:right;margin-right: 2px" ng-click="edit('{{item.userno}}')"><font size="2px">编辑</font></p>
+                <p><font size="2px">电话:{{item.number}}</font></p>
+            </div>
+        </div>
+    </ion-item>
+</div>

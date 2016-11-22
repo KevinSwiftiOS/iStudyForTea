@@ -1,0 +1,81 @@
+<ion-view title="讨论区">
+    <ion-nav-bar class="bar bar-positive">
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>返回
+        </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+        <button class="button ion-more" ng-click="openModal()"></button>
+    </ion-nav-buttons>
+        </ion-nav-bar>
+    <ion-content>
+        <script id = "Menu.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-stable">
+                    <h1 class="title"></h1>
+                    <button class="button button-clear" ng-click="modalHide()">
+                        <i class="icon ion-close"></i>
+                    </button>
+                </ion-header-bar>
+                <ion-content style="background-color: #F6F6F6">
+                    <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
+                </ion-content>
+        </script>
+      <!--顶部的图标-->
+        <div style="width: 100%;height: 80px;">
+            <div class="row">
+                <div class="col-20" style="height: 70px;background-color: #0a9dc7;text-align: center;line-height: 70px;border-radius: 5px">
+                    <p>测试班级</p>
+                </div>
+            <div class="col">
+                <h3>计算机原理141</h3>
+                <p>总贴数6</p>
+            </div>
+            </div>
+
+        </div>
+        <!--置顶的列表-->
+        <div class="list">
+            <div class="item item-avatar-left" ng-repeat="item in topItems" ui-sref="tab.TeachManagement-OneCourseDetailNote({content:{{item.content}}})">
+            <img src = "img/adam.jpg">
+           <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+            </div>
+        </div>
+        <!--非置顶的列表-->
+        <div class="list">
+            <div class="item" ng-repeat="item in unTopItems" ui-sref="tab.TeachManagement-OneCourseDetailNote({content:{{item.content}}})">
+
+                <h2>{{item.title}}</h2>
+                <p>{{item.time}}</p>
+            </div>
+        </div>
+    </ion-content>
+    <!--底部三个按钮-->
+    <ion-footer-bar align-title="center" class="bar-light">
+        <div class="button-bar button-light">
+            <button class="button">
+                <i class="ion-refresh" style="font-size: 30px"></i>
+            </button>
+            <button class="button">
+                <i class="ion-edit" style="font-size: 30px"></i>
+            </button>
+            <button class="button" ng-click = "openPopover($event)">
+                <i class="ion-more" style="font-size: 30px"></i>
+            </button>
+            </div>
+        </ion-footer-bar>
+    <!--定义脚本-->
+    <script id = "NoteType.html" type="text/ng-template">
+        <ion-popover-view style="height: 155px;width: 120px;">
+            <ion-content>
+                <ion-list>
+                    <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
+                        <div style="text-align: center">
+                            {{popItem.rowName}}
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-popover-view>
+    </script>
+</ion-view>

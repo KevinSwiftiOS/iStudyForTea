@@ -1,0 +1,50 @@
+
+<ion-view view-title="写邮件">
+
+    <ion-content>
+        <div class="list">
+                   <div class="row">
+                       <div class="col-10" style="margin-top: auto;margin-bottom: auto;">
+           <p style="font-size: 15px;">收件人</p>
+                           </div>
+                       <div class="col" style="margin-top: -15px;margin-bottom: auto;">
+               <button class="button button-light button-full button-stable" ng-click="showContactPerson()">点击查看收件人</button>
+               </div>
+                       <div class="col-10" align="center" style="margin-bottom: auto;margin-top: 10px">
+                <!--添加联系人的-->
+
+                    <i class="ion-plus" style="font-size: 20px"ng-click="addContactPerson()"></i>
+                </button>
+                       </div>
+               </div>
+            <div class="row">
+                <div class="col">
+            <label class="item item-input-inset">
+               主题:
+                <input type="text" id="subject">
+            </label>
+      </div>
+                </div>
+            <div class="row">
+                <div class="col">
+           内容:
+
+      <textarea class="comment"  style="height: 200px;width: 100%;" onpropertychange= "this.style.posHeight=this.scrollHeight "></textarea>
+            </div>
+                </div>
+                </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-light">
+        <div class="button-bar button-light">
+
+            <button class="button" ng-click="reply()">
+                <i class="ion-image" style="font-size: 30px"></i>
+            </button>
+            <button class="button" ng-click="writeEmail()">
+                <i class="ion-ios-paperplane" style="font-size: 30px"></i>
+            </button>
+
+        </div>
+    </ion-footer-bar>
+</ion-view>
+

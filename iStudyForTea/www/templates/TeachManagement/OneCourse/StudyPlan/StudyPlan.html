@@ -1,0 +1,38 @@
+<ion-view title="学习计划">
+    <ion-nav-bar class="bar bar-positive">
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>返回
+        </ion-nav-back-button>
+     <ion-nav-buttons side="right">
+         <button class="button ion-more" ng-click="openModal()"></button>
+     </ion-nav-buttons>
+</ion-nav-bar>
+    <ion-content>
+        <script id = "Menu.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-stable">
+                    <h1 class="title"></h1>
+                    <button class="button button-clear" ng-click="modalHide()">
+                        <i class="icon ion-close"></i>
+                    </button>
+                </ion-header-bar>
+                <ion-content style="background-color: #F6F6F6">
+                    <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
+                </ion-content>
+
+        </script>
+        <div class="list">
+            <div class="item" ng-repeat="item in items">
+                <div style="float: left">
+            <p><i class="icon ion-star"></i> <font size="3px"> {{item.title}}</font>
+                <font size="2px"> 参与人数{{item.num}}</font></p>
+                <P><font size="2px">开始时间:{{item.starttime}}</font></P>
+                <p><font size="2px">结束时间:{{item.endtime}}</font></p>
+                    </div>
+                <!--批阅的按钮 把id传进去-->
+              <button class="button button-positive" style="float: right;margin-top: 10px" ng-click="goOver('{{item.testid}}')">批阅</button>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

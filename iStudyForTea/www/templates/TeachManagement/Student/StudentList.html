@@ -1,0 +1,26 @@
+<ion-view view-title="学生列表">
+ <!--右上角加一个加的按钮-->
+    <ion-nav-buttons side="right">
+        <button class="button ion-plus" ng-click="openPopover($event)"></button>
+
+    </ion-nav-buttons>
+
+    <ion-content>
+        <!--弹出模框的定义-->
+        <script id = "StuListPopOver.html" type="text/ng-template">
+            <ion-popover-view style="height: 110px;width: 100px;">
+                <ion-content>
+                    <ion-list>
+                        <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
+                            <div style="text-align: left;margin-left: -10px">
+                                {{popItem.rowName}}
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-popover-view>
+        </script>
+       <div ng-include="'templates/Commons/StuList.html'"></div>
+    </ion-content>
+</ion-view>
+
