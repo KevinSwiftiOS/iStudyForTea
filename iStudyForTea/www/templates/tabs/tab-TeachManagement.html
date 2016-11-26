@@ -17,6 +17,7 @@
     <script id = "my-popover.html" type="text/ng-template">
       <ion-popover-view style="height: 110px;width: 100px;">
         <ion-content>
+
           <ion-list>
             <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
               <div align="right">
@@ -28,6 +29,11 @@
       </ion-popover-view>
     </script>
 <div class="content has-header">
+  <ion-refresher
+    pulling-text="下拉刷新..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
   <ion-list>
     <!--到新的界面去 点击事件有所不同-->
     <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="goToStuListOrCourse($index)" ng-repeat="item in items">

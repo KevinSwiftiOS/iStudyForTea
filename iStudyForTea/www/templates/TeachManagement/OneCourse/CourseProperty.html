@@ -44,7 +44,7 @@
     </div>
         <p>制作课程封面</p>
         <div ng-style="divBack" ng-if = "cou.isDiv">
-            <div style="width:50%; display:table; overflow:hidden; margin:0 auto; height: 100px; *position:relative;">
+            <div style="width:50%; display:table; overflow:hidden; margin:0 auto; height: 100%; *position:relative;">
                 <div style="display:table-cell; vertical-align: middle; *position:absolute; top:5%;">
                     <div style="*position:relative; *top:0%;">
                         <div style="width:100px; margin:-10% auto;">
@@ -59,9 +59,10 @@
         </div>
         <img src = {{cou.pic}} style="width: 100px;height: 100px;margin-left: 20%" ng-click="editpicbg()" ng-if = "cou.isImg">
     </ion-content>
-    <ion-footer-bar align-title="center" class="bar-light">
-        <div class="button-bar button-light">
-            <button class="button button-full button-positive" ng-click="finish()">完成
+    <ion-footer-bar align-title="center">
+        <div class="button-bar"  style="margin-top: -20px">
+            <button class="button button-full button-positive" ng-click="finish()"><font size="5px"> 完成</font>
             </button>
-
+</div>
+      </ion-footer-bar>
 </ion-view>

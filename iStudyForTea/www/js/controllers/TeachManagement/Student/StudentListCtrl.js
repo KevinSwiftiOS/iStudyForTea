@@ -2,7 +2,7 @@
  * Created by hcnucai on 2016/10/28.
  */
 //学生列表名单的
-app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state,$ionicPopover) {
+app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state,$ionicPopover,httpService) {
     //定义属性
     //搜索框的初始化 避免后面点取消按钮时一直找不到值
    $scope.user = {};
@@ -43,42 +43,25 @@ app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state
             default:break;
         }
     }
-    $scope.items = [{
-        userno:"2014211081",
-        username:"曹凯强",
-        sex:"男",
-        email:"17816869731@163.com",
-        number:"17816869731",
-        image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-    },
-        {
-            userno:"2015001001",
-            username:"李四",
-            sex:"女",
-            email:"17816869731@163.com",
-            number:"17816869731",
-            image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-        },
-        {
-            userno:"2016001001",
-            username:"王五",
-            sex:"男",
-            email:"17816869731@163.com",
-            number:"17816869731",
-            image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-        }]
+   var param = {
+     authtoken:window.localStorage.getItem("authtoken"),
+     groupid:$stateParams.groupid,
+     count:100,
+     page:1
+   }
+   console.log(param);
+   var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
+  promise.then(function (data) {
+    $scope.items = data;
+  },function (data) {
+    swal("提醒",data,"error");
+  })
     //搜索框的取消按钮的实现
     $scope.removeSearch = function(){
 
        $scope.user.search = "";
 
     }
-    $scope.$on("$ionicView.beforeEnter",function () {
-        //打印参数是否获取到
-        console.log($stateParams.id);
-
-        $rootScope.hideTabs = true;
-    });
 
     //重置密码的操作
     $scope.resetPassword = function ($index) {

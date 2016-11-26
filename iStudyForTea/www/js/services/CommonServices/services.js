@@ -49,15 +49,35 @@ appModel.factory('Chats', function() {
   };
 });
 //定义公有的http服务
-appModel.factory('httpPost',function ($http) {
-  return{
-    get:function (url,param) {
-      return $http({
-        type:"post",
-        url:url,
-        param:param,
-        cache:true,
+//自定义服务
+app.factory("httpService",
+function($http, $q) {
+  return {
+    post: function (url,params) {
+      var defer = $q.defer();
+      $http({
+        method: 'POST',
+        params: params,
+        url: url
+    }).success(function (data) {
+       if(data.retcode == 0) {
+         defer.resolve(data.items);
+       }
+        else
+         defer.reject(data.message);
+      }).error(function (data) {
+        defer.reject(data);
       });
-    },
-  }
+      return defer.promise;
+    }
+  };
+
 });
+app.factory("swalService",function () {
+  return {
+  cusSwal:function (type,message) {
+
+  }
+}
+})
+

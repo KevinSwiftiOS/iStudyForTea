@@ -23,13 +23,28 @@ app.run(function($ionicPlatform) {
     }
   });
 });
+app.directive('htmlText', function(){
+  return {
+    'restrict': 'A',
+    'require': 'ngModel',
+    'link': function(scope,element,attrs,model) {
+      model.$formatters.push(function(val){
+        return val.htmlField;
+      });
+
+      model.$parsers.push(function(val){
+        model.$modelValue.htmlField = val;
+      });
+    }
+  };
+});
 app.config(function ($ionicConfigProvider) {
     $ionicConfigProvider.views.swipeBackEnabled(false);
 })
 app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-   
+
   // setup an abstract state for the tabs directive
 
     .state('tab', {
@@ -211,7 +226,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       .state('tab.TeachManagement-StudentList',{
 
           url:"/TeachManagement/StudentList",
-          params:{"id":null},
+          params:{"groupid":null},
           views:{
               'menuContent': {
                   templateUrl: 'templates/TeachManagement/Student/StudentList.html',
@@ -474,9 +489,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
       })
   ;
-    // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/TeachManagement');
+  //判断首界面应该加载谁
+  var ls = window.localStorage;
+  if(ls.getItem("authtoken") == null) {
 
+    $urlRouterProvider.otherwise('/Login');
+  }else {
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/tab/TeachManagement');
+  }
 
 });
 //自定义tab的显示有隐藏的指令
