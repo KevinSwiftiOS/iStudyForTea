@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('systemManagementCtrl', function($scope,Chats,httpPost,$rootScope,$ionicLoading,$state) {
+app.controller('systemManagementCtrl', function($scope,$rootScope,$ionicLoading,$state,httpService,Chats) {
     //监听进入页面的时候 tabbar显示 进行网络请求
 
 

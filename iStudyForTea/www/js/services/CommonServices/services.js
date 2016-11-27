@@ -49,8 +49,7 @@ appModel.factory('Chats', function() {
   };
 });
 //定义公有的http服务
-//自定义服务
-app.factory("httpService",
+appModel.factory("httpService",
 function($http, $q) {
   return {
     post: function (url,params) {
@@ -58,7 +57,7 @@ function($http, $q) {
       $http({
         method: 'POST',
         params: params,
-        url: url
+        url: url,
     }).success(function (data) {
        if(data.retcode == 0) {
          defer.resolve(data.items);
@@ -73,7 +72,7 @@ function($http, $q) {
   };
 
 });
-app.factory("swalService",function () {
+appModel.factory("swalService",function () {
   return {
   cusSwal:function (type,message) {
 

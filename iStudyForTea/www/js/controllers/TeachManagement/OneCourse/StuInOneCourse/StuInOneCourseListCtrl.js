@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/11/14.
  */
-app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$ionicModal,$ionicPopover,$ionicHistory) {
+app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$ionicModal,$ionicPopover,$ionicHistory,$ionicLoading,httpService) {
     //监听事件 加载菜单栏
     $ionicModal.fromTemplateUrl("Menu.html", {
         scope: $scope,
@@ -13,10 +13,6 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
     $scope.$on("$ionicView.beforeLeave",function () {
         $scope.modal.hide();
     })
-
-    $scope.id = $stateParams.id;
-    console.log("CourseProperty",$scope.id);
-
     //显示菜单的事件
     $scope.openModal = function () {
         $scope.modal.show();
@@ -29,13 +25,10 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
         $scope.modal.remove();
     });
     //定义属性
-    //搜索框的初始化 避免后面点取消按钮时一直找不到值
-    $scope.user = {};
     //模板框数据的定义
     $scope.popItems = [
         {"rowName":"新建学生",
         },
-
     ]
     $scope.popOver = $ionicPopover.fromTemplateUrl("StuListPopOver.html",{
         scope:$scope
@@ -46,7 +39,6 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
     }).then(function (popover) {
         $scope.popOver = popover;
     });
-
 //打开的动作
     $scope.openPopover = function ($event) {
         $scope.popOver.show($event);
@@ -67,43 +59,64 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
             default:break;
         }
     }
-    $scope.items = [{
-        userno:"2014211081",
-        username:"曹凯强",
-        sex:"男",
-        email:"17816869731@163.com",
-        number:"17816869731",
-        image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-    },
-        {
-            userno:"2015001001",
-            username:"李四",
-            sex:"女",
-            email:"17816869731@163.com",
-            number:"17816869731",
-            image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-        },
-        {
-            userno:"2016001001",
-            username:"王五",
-            sex:"男",
-            email:"17816869731@163.com",
-            number:"17816869731",
-            image:"http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg"
-        }]
-    //搜索框的取消按钮的实现
-    $scope.removeSearch = function(){
-
-        $scope.user.search = "";
-
+  //搜索框的初始化 避免后面点取消按钮时一直找不到值
+  $scope.user = {};
+  $scope.removeSearch = function(){
+    $scope.user.search = "";
+  }
+  var items = [];
+  //第一次进入的时候拿数据
+  var index = $stateParams.index;
+  index++;
+  $scope.index = index;
+  $scope.courseid = $stateParams.courseid;
+  var param = {
+    authtoken:window.localStorage.getItem("authtoken"),
+    courseid:$stateParams.courseid,
+    count:100,
+    page:1
+  }
+  $ionicLoading.show({
+    template: '请等待'
+  });
+  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/stulistbycourseid",param);
+  promise.then(function (data) {
+    items = data;
+    for(var i = 0; i < items.length;i++) {
+      if(items[i].image == null)
+        items[i].image = "img/head.png";
     }
-    $scope.$on("$ionicView.beforeEnter",function () {
-        //打印参数是否获取到
-        console.log($stateParams.id);
+    $scope.items = items;
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+  },function (err) {
+    items = [];
+    $scope.items = items;
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+    swal("请求失败",err,"error");
+  })
+  //刷新的动作
+  $scope.doRefresh = function () {
+    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/stulistbycourseid",param);
+    promise.then(function (data) {
+      items = data;
+      $scope.items = items;
+      $ionicLoading.hide();
+      $scope.$broadcast('scroll.refreshComplete');
+    },function (err) {
+      items = [];
+      $scope.items = items;
+      $ionicLoading.hide();
+      $scope.$broadcast('scroll.refreshComplete');
+      swal("提醒",err,"error");
+    })
+  }
 
-    });
 
-    //重置密码的操作
+
+
+  //重置密码的操作
     $scope.resetPassword = function ($index) {
         //重置密码的操作
     }
@@ -116,10 +129,6 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
     //删除的操作
     $scope.remove = function ($index) {
     }
-    //当前是第几个界面 随后界面++
-    var index = $stateParams.index;
-    index++;
-    $scope.index = index;
     //回退的事件
     $scope.goBack = function () {
         $ionicHistory.goBack(-1 * index);

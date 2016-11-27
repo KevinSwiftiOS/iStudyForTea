@@ -2,7 +2,7 @@
  * Created by hcnucai on 2016/10/28.
  */
 //学生列表名单的
-app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state,$ionicPopover,httpService) {
+app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state,$ionicPopover,httpService,$ionicLoading) {
     //定义属性
     //搜索框的初始化 避免后面点取消按钮时一直找不到值
    $scope.user = {};
@@ -50,18 +50,46 @@ app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state
      page:1
    }
    console.log(param);
-   var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
+  $ionicLoading.show({
+    template: '请等待'
+  });
+  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
   promise.then(function (data) {
-    $scope.items = data;
-  },function (data) {
-    swal("提醒",data,"error");
+    items = data;
+    $scope.items = items;
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+  },function (err) {
+    items = [];
+    $scope.items = items;
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+    swal("请求失败",err,"error");
   })
-    //搜索框的取消按钮的实现
-    $scope.removeSearch = function(){
+  //刷新的动作
+  $scope.doRefresh = function () {
+    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
+    promise.then(function (data) {
+      items = data;
+      $scope.items = items;
+      $ionicLoading.hide();
+      $scope.$broadcast('scroll.refreshComplete');
+    },function (err) {
+      items = [];
+      $scope.items = items;
+      $ionicLoading.hide();
+      $scope.$broadcast('scroll.refreshComplete');
+      swal("提醒",err,"error");
+    })
+  }
+  //搜索框的取消按钮的实现
+  $scope.user = {};
+  $scope.removeSearch = function(){
 
-       $scope.user.search = "";
+    $scope.user.search = "";
 
-    }
+  }
+  //列表刷新
 
     //重置密码的操作
     $scope.resetPassword = function ($index) {

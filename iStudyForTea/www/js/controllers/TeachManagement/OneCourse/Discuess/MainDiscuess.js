@@ -15,7 +15,7 @@ app.controller("MainDiscussCtrl",function ($scope,$stateParams,$ionicModal,$ioni
         $scope.modal.hide();
     })
 
-    $scope.id = $stateParams.id;
+    $scope.courseid = $stateParams.courseid;
     console.log("Discuss",$scope.id);
 
     //显示菜单的事件

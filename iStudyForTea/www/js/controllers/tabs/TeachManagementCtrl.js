@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('teachManagementCtrl', function($scope,$ionicPopover,$timeout,$state,httpService,$ionicLoading) {
+app.controller('teachManagementCtrl', function($scope,$ionicPopover,$timeout,$state,$ionicLoading,httpService,$cacheFactory) {
 
     $scope.popOver = $ionicPopover.fromTemplateUrl("my-popover.html",{
     scope:$scope
@@ -18,7 +18,7 @@ app.controller('teachManagementCtrl', function($scope,$ionicPopover,$timeout,$st
         $scope.popOver.show($event);
     }
 
-//popView的一些事件代理x
+//popView的一些事件代理
     $scope.popItems = [{rowName: '新建学生库'}, {rowName: '新建课程'}];
     $scope.goToDifferent = function ($index) {
         $scope.popOver.hide();
@@ -33,9 +33,9 @@ app.controller('teachManagementCtrl', function($scope,$ionicPopover,$timeout,$st
             default:break;
         }
     }
-
-//选择学生还是课程
+//初始化选项
  var selectStuList = false,courseItems = [],stuGroupItems = [];
+
   //顶部的样式
   $scope.courseTab = "tab-item active";
   $scope.stuTab = "tab-item";
@@ -46,48 +46,57 @@ var param = {
   page:1
 }
 //第一次加载
+  //监听服务
   $ionicLoading.show({
     template: '请等待'
   });
+
  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist",param);
   promise.then(function (data) {
-  courseItems = data;
+    courseItems = data;
     $scope.items = courseItems;
-
-  },function (data) {
-  swal("无法获取后台数据",data,"error");
-}).finally()
-  {
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
-
-  }
+  },function (data) {
+    courseItems = [];
+    $scope.items = courseItems;
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+  swal("请求失败",data,"error");
+})
 
 //刷新按钮
   $scope.doRefresh = function () {
+
      if(selectStuList == false) {
        var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist", param);
        promise.then(function (data) {
          courseItems = data;
          $scope.items = courseItems;
-       }, function (data) {
-         swal("无法获取后台数据", data, "error");
-       }).finally()
-       {
+         $ionicLoading.hide();
          $scope.$broadcast('scroll.refreshComplete');
-       }
+       }, function (data) {
+         courseItems = [];
+         $scope.items = courseItems;
+         $ionicLoading.hide();
+         $scope.$broadcast('scroll.refreshComplete');
+         swal("请求失败", data, "error");
+       })
      }
     else{
        var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentgrouplist", param);
        promise.then(function (data) {
          stuGroupItems = data;
          $scope.items = stuGroupItems;
-       }, function (data) {
-         swal("无法获取后台数据", data, "error");
-       }).finally()
-       {
+         $ionicLoading.hide();
          $scope.$broadcast('scroll.refreshComplete');
-       }
+       }, function (data) {
+         stuGroupItems = [];
+         $scope.items = stuGroupItems;
+         $ionicLoading.hide();
+         $scope.$broadcast('scroll.refreshComplete');
+         swal("请求失败", data, "error");
+       })
      }
   }
   //选择学生列表
@@ -101,21 +110,23 @@ var param = {
    promise.then(function (data) {
      stuGroupItems = data;
      $scope.items = stuGroupItems;
-   }, function (data) {
-     swal("无法获取后台数据", data, "error");
-   }).finally()
-   {
      $ionicLoading.hide();
      $scope.$broadcast('scroll.refreshComplete');
-   }
- }      $scope.items = stuGroupItems;
+   }, function (data) {
+     stuGroupItems = [];
+     $scope.items = stuGroupItems;
+     $ionicLoading.hide();
+     $scope.$broadcast('scroll.refreshComplete');
+     swal("请求失败", data, "error");
+   })
+ }
+ $scope.items = stuGroupItems;
         selectStuList = true;
         //顶部的样式
         $scope.stuTab = "tab-item active";
         $scope.courseTab = "tab-item";
     }
-
-    //选择课程列表
+  //选择课程列表
     $scope.selectCourse = function () {
         selectStuList = false;
      $scope.items = courseItems;
@@ -125,15 +136,12 @@ var param = {
     }
     //跳转到学生库列表还是课程列表
     $scope.goToStuListOrCourse = function ($index) {
-
-        if(selectStuList === true){
+      if(selectStuList === true){
             //还要传参数将id 也要传进去
             $state.go("tab.TeachManagement-StudentList",{groupid:(stuGroupItems[$index].id)});
         }
         else{
             //还要穿有几个界面
-            $state.go("tab.TeachManagement-OneCourseStudyPlan",{id:(courseItems[$index].id),index:0});
-        }
-
-    }
+            $state.go("tab.TeachManagement-OneCourseStudyPlan",{courseid:(courseItems[$index].id),index:0});
+        }}
 });

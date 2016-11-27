@@ -9,6 +9,11 @@
     </ion-nav-buttons>
         </ion-nav-bar>
     <ion-content>
+      <ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="doRefresh()">
+
+      </ion-refresher>
         <script id = "Menu.html" type="text/ng-template">
             <ion-modal-view>
                 <ion-header-bar class="bar bar-header bar-stable">
@@ -22,5 +27,6 @@
                 </ion-content>
         </script>
         <div ng-include="'templates/Commons/HomeWorkList.html'"></div>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
     </ion-content>
 </ion-view>

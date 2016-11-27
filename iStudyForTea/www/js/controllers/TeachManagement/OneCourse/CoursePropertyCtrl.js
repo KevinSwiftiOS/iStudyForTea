@@ -17,8 +17,8 @@ app.controller("CoursePropertyCtrl",function ($scope,$rootScope,$state,$statePar
         $scope.colorListModal.hide();
     })
 
-    $scope.id = $stateParams.id;
-    console.log("CourseProperty",$scope.id);
+    $scope.courseid = $stateParams.courseid;
+    console.log("CourseProperty",$scope.courseid);
 
     //显示菜单的事件
     $scope.openModal = function () {

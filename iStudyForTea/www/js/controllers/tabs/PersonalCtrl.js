@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/25.
  */
-app.controller('PersonalCtrl', function($scope,$rootScope,$state,$ionicHistory,$ionicActionSheet,$cordovaCamera){
+app.controller('PersonalCtrl', function($scope,$rootScope,$state,$ionicHistory,$ionicActionSheet,$cordovaCamera,httpService){
     $scope.avatar = "http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg";
 
     $scope.stu = {

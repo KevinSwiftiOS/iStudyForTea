@@ -12,14 +12,4 @@ app.controller("ResetPsswordCtrl",function ($scope,$state) {
         if(newPassword === configNewPassword){
          //验证密码相同后进行修改 跳转到主界面
             $state.go('tab.TeachManagement');
-        }else {
-            swal({
-                title:"提醒",
-                type:"error",
-                text:"密码填写不相同",
-            },(function () {
-
-            }));
-        }
-    }
-});
+        }else { swal({ title: "提醒", type: "error", text: "密码填写不相同",}, (function () { })); } } });

@@ -9,10 +9,9 @@
         <font color="blue">取消</font>
     </button>
 </div>
-<ion-refresher pulling-text="下拉刷新..." on-refresh="headerRefresh()"></ion-refresher>
 <div class="list">
     <ion-item class="item-icon-right"
-              ng-repeat="item in items | filter:user.search" ng-click= "editHomeWorkDetail('{{item.id}}')">
+              collection-repeat="item in items | filter:user.search" ng-click= "editHomeWorkDetail('{{item.id}}')">
         <p><font color="blue">{{item.title}}</font> </p>
         <P><font size="1px">开始时间:{{item.datestart}}</font></P>
         <p><font size="1px">截止时间:{{item.dateend}}</font></p>

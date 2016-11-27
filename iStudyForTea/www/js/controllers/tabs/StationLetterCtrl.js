@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('stationLetterCtrl', function($scope,Chats,$state,$rootScope,$ionicPopover) {
+app.controller('stationLetterCtrl', function($scope,Chats,$state,$rootScope,$ionicPopover,httpService) {
     $scope.popOver = $ionicPopover.fromTemplateUrl("station-popover.html",{
         scope:$scope
     });

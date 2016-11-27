@@ -36,7 +36,7 @@
   <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
   <ion-list>
     <!--到新的界面去 点击事件有所不同-->
-    <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="goToStuListOrCourse($index)" ng-repeat="item in items">
+    <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="goToStuListOrCourse($index)" collection-repeat="item in items">
         <h2>{{item.name}}</h2>
 
       <ion-option-button class="button-assertive" ng-click="remove(chat)">

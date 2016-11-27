@@ -286,7 +286,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 //第二个模块 教学管理中的一门课程中的学习计划界面
       .state('tab.TeachManagement-OneCourseStudyPlan',{
           url:"/TeachManagement/OneCourseStudyPlan",
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           views:{
               'menuContent': {
                   templateUrl: 'templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html',
@@ -309,7 +309,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
   //第二个模块中 教学管理中的一门课程中的课程属性界面
       .state('tab.TeachManagement-OneCourseProperty',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseProperty",
           views:{
               'menuContent': {
@@ -321,7 +321,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的课程公告界面
       .state('tab.TeachManagement-OneCourseAnnoucement',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseAnnoucement",
           views:{
               'menuContent': {
@@ -357,7 +357,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的学生列表
       .state('tab.TeachManagement-OneCourseStuInOneCourseList',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseStuInOneCourseList",
           views:{
               'menuContent': {
@@ -369,7 +369,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的课程资源界面
       .state('tab.TeachManagement-OneCourseResource',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseResource",
           views:{
               'menuContent': {
@@ -381,7 +381,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的作业列表界面
       .state('tab.TeachManagement-OneCourseHomeWorkList',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseHomeWorkList",
           views:{
               'menuContent': {
@@ -393,7 +393,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的练习列表界面
       .state('tab.TeachManagement-OneCourseExerciseList',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseExerciseList",
           views:{
               'menuContent': {
@@ -405,7 +405,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的实验列表界面
       .state('tab.TeachManagement-OneCourseExprementList',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseExprementList",
           views:{
               'menuContent': {
@@ -417,7 +417,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中编辑课程界面-->
       .state('tab.TeachManagement-OneCourseEditHomeWorkDetail',{
-          params:{id:null},
+          params:{courseid:null},
           url:"/TeachManagement/OneCourseEditHomeWorkDetail",
           views:{
               'menuContent': {
@@ -429,7 +429,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的讨论区界面
       .state('tab.TeachManagement-OneCourseDiscuss',{
-          params:{id:null,index:null},
+          params:{courseid:null,index:null},
           url:"/TeachManagement/OneCourseDiscuss",
           views:{
               'menuContent': {

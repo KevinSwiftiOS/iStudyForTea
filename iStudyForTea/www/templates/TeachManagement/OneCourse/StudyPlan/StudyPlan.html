@@ -8,6 +8,12 @@
      </ion-nav-buttons>
 </ion-nav-bar>
     <ion-content>
+      <ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="doRefresh()">
+
+      </ion-refresher>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
         <script id = "Menu.html" type="text/ng-template">
             <ion-modal-view>
                 <ion-header-bar class="bar bar-header bar-stable">
@@ -22,17 +28,23 @@
 
         </script>
         <div class="list">
-            <div class="item" ng-repeat="item in items">
-                <div style="float: left">
+            <div class="item" collection-repeat="item in items">
+              <div class="row">
+                <div class="col">
+
             <p><i class="icon ion-star"></i> <font size="3px"> {{item.title}}</font>
                 <font size="2px"> 参与人数{{item.num}}</font></p>
                 <P><font size="2px">开始时间:{{item.starttime}}</font></P>
                 <p><font size="2px">结束时间:{{item.endtime}}</font></p>
                     </div>
+
                 <!--批阅的按钮 把id传进去-->
-              <button class="button button-positive" style="float: right;margin-top: 10px" ng-click="goOver('{{item.testid}}')">批阅</button>
+              <div class="col-20" style="margin-right: -20px">
+              <button class="button button-positive" ng-click="goOver('{{item.testid}}')" style="margin-left: -30px;margin-top: 25px">批阅</button>
             </div>
+              </div>
         </div>
+          </div>
     </ion-content>
 
 </ion-view>

@@ -15,7 +15,7 @@ app.controller("StuInGradeListCtrl",function ($scope,$ionicModal,$state,$statePa
         $scope.modal.hide();
     })
 
-    $scope.id = $stateParams.id;
+    $scope.courseid = $stateParams.courseid;
     console.log("StuGradeList",$scope.id);
 
     //显示菜单的事件
