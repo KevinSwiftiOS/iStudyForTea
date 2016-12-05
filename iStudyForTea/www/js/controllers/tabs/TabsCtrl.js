@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/11/9.
  */
-app.controller("tabsCtrl",function ($scope,$state) {
+app.controller("tabsCtrl",function ($scope,$state,img) {
     //定义颜色
     var selectStyle = {
         "border-left-color":"blue",
@@ -18,8 +18,16 @@ app.controller("tabsCtrl",function ($scope,$state) {
     $scope.thirdStyle = onselectStyle;
     $scope.fourthStyle = onselectStyle;
     //增加个人头像和账号信息
-    $scope.username = "曹凯强";
-    $scope.avatar = "http://dodo.hznu.edu.cn/Upload/editor/776de979-dead-4a60-83ca-a6aa00be839a.jpg";
+  var ls = window.localStorage;
+    $scope.username = ls.getItem("username");
+
+
+    $scope.img = img;
+  $scope.$watch('img',function (newV,oldV) {
+    if(newV != oldV)
+      $scope.img = newV;
+  },true);
+
     //选择不同的按钮
     $scope.selectFirst = function () {
         $scope.firstStyle = selectStyle;

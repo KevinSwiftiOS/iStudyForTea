@@ -237,36 +237,5 @@ $scope.inputBack = {
     $scope.finish = function () {
         console.log($scope.cou);
     }
-  //上传文件
-  function upload(fileURL,callback) {
-    //上传成功
-    var success = function (r) {
-      var res = angular.fromJson(r["response"]);
-      console.log("上传成功! Code = " + r.responseCode);
-      callback("success",res["info"]["uploadedurl"]);
-    }
 
-    //上传失败
-    var fail = function (error) {
-      alert("上传失败! Code = " + error.code);
-      callback("error",err);
-    }
-
-    var options = new FileUploadOptions();
-    options.fileKey = "file1";
-    options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
-    //options.mimeType = "text/plain";
-
-    //上传参数
-    var params = {};
-    //只是测试
-    params.authtoken = "876E65B5AFB21A07328BEE7319F8F365D1C47779789D373E";
-    params.type = "1";
-    options.params = params;
-
-    var ft = new FileTransfer();
-    //上传地址
-    var SERVER = "http://dodo.hznu.edu.cn/api/upfile"
-    ft.upload(fileURL, encodeURI(SERVER), success, fail, options);
-  };
 })

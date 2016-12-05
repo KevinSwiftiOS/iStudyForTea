@@ -1,19 +1,47 @@
 /**
  * Created by hcnucai on 2016/10/24.
  */
-app.controller('PersonalResetPasswordCtrl', function($scope,$ionicHistory,$rootScope){
-    //tab隐藏
-    $scope.$on("$ionicView.beforeEnter",function () {
-        $rootScope.hideTabs = true;
-    });
-//获取到值后进行返回到主界面
+app.controller('PersonalResetPasswordCtrl', function($scope,$ionicHistory,httpService){
+    //监听进入页面时 进行初始化值
+  $scope.$on("$ionicView.beforeEnter",function () {
+    $scope.oldpassword = "";
+    $scope.newPassword = "";
+    $scope.configNewPassword = "";
+  });
+    //修改密码
     $scope.config = function () {
-
-
-        var oldPassword = angular.element(document.querySelector('#oldPassword')).val();
+      var oldPassword = angular.element(document.querySelector('#oldPassword')).val();
         var newPassword = angular.element(document.querySelector('#newPassword')).val();
         var configNewPassword = angular.element(document.querySelector('#configNewPassword')).val();
        //返回上一个界面
-        $ionicHistory.goBack();
+      var ls = window.localStorage;
+      if(oldPassword != ls.getItem("password")){
+        swal("提醒","原始密码填写不正确","warning");
+      }else if(newPassword != configNewPassword){
+        swal("提醒","新密码填写不相同","warning");
+      }else{
+        var param = {
+          authtoken:ls.getItem("authtoken"),
+          oldpassword:oldPassword,
+          newpassword:newPassword
+        }
+         var promise =  httpService.post("http://dodo.hznu.edu.cn/api/changepassword",param);
+        promise.then(function (res) {
+            swal({
+                title: "恭喜您",
+                text: "修改成功",
+                type: "success",
+                height: 10000,
+                width: 100,
+              },
+              function () {
+                $ionicHistory.goBack();
+                return true;
+              });
+
+          },function (err) {
+            swal("修改失败",err,"error");
+          })
+      }
     }
     });

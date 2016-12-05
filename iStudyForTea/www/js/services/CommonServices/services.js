@@ -68,15 +68,80 @@ function($http, $q) {
         defer.reject(data);
       });
       return defer.promise;
-    }
+    },
+    login: function (url,params) {
+      var defer = $q.defer();
+      $http({
+        method: 'POST',
+        params: params,
+        url: url,
+      }).success(function (data) {
+        if(data.retcode == 0) {
+          defer.resolve(data);
+        }
+        else
+          defer.reject(data.message);
+      }).error(function (data) {
+        defer.reject(data);
+      });
+      return defer.promise;
+    },
+
   };
 
 });
 appModel.factory("swalService",function () {
   return {
-  cusSwal:function (type,message) {
+    cusSwal: function (type, message) {
 
+    }
   }
-}
-})
+});
+appModel.factory("uploadFile",function ($q) {
+  return {
+    upload: //上传文件
+      function upload(fileURL,param) {
+        var defer = $q.defer();
+        //上传成功
+        var success = function (r) {
+          var res = angular.fromJson(r["response"]);
+          if(res.retcode == 0) {
+            var info = res.info;
+            if(info["succ"] == true)
+            defer.resolve(res.info);
+            else
+              defer.reject(res.message);
+          }
+          else{
+           defer.reject(res.message);
+          }
+        }
+
+        //上传失败
+        var fail = function (error) {
+          defer.reject(error);
+        }
+
+        var options = new FileUploadOptions();
+        options.fileKey = "file1";
+        options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
+        //options.mimeType = "text/plain";
+
+        //上传参数
+        options.params = param;
+
+        var ft = new FileTransfer();
+        //上传地址
+        var SERVER = "http://dodo.hznu.edu.cn/api/upfile"
+        ft.upload(fileURL, encodeURI(SERVER), success, fail, options);
+        return defer.promise;
+      }
+  }
+});
+//头像的路径
+appModel.factory("img",function () {
+  return {
+    avtarurl: null
+  }
+});
 

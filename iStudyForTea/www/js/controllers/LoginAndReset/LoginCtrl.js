@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/23.
  */
-app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory) {
+app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory,img) {
 
 
     $scope.login = function () {
@@ -10,11 +10,37 @@ app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory) {
         var username = angular.element(document.querySelector('#username')).val();
         var password = angular.element(document.querySelector('#password')).val();
 
-        $state.go('tab.TeachManagement');
+
         //启动界面
-      //登录服务 暂时先赋一个authtoken
-      var ls = window.localStorage;
-      ls.setItem("authtoken","0B849459E30161BEF4AD80E6239A4A8D1940640FCEF133F0");
+      var param = {
+        username:username,
+        password:password,
+        devicetoken:"",
+        number:"",
+        os:"",
+        clienttype:2
+      }
+    var promise =   httpService.login("http://dodo.hznu.edu.cn/api/login",param);
+      promise.then(function (data) {
+        var ls = window.localStorage;
+        ls.setItem("authtoken",data.authtoken);
+
+        var info = data["info"];
+        if(info.avtarurl == null) {
+          //头像的设置
+          info.avtarurl = "img/head.png";
+          img.avtarurl = "img/head.png";
+        }else{
+          img.avtarurl = info.avtarurl;
+        }
+        ls.setItem("info",angular.toJson(info));
+        ls.setItem("username",username);
+        ls.setItem("password",password);
+
+       $state.go("tab.TeachManagement");
+      },function (data) {
+        swal("请求失败",data,"error");
+      })
       var myCache = $cacheFactory("my-cache");
 
     }
