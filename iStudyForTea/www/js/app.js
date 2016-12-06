@@ -70,6 +70,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   .state('tab.TeachManagement', {
       url: '/TeachManagement',
+      params:{fromLogin:null},
       views: {
         'menuContent': {
           templateUrl: 'templates/tabs/tab-TeachManagement.html',
@@ -189,7 +190,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   //第三个模块 读邮件的
       .state('tab.StationLetter-ReadEmail',{
 
-          url:"/StationLetter/ReadEmail/:id/:name",
+          url:"/StationLetter/ReadEmail",
+        params:{"index":null,"fromIn":null},
           views:{
               'menuContent': {
                   templateUrl: 'templates/StationLetter/ReadEmail.html',
@@ -202,6 +204,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       .state('tab.StationLetter-WriteEmail',{
 
           url:"/StationLetter/WriteEmail",
+          params:{code:null,subject:null,senderid:null,sendername:null},
           views:{
               'menuContent': {
                   templateUrl: 'templates/StationLetter/WriteEmail.html',
@@ -491,7 +494,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   ;
   //判断首界面应该加载谁
   var ls = window.localStorage;
-  if(ls.getItem("authtoken") == null) {
+  if(ls.getItem("username") == null) {
 
     $urlRouterProvider.otherwise('/Login');
   }else {

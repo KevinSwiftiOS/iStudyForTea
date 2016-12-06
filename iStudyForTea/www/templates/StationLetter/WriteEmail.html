@@ -21,18 +21,27 @@
                 <div class="col">
             <label class="item item-input-inset">
                主题:
-                <input type="text" id="subject">
+                <input type="text" ng-model="detail.subject">
             </label>
       </div>
-                </div>
+            </div>
             <div class="row">
                 <div class="col">
-           内容:
+           文本区:
 
-      <textarea class="comment"  style="height: 200px;width: 100%;" onpropertychange= "this.style.posHeight=this.scrollHeight "></textarea>
+      <textarea class="comment"  style="height: 100px;width: 100%;" ng-model = "detail.content"></textarea>
             </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  图片区
+                  <div ng-repeat="chart in divIds" style="float: left">
+                    <img id="{{chart.divId}}">{{chart.divId}}</img>
+                  </div>
                 </div>
+              </div>
                 </div>
+
     </ion-content>
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar button-light">

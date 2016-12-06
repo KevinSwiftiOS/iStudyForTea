@@ -2,21 +2,21 @@
 
     <ion-content>
  <div class="list">
-     <div class="item item-checkbox-right" ng-repeat="class in names">
+     <div class="item item-checkbox-right" ng-repeat="class in items">
        <div ng-click="hide($index)">
-           <p><font size="3px">{{class.label}}</font></p>
+           <p><font size="3px">{{class.Label}}</font></p>
        </div>
-         <font size="5px"><i class="{{class.icon}}" style="float: right;margin-top: -20px;margin-right: -4px" ng-click="selectGroup('{{class.label}}')"></i>
+         <font size="5px"><i class="{{class.icon}}" style="float: right;margin-top: -20px;margin-right: -4px" ng-click="selectGroup('{{class.Label}}')"></i>
 
 </font>
          <div class="list" style="margin-left: -20px;margin-right: -20px;margin-top: 5px">
-             <div  class="item item-avatar-left item-checkbox-right" ng-repeat="person in class.list" ng-if="class.isShow">
+             <div  class="item item-avatar-left item-checkbox-right" ng-repeat="person in class.ContacterList" ng-if="class.isShow">
 
-               <img src = "{{person.image}}"/>
-                        <p style="margin-top: 10px"><font size="3px"> {{person.name}}</font></p>
+               <img src = "{{person.Face}}"/>
+                        <p style="margin-top: 10px"><font size="3px"> {{person.Name}}</font></p>
                  <div style="float: right;margin-top: -25px" >
                       <font size="5px">
-                      <i class="{{person.icon}}" ng-click="selectPerson('{{person.id}}','{{class.label}}')"></i>
+                      <i class="{{person.icon}}" ng-click="selectPerson('{{person.Id}}','{{class.Label}}')"></i>
                       </font>
                  </div>
                     </div>
@@ -25,6 +25,14 @@
          </div>
  </div>
     </ion-content>
-
+    <!--保存的按钮-->
+  <ion-footer-bar align-title="center">
+    <div class="button-bar"  style="margin-top: -20px">
+      <button class="button button-full button-positive" ng-click="finish()"><font size="5px">
+        <i class="icon ion-document"></i>
+      </font>
+      </button>
+    </div>
+  </ion-footer-bar>
 </ion-view>
 

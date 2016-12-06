@@ -69,7 +69,7 @@ function($http, $q) {
       });
       return defer.promise;
     },
-    login: function (url,params) {
+    infoPost: function (url,params) {
       var defer = $q.defer();
       $http({
         method: 'POST',
@@ -144,4 +144,17 @@ appModel.factory("img",function () {
     avtarurl: null
   }
 });
+//时间日期的分割
+appModel.factory("subDate",function () {
+  return {
+
+    divedeToDay:function (date) {
+
+      var year = date.substr(0,4);
+      var month = date.substr(4,2);
+      var day = date.substr(6,2);
+      return year + "-" + month + "-" + day;
+    }
+  }
+})
 

@@ -5,23 +5,22 @@
     <button class="button" ng-click="ManageAccount()">账号管理</button>
   </ion-nav-buttons>
   <ion-content class="padding">
-    <ion-refresher pulling-text="下拉刷新..." on-refresh="headerRefresh()"></ion-refresher>
+    <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
+    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>
      <!--没有列表信息的时候显示 其余界面均可使用-->
       <div ng-include="'templates/Commons/Empty.html'" ng-if = false></div>
     <ion-list>
-      <ion-item  ng-repeat="chat in chats" href="#/tab/SystemManagement/DetailInfo/{{$index}}">
+      <ion-item  ng-repeat="item in items" href="#/tab/SystemManagement/DetailInfo/{{$index}}">
 <div class="row" style="height: 30px;margin-top: -20px">
     <div class="col">
-          <p style="float:left">张量
+          <p style="float:left">{{item.title}}
           </p>
         </div>
-    <div class="col">
-            <p style="float: right">2016年12月12日 19:50:20</p>
-    </div>
+
 </div>
 <div class="row" style="height: 25px;margin-top: 5px;margin-bottom: -10px" >
     <i class="icon ion-android-star"></i>
-<p><font size="2px">VB程序设计</font></p>
+<p><font size="2px">{{item.date}}</font></p>
 </div>
 
 

@@ -1,9 +1,8 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('teachManagementCtrl', function($scope,$ionicPopover,$timeout,$state,$ionicLoading,httpService,$cacheFactory) {
-
-    $scope.popOver = $ionicPopover.fromTemplateUrl("my-popover.html",{
+app.controller('teachManagementCtrl', function(img,$scope,$ionicPopover,$timeout,$state,$ionicLoading,httpService,$stateParams) {
+   $scope.popOver = $ionicPopover.fromTemplateUrl("my-popover.html",{
     scope:$scope
 });
   //fromTemplateUrl的方法
@@ -50,20 +49,47 @@ var param = {
   $ionicLoading.show({
     template: '请等待'
   });
-
- var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist",param);
-  promise.then(function (data) {
-    courseItems = data;
-    $scope.items = courseItems;
-    $ionicLoading.hide();
-    $scope.$broadcast('scroll.refreshComplete');
-  },function (data) {
-    courseItems = [];
-    $scope.items = courseItems;
-    $ionicLoading.hide();
-    $scope.$broadcast('scroll.refreshComplete');
-  swal("请求失败",data,"error");
-})
+  var ls = window.localStorage;
+  var loginparam = {
+      username:ls.getItem("username"),
+      password:ls.getItem("password"),
+      devicetoken:"",
+      number:"",
+      os:"",
+      clienttype:2
+    }
+    var promise =   httpService.infoPost("http://dodo.hznu.edu.cn/api/login",loginparam);
+    promise.then(function (data) {
+      ls.setItem("authtoken",data.authtoken);
+      var info = data["info"];
+      if(info.avtarurl == null) {
+        //头像的设置
+        info.avtarurl = "img/head.png";
+        img.avtarurl = "img/head.png";
+      }else{
+        img.avtarurl = info.avtarurl;
+      }
+      ls.setItem("info",angular.toJson(info));
+      ls.setItem("username",ls.getItem("username"));
+      ls.setItem("password",ls.getItem("password"));
+      var promise1 = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist", param);
+      promise1.then(function (data1) {
+        courseItems = data1;
+        $scope.items = courseItems;
+        $ionicLoading.hide();
+        $scope.$broadcast('scroll.refreshComplete');
+      }, function (err) {
+        courseItems = [];
+        $scope.items = courseItems;
+        $ionicLoading.hide();
+        $scope.$broadcast('scroll.refreshComplete');
+        swal("请求失败", err, "error");
+      })
+    },function (data) {
+      $ionicLoading.hide();
+      $scope.$broadcast('scroll.refreshComplete');
+      swal("请求失败",data,"error");
+    })
 
 //刷新按钮
   $scope.doRefresh = function () {

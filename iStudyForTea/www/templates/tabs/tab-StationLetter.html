@@ -24,16 +24,20 @@
                         </ion-content>
                     </ion-popover-view>
                 </script>
-                <ion-refresher pulling-text="下拉刷新..."></ion-refresher>
+              <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+              </ion-refresher>
+              <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
                 <ion-list>
-                    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats"
-                              type="item-text-wrap" href="#/tab/StationLetter/ReadEmail/{{$index}}/{{chat.name}}">
-                        <img ng-src="{{chat.face}}">
-                        <h2>{{chat.name}}</h2>
-                        {{chat.lastText }}
-                        <p>曹凯强于2016-12-13发表</p>
+                    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items"
+                              type="item-text-wrap" ng-click="goToRead($index)">
+                        <img src="{{item.img}}">
+                        <h2>{{item.subject}}</h2>
+
+                        <p>{{item.sendername}}于{{item.date}} 发表</p>
                         <!--删除的按钮-->
-                        <ion-option-button class="button-assertive">
+                        <ion-option-button class="button-assertive" ng-click="removeLetter($index)">
                             删除
                         </ion-option-button>
                     </ion-item>

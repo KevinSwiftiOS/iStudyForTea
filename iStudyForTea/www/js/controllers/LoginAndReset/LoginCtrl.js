@@ -20,7 +20,7 @@ app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory,img
         os:"",
         clienttype:2
       }
-    var promise =   httpService.login("http://dodo.hznu.edu.cn/api/login",param);
+    var promise =   httpService.infoPost("http://dodo.hznu.edu.cn/api/login",param);
       promise.then(function (data) {
         var ls = window.localStorage;
         ls.setItem("authtoken",data.authtoken);
@@ -37,7 +37,7 @@ app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory,img
         ls.setItem("username",username);
         ls.setItem("password",password);
 
-       $state.go("tab.TeachManagement");
+       $state.go("tab.TeachManagement",({fromLogin:true}));
       },function (data) {
         swal("请求失败",data,"error");
       })
