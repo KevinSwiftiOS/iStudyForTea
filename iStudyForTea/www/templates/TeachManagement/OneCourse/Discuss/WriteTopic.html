@@ -1,0 +1,24 @@
+<ion-view title="发起主题">
+  <ion-content>
+    <p>标题为</p>
+   <input placeholder="请输入标题" ng-model="topic.subject" style="width: 100%;margin-left: 5px;margin-right: 5px">
+    <p>文本区</p>
+    <textarea style="width: 100%;height: 300px;margin-left: 5px;margin-right: 5px" ng-model = "topic.content"></textarea>
+    <p>图片区</p>
+    <div ng-repeat="img in images" style="float: left">
+      <img src = "{{img.src}}" style="width: 100px;height: 100px;float: left;" ng-click="showBigImage($index)">
+    </div>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-light">
+    <div class="button-bar button-light">
+
+      <button class="button" ng-click="selectImage()">
+        <i class="ion-image" style="font-size: 30px"></i>
+      </button>
+      <button class="button" ng-click="writeTopic()">
+        <i class="ion-ios-paperplane" style="font-size: 30px"></i>
+      </button>
+
+    </div>
+  </ion-footer-bar>
+</ion-view>

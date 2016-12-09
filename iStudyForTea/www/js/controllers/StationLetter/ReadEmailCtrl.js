@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/27.
  */
-app.controller("ReadEmailCtrl",function ($scope,$stateParams,lettersInAndOut,httpService,$ionicHistory,$state) {
+app.controller("ReadEmailCtrl",function ($scope,$stateParams,lettersInAndOut,httpService,$ionicHistory,$state,$ionicScrollDelegate,showBigImg) {
 //监听事件 当进入的时候tab消失
 var index = $stateParams.index;
   var fromIn = $stateParams.fromIn;
@@ -11,7 +11,6 @@ var index = $stateParams.index;
     $scope.content = inItem.content;
     //表明这封信件已读
     if(inItem.isread == false){
-
       var ls = window.localStorage;
       var param = {
         authtoken:ls.getItem("authtoken"),
@@ -36,7 +35,7 @@ var index = $stateParams.index;
           var inItems = lettersInAndOut.getInItems(index);
           $state.go('tab.StationLetter-WriteEmail',{code:inItems.code,subject:"回复:" + inItems.subject,senderid:inItems.senderid,sendername:inItems.sendername});
         }else{
-          swal("提醒","不能回复自己","error");
+          swal("提醒","不能回复自己","warning");
         }
     }
     $scope.writeEmail = function () {
@@ -57,7 +56,6 @@ var index = $stateParams.index;
        authtoken:ls.getItem("authtoken"),
        "msgid":id
      }
-     console.log(param);
     var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagedelete",param);
     promise.then(function (res) {
       if(fromIn)
@@ -71,4 +69,19 @@ var index = $stateParams.index;
     })
 
   }
+  //图片放大的动作
+  var zoomed = true;
+  $scope.zoomFunction = function(){
+    if(zoomed){// toggle zoom in
+      var tap = {x:0, y:0};
+      var position = showBigImg.getTouchposition(event);
+      $ionicScrollDelegate.$getByHandle('content').zoomBy(3, true, position.x, position.y);
+      zoomed = !zoomed;
+
+    }else{ // toggle zoom out
+      $ionicScrollDelegate.$getByHandle('content').zoomTo(1, true);
+      zoomed = !zoomed;
+    }
+  }
+
 })

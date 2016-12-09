@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-title>
+    预览图({{current}})
+  </ion-nav-title>
+<ion-content on-swipe-left="leftImg()" on-swipe-right="rightImg()" style="background-color: black">
+  <ion-scroll  zooming="true"  style="width: 100%;"  >
+    <div style="width: 100%;height: 600px;text-align: center;margin-top:-100px"><span style="height: 100%;display: inline-block;vertical-align: middle"></span>
+      <img style="width:300px;height: 300px;vertical-align: middle" src="{{img.src}}">
+    </div>
+  </ion-scroll>
+
+
+
+</ion-content>
+
+</ion-view>

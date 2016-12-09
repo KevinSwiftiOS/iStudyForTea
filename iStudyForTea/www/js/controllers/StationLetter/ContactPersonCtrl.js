@@ -6,26 +6,41 @@ var ls = window.localStorage;
 var param = {
   authtoken:ls.getItem("authtoken")
 },persons = [],list = [];
-var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",param);
-  promise.then(function (res) {
-    persons = res;
-    //进行遍历
-    for(var i = 0; i < persons.length;i++){
-      persons[i].isShow = false;
-      persons[i].icon = "ion-ios-circle-outline";
-      list = persons[i].ContacterList;
-      for(var j = 0; j < list.length;j++) {
-        list[j].icon = "ion-ios-circle-outline";
-        if(list[j].Face == null)
-          list[j].Face = "img/head.png";
-      }
-      persons[i].ContacterList = list;
 
+  //监听页面进入的时候
+  $scope.$on("$ionicView.beforeEnter",function () {
+    persons = contactPersons.getAllPersons();
+    if(persons.length == []) {
+      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",param);
+      promise.then(function (res) {
+        persons = res;
+        //进行遍历
+        for(var i = 0; i < persons.length;i++){
+          persons[i].isShow = false;
+          persons[i].icon = "ion-ios-circle-outline";
+          list = persons[i].ContacterList;
+          for(var j = 0; j < list.length;j++) {
+            list[j].icon = "ion-ios-circle-outline";
+            if(list[j].Face == null)
+              list[j].Face = "img/head.png";
+          }
+          persons[i].ContacterList = list;
+          $scope.$broadcast('scroll.refreshComplete');
+        }
+        contactPersons.setAllPersons(persons);
+        $scope.items = contactPersons.getAllPersons();
+      },function (err) {
+        swal("请求失败",err,"error");
+        $scope.items = [];
+        $scope.$broadcast('scroll.refreshComplete');
+
+      })
+    }else{
+      //说明有联系人 随后已经选择的联系人要把他置为打钩符号
+      $scope.items = contactPersons.getAllPersons();
     }
-    contactPersons.setAllPersons(persons);
-    $scope.items = contactPersons.getAllPersons();
   })
-    //隐藏属性
+  //隐藏属性
     $scope.hide = function ($index) {
      var persons = contactPersons.getAllPersons();
         if (persons[$index].isShow == true) {
@@ -50,11 +65,11 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",para
             if(lists[j].Id == id) {
                 if (lists[j].icon == "ion-ios-circle-outline") {
                     lists[j].icon = "ion-checkmark";
-                    contactPersons.addPerson(id);
+                    contactPersons.addPerson(lists[j].Id,lists[j].Name);
                 }
                 else {
                     lists[j].icon = "ion-ios-circle-outline";
-                  contactPersons.removePerson(id);
+                  contactPersons.removePerson(lists[j].Id,lists[j].Name);
                 }
             break;
             }
@@ -75,14 +90,15 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",para
                    lists = persons[i].ContacterList;
                   for(j = 0; j < lists.length;j++){
                     lists[j].icon = "ion-checkmark";
-                    contactPersons.addPerson(list[j].Id);
+                    //加入的时候要看有没有去重
+                    contactPersons.addPerson(lists[j].Id,lists[j].Name);
                   }
                 }else{
                   persons[i].icon = "ion-ios-circle-outline";
                    lists = persons[i].ContacterList;
                   for(j = 0; j < lists.length;j++){
                     lists[j].icon = "ion-ios-circle-outline";
-                    contactPersons.removePerson(list[j].Id);
+                    contactPersons.removePerson(lists[j].Id,lists[j].Name);
                   }
                 }
                 persons[i].ContacterList = lists;
@@ -96,5 +112,32 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",para
     //结束选择联系人
   $scope.finish = function () {
     $ionicHistory.goBack();
+  }
+  //刷新的动作
+  $scope.doRefresh = function () {
+    var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",param);
+    promise.then(function (res) {
+      persons = res;
+      //进行遍历
+      for(var i = 0; i < persons.length;i++){
+        persons[i].isShow = false;
+        persons[i].icon = "ion-ios-circle-outline";
+        list = persons[i].ContacterList;
+        for(var j = 0; j < list.length;j++) {
+          list[j].icon = "ion-ios-circle-outline";
+          if(list[j].Face == null)
+            list[j].Face = "img/head.png";
+        }
+        persons[i].ContacterList = list;
+
+      }
+      $scope.$broadcast('scroll.refreshComplete');
+      contactPersons.setAllPersons(persons);
+      $scope.items = contactPersons.getAllPersons();
+    },function (err) {
+      swal("请求失败",err,"error");
+      $scope.items = [];
+
+    })
   }
 });

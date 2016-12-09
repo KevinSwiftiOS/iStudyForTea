@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('teachManagementCtrl', function(img,$scope,$ionicPopover,$timeout,$state,$ionicLoading,httpService,$stateParams) {
+app.controller('teachManagementCtrl', function(img,$scope,$ionicPopover,$timeout,$state,$ionicLoading,httpService,$stateParams,discussService) {
    $scope.popOver = $ionicPopover.fromTemplateUrl("my-popover.html",{
     scope:$scope
 });
@@ -169,5 +169,7 @@ var param = {
         else{
             //还要穿有几个界面
             $state.go("tab.TeachManagement-OneCourseStudyPlan",{courseid:(courseItems[$index].id),index:0});
+           //注册课程名称 因为在讨论区中要用到
+            discussService.courseNames = courseItems[$index].name;
         }}
 });

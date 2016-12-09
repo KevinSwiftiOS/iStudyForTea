@@ -36,7 +36,7 @@ appModel.factory("lettersInAndOut",function () {
 });
 //联系人
 appModel.factory("contactPersons",function () {
-  var contactPersons = [],selectPerons = [];
+  var contactPersons = [],selPeronsId = [],selPersonsName = [];
   return {
     setAllPersons:function (_items) {
       contactPersons = _items;
@@ -44,15 +44,28 @@ appModel.factory("contactPersons",function () {
     getAllPersons:function () {
       return contactPersons;
     },
-    addPerson:function (id) {
-      selectPerons.push(id);
+    addPerson:function (id,name) {
+      //去重
+      if(selPeronsId.indexOf(id) == -1)
+        selPeronsId.push(id);
+      if(selPersonsName.indexOf(name) == -1)
+        selPersonsName.push(name);
     },
-    removePerson:function (id) {
-      var index = selectPerons.indexOf(id);
-      selectPerons.splice(index,1);
+    removePerson:function (id,name) {
+      var idIndex = selPeronsId.indexOf(id);
+      selPeronsId.splice(idIndex,1);
+      var nameIndex = selPersonsName.indexOf(name);
+      selPersonsName.splice(nameIndex,1);
     },
-    getSelPersons:function () {
-      return selectPerons;
+    getSelPersonsId:function () {
+      return selPeronsId;
+    },
+    getSelPersonsName:function () {
+      return selPersonsName;
+  },
+    removeSelPersons:function () {
+      selPeronsId.splice(0,selPeronsId.length);
+      selPersonsName.splice(0,selPersonsName.length);
     }
   }
 })

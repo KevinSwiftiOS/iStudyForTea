@@ -34,9 +34,9 @@
               </div>
               <div class="row">
                 <div class="col">
-                  图片区
-                  <div ng-repeat="chart in divIds" style="float: left">
-                    <img id="{{chart.divId}}">{{chart.divId}}</img>
+                 <p> 图片区</p>
+                  <div ng-repeat="img in images" style="float: left">
+                    <img src = "{{img.src}}" style="width: 100px;height: 100px;float: left;" ng-click="showBigImage($index)">
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar button-light">
 
-            <button class="button" ng-click="reply()">
+            <button class="button" ng-click="selectImage()">
                 <i class="ion-image" style="font-size: 30px"></i>
             </button>
             <button class="button" ng-click="writeEmail()">

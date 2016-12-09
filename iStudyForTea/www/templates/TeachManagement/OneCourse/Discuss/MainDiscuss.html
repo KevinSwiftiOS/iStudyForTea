@@ -1,4 +1,4 @@
-<ion-view title="讨论区">
+<ion-view title="讨论区" cache-view="false">
     <ion-nav-bar class="bar bar-positive">
         <ion-nav-back-button class="button-clear" ng-click="goBack()">
             <i class="ion-chevron-left"></i>返回
@@ -27,36 +27,41 @@
                     <p>测试班级</p>
                 </div>
             <div class="col">
-                <h3>计算机原理141</h3>
-                <p>总贴数6</p>
+                <h3>{{courseName}}</h3>
+                <p>总贴数{{items.length}}</p>
             </div>
             </div>
 
         </div>
-        <!--置顶的列表-->
-        <div class="list">
-            <div class="item item-avatar-left" ng-repeat="item in topItems" ui-sref="tab.TeachManagement-OneCourseDetailNote({content:{{item.content}}})">
-            <img src = "img/adam.jpg">
+      <!--置顶的列表-->
+      <ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="doRefresh()" on-pulling="pulling()">
+      </ion-refresher>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
+      <div class="list">
+            <div class="item item-avatar-left" ng-repeat="item in topItems" ng-click = "seeTopDetail($index)">
+            <img src = "img/top.png">
            <h2>{{item.title}}</h2>
-                <p>{{item.time}}</p>
+                <p>{{item.AutherAndDate}}</p>
             </div>
         </div>
         <!--非置顶的列表-->
         <div class="list">
-            <div class="item" ng-repeat="item in unTopItems" ui-sref="tab.TeachManagement-OneCourseDetailNote({content:{{item.content}}})">
+            <div class="item" ng-repeat="item in unTopItems" ng-click = "seeUnTopDetail($index)">
 
                 <h2>{{item.title}}</h2>
-                <p>{{item.time}}</p>
+                <p>{{item.AutherAndDate}}</p>
             </div>
         </div>
     </ion-content>
     <!--底部三个按钮-->
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar button-light">
-            <button class="button">
+            <button class="button" ng-click="footerRefresh()">
                 <i class="ion-refresh" style="font-size: 30px"></i>
             </button>
-            <button class="button">
+            <button class="button" ng-click="writeTopic()">
                 <i class="ion-edit" style="font-size: 30px"></i>
             </button>
             <button class="button" ng-click = "openPopover($event)">

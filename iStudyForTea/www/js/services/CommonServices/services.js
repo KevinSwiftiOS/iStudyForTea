@@ -156,5 +156,35 @@ appModel.factory("subDate",function () {
       return year + "-" + month + "-" + day;
     }
   }
-})
+});
+appModel.factory("showBigImg",function () {
+  function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while(element) {
+      xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+      yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+      element = element.offsetParent;
+    }
+    return { x: xPosition, y: yPosition };
+  }
+
+ return {
+   getTouchposition: function (event) {
+     var canvasPosition = getPosition(event.gesture.touches[0].target);
+
+     var tap = {x: 0, y: 0};
+     if (event.gesture.touches.length > 0) {
+       tt = event.gesture.touches[0];
+       tap.x = tt.clientX || tt.pageX || tt.screenX || 0;
+       tap.y = tt.clientY || tt.pageY || tt.screenY || 0;
+     }
+     tap.x = tap.x - 0;
+     tap.y = tap.y - 0;
+
+     return {x: tap.x, y: tap.y};
+   }
+ }
+});
 

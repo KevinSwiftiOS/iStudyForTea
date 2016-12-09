@@ -24,7 +24,7 @@ app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory,img
       promise.then(function (data) {
         var ls = window.localStorage;
         ls.setItem("authtoken",data.authtoken);
-
+        console.log(ls.getItem("authtoken"));
         var info = data["info"];
         if(info.avtarurl == null) {
           //头像的设置

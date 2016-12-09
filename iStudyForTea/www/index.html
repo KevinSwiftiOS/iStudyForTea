@@ -30,6 +30,7 @@
 
   <link href="lib/sweetalert/dist/sweetalert.css" rel="stylesheet">
 
+<link href="lib/ionic-images/dist/ionic-images.min.css" rel="stylesheet">
 
 
 
@@ -38,10 +39,7 @@
 
 
 
-
-
-
-  <!--<link href="lib/timePicker/time-picker.css" rel="stylesheet">-->
+<!--<link href="lib/timePicker/time-picker.css" rel="stylesheet">-->
   <!--<link href="lib/datePicker/ionic-datepicker.styles.css" rel="stylesheet">->
   <!--加载动画的-->
 
@@ -53,11 +51,13 @@
   <!--加载弹出框的显示-->
   <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-
   <script src="lib/sweetalert/dist/sweetalert.min.js"></script>
   <!--加载动画的-->
   <script src = "lib/angular-animate/angular-animate.js"></script>
   <!-- cordova script (this will be a 404 during development) -->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/ionic-images/dist/ionic-images.all.min.js"></script>
+
 
 
   <script src = "lib/ngCordova/dist/ng-cordova.js"></script>
@@ -65,6 +65,8 @@
   <script src="cordova.js"></script>
 <!--base64加密-->
 <script src = "lib/angular-utf8-base64/angular-utf8-base64/angular-utf8-base64.js"></script>
+
+
   <!--&lt;!&ndash;Cordova的引用&ndash;&gt;-->
   <!--<script src = "lib/datePicker/ionic-datepicker.bundle.min.js"></script>-->
   <!--<script src = "lib/timePicker/ionic-timepicker.bundle.min.js"></script>-->
@@ -89,10 +91,14 @@
 
 <!--站内信中的服务-->
 <script src = "js/services/StationLetter/StationLetterServices.js"></script>
+<!--教学管理中的讨论区的服务-->
+<script src = "js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js"></script>
 <!--主ctrl-->
 <!--菜单的ctrl-->
 <script src = "js/controllers/tabs/TabsCtrl.js"></script>
 <script src="js/controllers/tabs/controllers.js"></script>
+<!--图片放大的ctrl-->
+<script src = "js/controllers/Commons/ImageShowBigCtrl.js"></script>
 <!--tab里面的ctrl-->
 <script src="js/controllers/tabs/StationLetterCtrl.js"></script>
 <script src="js/controllers/tabs/SystemManagementCtrl.js"></script>
@@ -149,7 +155,7 @@
 <script src="js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js"></script>
 <script src = "js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js"></script>
 <script src = "js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js"></script>
-
-
+<script src = "js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js"></script>
+<script src = "js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js"></script>
 </body>
 </html>

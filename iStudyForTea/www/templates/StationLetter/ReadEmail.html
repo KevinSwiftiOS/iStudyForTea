@@ -1,13 +1,14 @@
 
 <ion-view view-title="详细内容">
 
-    <ion-content>
+    <ion-content delegate-handle="main" zooming="true" direction="xy">
       <!--标题-->
       <div style="text-align: center">
         <p>{{subject}}</p>
       </div>
+      <ion-scroll  zooming="true" direction="xy" style="width: 100%; height: 500px" delegate-handle="content" on-double-tap="zoomFunction()">
         <div ng-bind-html="content"></div>
-
+</ion-scroll>
     </ion-content>
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar">
