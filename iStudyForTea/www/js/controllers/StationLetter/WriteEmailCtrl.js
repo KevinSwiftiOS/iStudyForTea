@@ -2,12 +2,12 @@
  * Created by hcnucai on 2016/10/27.
  */
 app.controller("WriteEmailCtrl",function ($cordovaProgress,$scope,$stateParams,$state,$ionicLoading,contactPersons,$cordovaImagePicker,httpService,uploadFile,base64,$ionicHistory,showBigImg) {
-//测试
+
   var code = $stateParams.code;
   var subject = $stateParams.subject;
   var senderid = $stateParams.senderid;
   var sendername = $stateParams.sendername;
-  var selPeronsId = [],selPersonsName = [], images = [];;
+  var selPeronsId = [],selPersonsName = [], images = [];
   $scope.$on("$ionicView.beforeEnter",function () {
     //看是否有联系人
     selPeronsId = contactPersons.getSelPersonsId();
@@ -29,6 +29,26 @@ app.controller("WriteEmailCtrl",function ($cordovaProgress,$scope,$stateParams,$
     }
 
   });
+  var height = document.body.scrollHeight;
+  $scope.textAreaStyle = {
+    "width" :"98%",
+    "height": height * 0.4 + "px",
+    "margin-left":"5px",
+    "margin-right": "5px",
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+  }
+
+  $scope.imgsDivStyle = {
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+    "width": "98%",
+    "margin-left":"5px",
+    "margin-right":"5px",
+    "height": height * 0.3 + "px"
+  }
 //添加联系人的
     $scope.addContactPerson = function () {
       $state.go('tab.StationLetter-ContactPerson');
@@ -40,11 +60,7 @@ app.controller("WriteEmailCtrl",function ($cordovaProgress,$scope,$stateParams,$
         totalSelPersonsName += selPersonsName[i] + ",";
       }
       swal("你选择的联系人有",totalSelPersonsName);
-      // var dic = [
-      //   {src:"img/head.png"},
-      //   {src:"img/top.png"},
-      // ]
-      // $state.go("tab.StationLette-ShowBigImage",{index:0,imgs:dic});
+
     }
 
 

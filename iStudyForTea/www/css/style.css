@@ -1,7 +1,10 @@
 /* Empty. Add your own CSS if you like */
 /*设置冒泡格式的*/
-input[type="button"], input[type="date"], input[type="datetime-local"] {
+input{
     -webkit-appearance: none;
+}
+textarea{
+  -webkit-appearance: none;
 }
 .comment{
     width: 100%;

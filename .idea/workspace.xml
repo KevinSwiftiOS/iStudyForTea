@@ -2,163 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c32c1ab-1d1f-4196-9f00-6c401139b8dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/img/top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/Commons/ImageShowBigCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/Commons/ShowBigImage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailReplyNote.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.slim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.slim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.slim.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/.eslintrc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/DOMEval.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/ready-no-deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/readyException.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/stripAndCollapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/isHiddenWithinTree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/deferred/exceptionHook.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/ObjectFunctionString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/fnToString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/getProto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/rnothtmlwhite.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js.gzip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/iStudyForTea.iml" afterPath="$PROJECT_DIR$/.idea/iStudyForTea.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/.idea/workspace.xml" afterPath="$PROJECT_DIR$/iStudyForTea/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/bower.json" afterPath="$PROJECT_DIR$/iStudyForTea/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/index.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/css/style.css" afterPath="$PROJECT_DIR$/iStudyForTea/www/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/app.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/SendIdentityCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/SendIdentityCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/WriteEmailCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/WriteEmailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ContactPersonCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ContactPersonCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ReadEmailCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ReadEmailCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/controllers.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/services/CommonServices/services.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/services/CommonServices/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/services/StationLetter/StationLetterServices.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/services/StationLetter/StationLetterServices.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/bower.json" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/package.json" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/.bower.json" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/AUTHORS.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/dist/jquery.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/external/sizzle/dist/sizzle.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/parseXML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/location.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/nonce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/var/rquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/ajax/xhr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/prop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/attributes/val.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/access.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/parseHTML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/core/var/rsingleTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/addGetHookIf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/adjustCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/showHide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/cssExpand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/getStyles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/rmargin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/rnumnonpx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/css/var/swap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/Data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/acceptData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/dataPriv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/data/var/dataUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/deferred.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/deprecated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/dimensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/effects/animatedSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/alias.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/focusin.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/focusin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/event/trigger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/exports/amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/exports/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/_evalUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/buildFragment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/getAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/setGlobalEval.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rscriptType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/var/rtagName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/manipulation/wrapMap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/offset.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/queue.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/queue/delay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector-native.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector-sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/findFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/dir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/traversing/var/siblings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/arr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/class2type.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/documentElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/hasOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/indexOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/pnum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/push.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/rcssNum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/var/toString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/lib/jquery/src/wrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/LoginAndReset/ResetPassword.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/LoginAndReset/ResetPassword.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/LoginAndReset/SendIdentity.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/LoginAndReset/SendIdentity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/ContactPerson.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/ContactPerson.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/ReadEmail.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/ReadEmail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailNote.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailNote.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/MainDiscuss.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/MainDiscuss.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html" />
     </list>
     <ignored path="iStudyForTea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,78 +39,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
+      <file leaf-file-name="CourseAnnoucementCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="132" column="90" selection-start-line="132" selection-start-column="90" selection-end-line="132" selection-end-column="90" />
+            <state relative-caret-position="540">
+              <caret line="81" column="77" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteEmailCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
+      <file leaf-file-name="CourseAnnoucement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="18" selection-start-line="20" selection-start-column="7" selection-end-line="21" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainDiscuess.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
+            <state relative-caret-position="329">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="48" />
               <folding>
-                <element signature="e#3408#6235#0" expanded="false" />
-                <element signature="e#4603#6231#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteTopicCtrl.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js">
+      <file leaf-file-name="tab-SystemManagement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/tabs/tab-SystemManagement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="2" selection-start-line="11" selection-start-column="0" selection-end-line="28" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SystemManagementCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/SystemManagementCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
-              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WriteTopic.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="108" selection-start-line="5" selection-start-column="101" selection-end-line="5" selection-end-column="108" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WriteEmail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="31" column="94" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="94" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#3;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="49" column="5" selection-start-line="12" selection-start-column="2" selection-end-line="49" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -260,8 +90,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="702" column="22" selection-start-line="702" selection-start-column="14" selection-end-line="702" selection-end-column="22" />
+            <state relative-caret-position="158">
+              <caret line="556" column="23" selection-start-line="556" selection-start-column="23" selection-end-line="556" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseAnnoucementDetailInfoCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,26 +130,30 @@
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/ContactPerson.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ContactPersonCtrl.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailNote.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailReplyNote.html" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/Commons/ImageShowBigCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/controllers.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/Commons/ImageShowBigCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/Commons/ShowBigImage.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/index.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/MainDiscuss.html" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/css/style.css" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/app.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/app.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js" />
       </list>
     </option>
   </component>
@@ -324,10 +168,10 @@
     <handled-path value="$PROJECT_DIR$/iStudyForTea/platforms/ios/cordova/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="78" />
+    <option name="x" value="327" />
     <option name="y" value="23" />
-    <option name="width" value="1527" />
-    <option name="height" value="794" />
+    <option name="width" value="1807" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -354,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -490,7 +335,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Discuss" />
+              <option name="myItemId" value="CourseAnnoucement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,6 +360,10 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -535,10 +384,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StationLetter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -662,7 +507,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Discuess" />
+              <option name="myItemId" value="CourseAnnoucement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,22 +615,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Commons" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -851,17 +717,19 @@
       <workItem from="1420070458831" duration="6218000" />
       <workItem from="1481274181293" duration="821000" />
       <workItem from="1481283456781" duration="7880000" />
+      <workItem from="1481338673815" duration="143000" />
+      <workItem from="1481350324459" duration="8356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27184000" />
+    <option name="totallyTimeSpent" value="35683000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="78" y="23" width="1527" height="794" extended-state="0" />
+    <frame x="327" y="23" width="1807" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2508186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24681793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -900,47 +768,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/SystemManagement/DetailInfoCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="74" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ReadEmailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1021,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/lib/angular-editor/javascripts/simditor/module.js" />
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/SystemManagement/DetailInfo.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1085,41 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/tabs/tab-TeachManagement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="35" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailNote.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="3" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#button#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1130,27 +924,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="144" column="49" selection-start-line="143" selection-start-column="4" selection-end-line="144" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/Commons/ImageShowBigCtrl.js" />
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/lib/imgShowBig/js/img-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="45" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/lib/imgShowBig/js/img-service.js" />
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ReadEmailCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="77" column="59" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="93" selection-start-line="0" selection-start-column="93" selection-end-line="0" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,15 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,9 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,13 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ion-scroll#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ion-scroll#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#ion-scroll#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#ion-scroll#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,9 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="63" column="55" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,81 +979,182 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/app.js">
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="702" column="22" selection-start-line="702" selection-start-column="14" selection-end-line="702" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="108" selection-start-line="5" selection-start-column="101" selection-end-line="5" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="132" column="90" selection-start-line="132" selection-start-column="90" selection-end-line="132" selection-end-column="90" />
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/StationLetter/WriteEmail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="31" column="94" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="94" />
+        <state relative-caret-position="314">
+          <caret line="22" column="150" selection-start-line="22" selection-start-column="138" selection-end-line="22" selection-end-column="150" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#3;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="18" selection-start-line="20" selection-start-column="7" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
-          <folding>
-            <element signature="e#3408#6235#0" expanded="false" />
-            <element signature="e#4603#6231#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        <state relative-caret-position="15">
+          <caret line="3" column="160" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="160" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/WriteTopic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" selection-start-line="6" selection-start-column="2" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="134" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="250" column="9" selection-start-line="250" selection-start-column="9" selection-end-line="250" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#1;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="131" column="91" selection-start-line="131" selection-start-column="91" selection-end-line="131" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/tabs/tab-TeachManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="35" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/TeachManagementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="178" column="2" selection-start-line="178" selection-start-column="2" selection-end-line="178" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/SystemManagementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="49" column="5" selection-start-line="12" selection-start-column="2" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/tabs/tab-SystemManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="11" selection-start-column="0" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="81" column="77" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="556" column="23" selection-start-line="556" selection-start-column="23" selection-end-line="556" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

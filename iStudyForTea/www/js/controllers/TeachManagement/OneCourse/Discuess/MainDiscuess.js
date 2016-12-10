@@ -129,7 +129,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
         $scope.unTopItems = dic.unTopItems;
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-        $cordovaProgress.hide();
+      $cordovaProgress.hide();
       }
     }
     if(selReply == true){
@@ -153,7 +153,8 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
         $scope.unTopItems = dic.unTopItems;
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-        $cordovaProgress.hide();
+
+       $cordovaProgress.hide();
       }
     }
     if(needPost) {
@@ -179,7 +180,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
           discussService.setPublishItems(items, topItems, unTopItems);
         $ionicLoading.hide();
         $scope.$broadcast('scroll.refreshComplete');
-        $cordovaProgress.hide();
+       $cordovaProgress.hide();
 
       }, function (err) {
         var items = [], topItems = [], unTopItems = [];
@@ -203,7 +204,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
   $scope.doRefresh = function () {
     var promise = httpService.post(url, param);
     promise.then(function (res) {
-      $cordovaProgress.hide();
+     $cordovaProgress.hide();
       var items = res, topItems = [], unTopItems = [];
       for (var i = 0; i < items.length; i++) {
         //时间的分割

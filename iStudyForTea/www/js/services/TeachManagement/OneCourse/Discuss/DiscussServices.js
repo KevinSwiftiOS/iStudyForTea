@@ -38,6 +38,7 @@ appModel.factory("discussService",function () {
 
   courseNames:null,
     //回复列表的信息
-    replyItems:null
+    replyItems:null,
+    courseId:null
   }
 })

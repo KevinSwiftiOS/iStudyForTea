@@ -1,11 +1,31 @@
 /**
  * Created by hcnucai on 2016/12/9.
  */
-app.controller("WriteTopicCtrl",function ($scope,httpService,$cordovaProgress,$cordovaImagePicker,uploadFile,base64,$ionicHistory,showBigImg,$stateParams) {
+app.controller("WriteTopicCtrl",function ($scope,httpService,$cordovaProgress,$cordovaImagePicker,uploadFile,base64,$ionicHistory,showBigImg,$stateParams,$state) {
 $scope.topic = {
   subject:"",
   content:""
 };
+var height = document.body.scrollHeight;
+  $scope.textAreaStyle = {
+    "width" :"98%",
+    "height": height * 0.5 + "px",
+    "margin-left":"5px",
+    "margin-right": "5px",
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+  }
+  console.log(height);
+  $scope.imgsDivStyle = {
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+    "width": "98%",
+    "margin-left":"5px",
+    "margin-right":"5px",
+    "height": height * 0.4 + "px"
+  }
 var images = [];
   //选择相册的
   //添加图片的操作
@@ -33,8 +53,7 @@ var images = [];
   $scope.writeTopic = function () {
     var subject = $scope.topic.subject;
     var content = $scope.topic.content;
-    console.log(subject);
-    console.log(content);
+
     if(subject == "")
     swal("提醒","标题不能为空","warning");
   else if(content == "" && images.length == 0)
@@ -95,5 +114,9 @@ var images = [];
       $cordovaProgress.hide();
       swal("发帖失败",err,"error");
     })
+  }
+  //图片放大
+  $scope.showBigImage = function ($index) {
+    $state.go("tab.StationLette-ShowBigImage",{index:$index,imgs:images});
   }
 })

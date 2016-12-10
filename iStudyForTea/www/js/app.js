@@ -554,7 +554,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的课程公告详细界面
       .state('tab.TeachManagement-OneCourseAnnoucementDetailInfo',{
-          params:{id:null},
+          params:{index:null,items:null},
           url:"/TeachManagement/OneCourseAnnoucementDetainInfo",
           views:{
               'menuContent': {
@@ -674,7 +674,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的讨论区的回复列表界面
       .state('tab.TeachManagement-OneCourseNoteReplyList',{
-          //帖子的id
+          //帖子的id 课程id
           params:{id:null},
           url:"/TeachManagement/OneCourseNoteReplyList",
           views:{

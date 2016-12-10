@@ -171,5 +171,6 @@ var param = {
             $state.go("tab.TeachManagement-OneCourseStudyPlan",{courseid:(courseItems[$index].id),index:0});
            //注册课程名称 因为在讨论区中要用到
             discussService.courseNames = courseItems[$index].name;
+             discussService.courseId = courseItems[$index].id;
         }}
 });

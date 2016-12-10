@@ -1,47 +1,28 @@
 
 <ion-view view-title="写邮件">
-
-    <ion-content>
-        <div class="list">
-                   <div class="row">
-                       <div class="col-10" style="margin-top: auto;margin-bottom: auto;">
-           <p style="font-size: 15px;">收件人</p>
-                           </div>
-                       <div class="col" style="margin-top: -15px;margin-bottom: auto;">
-               <button class="button button-light button-full button-stable" ng-click="showContactPerson()">点击查看收件人</button>
-               </div>
-                       <div class="col-10" align="center" style="margin-bottom: auto;margin-top: 10px">
-                <!--添加联系人的-->
-
-                    <i class="ion-plus" style="font-size: 20px"ng-click="addContactPerson()"></i>
-                </button>
-                       </div>
-               </div>
-            <div class="row">
-                <div class="col">
-            <label class="item item-input-inset">
-               主题:
-                <input type="text" ng-model="detail.subject">
-            </label>
+  <ion-content>
+  <div>
+ <div class="row">
+   <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto">
+   收件人
+     </div>
+  <div class="col">
+    <button class="button button-light button-full button-stable;" ng-click="showContactPerson()" style = "border-style: solid;border-width: 1px;border-color: darkgray">点击查看收件人</button>
+</div>
+   <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto;" >
+   <i class="ion-plus" style="font-size: 20px;"ng-click="addContactPerson()"></i>
+  </div>
+   </div>
+    </div>
+    <input placeholder="请输入主题" ng-model="detail.subject" style="width: 98%;margin-left: 5px;margin-right:5px;margin-top: -20px; border-width: 1px;border-color: darkgray">
+    <p style="margin-left: 5px;margin-top: 5px">文本区</p>
+    <textarea ng-style="textAreaStyle" ng-model = "detail.content"></textarea>
+    <p style="margin-left: 5px;margin-top: 5px">图片区</p>
+    <div ng-style="imgsDivStyle">
+      <div ng-repeat="img in images">
+        <img src = "{{img.src}}" style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px" ng-click="showBigImage($index)">
       </div>
-            </div>
-            <div class="row">
-                <div class="col">
-           文本区:
-
-      <textarea class="comment"  style="height: 100px;width: 100%;" ng-model = "detail.content"></textarea>
-            </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                 <p> 图片区</p>
-                  <div ng-repeat="img in images" style="float: left">
-                    <img src = "{{img.src}}" style="width: 100px;height: 100px;float: left;" ng-click="showBigImage($index)">
-                  </div>
-                </div>
-              </div>
-                </div>
-
+    </div>
     </ion-content>
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar button-light">
