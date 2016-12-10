@@ -47,6 +47,7 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",p
     for(var i = 0; i < items.length;i++) {
       if(items[i].avatar_url == null)
         items[i].avatar_url = "img/head.png";
+      items[i].date = "于" + subDate.divedeToDay(items[i].date) + " 发表";
     }
     $scope.items = items;
     $ionicLoading.hide();
@@ -180,5 +181,9 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",p
       swal("回帖失败",err,"error");
     })
 
+  }
+  //图片放大的动作
+  $scope.showBigImage = function ($index) {
+    $state.go("tab.StationLette-ShowBigImage",{index:$index,imgs:images});
   }
 });

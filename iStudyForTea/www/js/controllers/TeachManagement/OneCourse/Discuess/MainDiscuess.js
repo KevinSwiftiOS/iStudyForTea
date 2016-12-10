@@ -10,8 +10,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
     }).then(function(modal) {
         $scope.modal = modal;
     });
-
-    $scope.$on("$ionicView.beforeLeave",function () {
+  $scope.$on("$ionicView.beforeLeave",function () {
         $scope.modal.hide();
     })
    //显示菜单的事件
@@ -114,7 +113,33 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
   //刚开始进入的时候选择全部的
   var selTotal = true,selReply = false,selPublish = false;
   //刚开始进入页面的时候
-  headRefresh();
+  //刚开始进入界面的时候
+  var promise = httpService.post(url,param);
+  promise.then(function (res) {
+    var items = res, topItems = [], unTopItems = [];
+    for (var i = 0; i < items.length; i++) {
+      //时间的分割
+      items[i].AutherAndDate = items[i].author + "于 " + subDate.divedeToDay(items[i].date) + "发表";
+      if (items[i].top == 1)
+        topItems.push(items[i]);
+      else
+        unTopItems.push(items[i]);
+    }
+    $scope.items = items;
+    $scope.topItems = topItems;
+    $scope.unTopItems = unTopItems;
+    discussService.setTotalItems(items,topItems,unTopItems);
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+
+  },function (err) {
+    swal("请求失败",err,"error");
+    $ionicLoading.hide();
+    $scope.$broadcast('scroll.refreshComplete');
+  })
+
+
+
   $scope.courseName = discussService.courseNames;
   //开始刷新
   function headRefresh() {

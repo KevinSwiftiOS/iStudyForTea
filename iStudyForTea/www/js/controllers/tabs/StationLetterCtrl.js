@@ -119,13 +119,17 @@ var inItems = [],outItems = [],selectInBox = true;
       })
     }
   }
+  //定义名称
+  $scope.title = "收件箱";
   //选择不同的信件
     $scope.selectStation = function ($index) {
       $scope.popOver.hide();
       if ($index == 0) {
+        $scope.title = "收件箱";
         selectInBox = true;
         $scope.items = lettersInAndOut.getInItemsAll();
       } else {
+        $scope.title = "发件箱";
         selectInBox = false;
         if ((lettersInAndOut.getOutItemsAll()).length == 0) {
           $ionicLoading.show({
