@@ -1,89 +1,151 @@
 /**
- * Created by hcnucai on 2016/10/25.
+ * Created by hcnucai on 2016/11/15.
  */
-//增加系统公告的界面
-app.controller('AddAnnoucementCtrl', function($scope,$rootScope,$ionicHistory,$ionicPopover) {
-//监听视图进入的时候tab隐藏
-    $scope.$on("$ionicView.beforeEnter",function () {
-
-        $scope.btnWidth = document.body.clientWidth / 3;
-
-    });
-    //footerStyle的样式指定
-    $scope.btnFooterStyle = {
-        "width":"document.body.clientWidth / 3",
-        "height":"50",
-        "background-color" : "coral",
-        "align":"center"
-    };
-    //选择相册
-    $scope.selectImage = function () {
-        alert("选择相册");
-    }
-    $scope.moreShow = function () {
-        alert("更多");
-    }
-    //底部的动作 最右边是打开一个脚本
-    $scope.popOver = $ionicPopover.fromTemplateUrl("AddAnnoucement.html",{
-        scope:$scope
-    });
-    //fromTemplateUrl的方法
-    $ionicPopover.fromTemplateUrl("AddAnnoucement.html", {
-        scope: $scope
-    }).then(function (popover) {
-        $scope.popOver = popover;
-    });
-
-//打开的动作
-    $scope.openPopover = function ($event) {
-        $scope.popOver.show($event);
-    }
-    //清除浮动框
-    $scope.$on("$destroy",function () {
-        $scope.popOver.remove();
-    })
-
+app.controller("AddAnnoucementCtrl",function ($scope,httpService,$cordovaImagePicker,uploadFile,base64,$ionicHistory,showBigImg,$stateParams,$state) {
+  $scope.$on("$ionicView.beforeEnter",function () {
+  });
 //popView的一些事件代理x
-    $scope.popItems = [{rowName: '置顶'}, {rowName: '取消'}];
-    $scope.goToDifferent = function ($index) {
-        $scope.popOver.hide();
-        switch ($index){
-            case 0:
-                     //提醒成功置顶
-                swal({   title: "恭喜您",
-                        text: "置顶成功",
-                        type: "success",
-                        height:1000,
-                        width:100,
-                    },
-                    function(){
-
-
-
-                    });
-                break;
-            case 1:
-                //确认取消
-                swal({   title: "提醒",
-                        text: "你确认退出编辑吗?",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "确定",
-                        cancelButtonText: "取消",
-                        closeOnConfirm: true,
-                        closeOnCancel: true },
-                    function(isConfirm){
-
-                        if (isConfirm) {
-                            console.log(22);
-                            //进行缓存的清理和跳转
-                            $ionicHistory.goBack();
-                        }
-
-                    });
-                break;
-            default:break;
-        }
+  $scope.ann = {
+    subject:"",
+    content:""
+  };
+  var height = document.body.scrollHeight;
+  $scope.textAreaStyle = {
+    "width" :"98%",
+    "height": height * 0.5 + "px",
+    "margin-left":"5px",
+    "margin-right": "5px",
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+  }
+  $scope.imgsDivStyle = {
+    "border-style":"solid",
+    "border-width":"1px",
+    "border-color":"darkgray",
+    "width": "98%",
+    "margin-left":"5px",
+    "margin-right":"5px",
+    "height": height * 0.4 + "px"
+  }
+  $scope.pinStyle = {
+    "font-size":"30px",
+    "color":"gray"
+  }
+  var isTop = false;
+  var myDate = new Date();
+  $scope.year = myDate.getFullYear();
+  $scope.month = myDate.getMonth() + 1;
+  $scope.day = myDate.getDate();
+  //是否置顶
+  $scope.selectTop = function () {
+    if(isTop){
+      isTop = false;
+      $scope.pinStyle = {
+        "font-size":"30px",
+        "color":"gray"
+      }
+    }else{
+      isTop = true;
+      $scope.pinStyle = {
+        "font-size":"30px",
+        "color":"blue"
+      }
     }
-});
+  }
+  var images = [];
+  $scope.ann = {
+    subject:"",
+    content:""
+  }
+  //选择相册的
+  //添加图片的操作
+  $scope.selectImage = function () {
+    var options = {
+      maximumImagesCount: 10,
+      width: 400,
+      height: 400,
+      quality: 80
+    };
+    $cordovaImagePicker.getPictures(options)
+      .then(function (results) {
+        for (var i = 0; i < results.length; i++) {
+          var dic = {src:results[i]};
+          images.push(dic);
+        }
+        $scope.images = images;
+        //上传图片拿到url后进行动态加载div
+
+      }, function(error) {
+        // error getting photos
+      });
+  };
+//完成的按钮
+  $scope.finish = function () {
+    var subject = $scope.ann.subject;
+    var content = $scope.ann.content;
+    if(subject == "")
+      swal("提醒","标题未填","warning");
+    else if(content == "" && images.length == 0)
+      swal("提醒","公告内容未填","warning");
+    else{
+      //先上传图片 再上传内容
+      // $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发公告中");
+      var totalHtml = "";
+      var ls = window.localStorage;
+      var authtoken = ls.getItem("authtoken");
+      totalHtml += content;
+      if (images.length > 0) {
+        var cnt = 0;
+        //首先进行图片的上传
+        for (var i = 0; i < images.length; i++) {
+          var uri = images[i].src;
+          var param = {
+            authtoken: authtoken,
+            type: 3
+          }
+          var promise = uploadFile.upload(uri, param);
+          promise.then(function (res) {
+            totalHtml += "<div><img src =" + "\"" + res["uploadedurl"] + "\"" + "/></div>";
+            cnt++;
+            if (cnt == images.length) {
+              //上传总共的文本
+              sendAnn(totalHtml, subject, authtoken);
+            }
+          }, function (err) {
+            //  $cordovaProgress.hide();
+            swal("图片上传失败", err, "error");
+          })
+        }
+      } else {
+        sendAnn(totalHtml, subject, authtoken);
+      }
+    }
+  }
+  function  sendAnn(totalHtml, subject, authtoken) {
+    var param = {
+      title:subject,
+      content:totalHtml,
+      istop:isTop,
+      authtoken:authtoken
+    }
+    console.log(param);
+
+    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/newnotify",param);
+    promise.then(function () {
+      swal({
+          title: "恭喜您",
+          text: "发送公告成功",
+          type: "success",
+          height: 10000,
+          width: 100,
+        },
+        function () {
+          $ionicHistory.goBack();
+          return true;
+        });
+    },function (data) {
+      swal("提醒",data,"创建失败");
+    })
+  }
+})

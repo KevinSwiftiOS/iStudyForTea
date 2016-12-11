@@ -11,15 +11,20 @@
       <font color="blue">取消</font>
     </button>
   </div>
-  <ion-refresher pulling-text="下拉刷新..." on-refresh="headerRefresh()"></ion-refresher>
+  <ion-refresher
+    pulling-text="下拉刷新..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
   <ion-list>
     <ion-item class="item-avatar item-remove-animate"
               ng-repeat="item in items | filter:user.search">
-      <img src = "img/adam.jpg">
+      <img src = "{{item.img}}">
 
-      <h2>{{item.no}}</h2>
-      {{item.name}}
-
+      <h2>{{item.userno}}</h2>
+      {{item.username}}
+   <p style="float: right">{{item.submit}}</p>
+      <p>{{item.check}}</p>
       <!--删除的按钮-->
       <ion-option-button class="button-assertive">
         查卷

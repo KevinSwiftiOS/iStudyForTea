@@ -13,9 +13,9 @@
             <ion-content>
                 <!--脚本-->
                 <script id = "station-popover.html" type="text/ng-template">
-                    <ion-popover-view style="height: 110px;width: 100px;">
-                        <ion-content>
-                            <ion-list>
+                    <ion-popover-view style="height: 100px;width: 100px;background-color: #2c64f0">
+                        <ion-content style="margin-top: -5px">
+                            <ion-list >
                                 <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="selectStation($index)">
                                     <i class="{{popItem.iconName}}"></i>
                                         {{popItem.rowName}}

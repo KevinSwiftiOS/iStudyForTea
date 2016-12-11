@@ -16,7 +16,7 @@ app.controller("CourseAnnoucementCtrl",function ($scope,$stateParams,$ionicModal
     })
 
     $scope.courseid = $stateParams.courseid;
-    console.log("CourseAnnoucement",$scope.id);
+
 
     //显示菜单的事件
     $scope.openModal = function () {
@@ -91,6 +91,6 @@ var param = {
     }
     //增加系统公告界面
     $scope.addAnnoucement = function () {
-        $state.go("tab.TeachManagement-OneCourseAddAnnoucement");
+        $state.go("tab.TeachManagement-OneCourseAddAnnoucement",{courseid:$stateParams.courseid});
     }
 })

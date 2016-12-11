@@ -566,7 +566,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       //第二个模块中 教学管理中的一门课程中的增加课程公告界面
       .state('tab.TeachManagement-OneCourseAddAnnoucement',{
-          params:{id:null},
+          params:{courseid:null},
           url:"/TeachManagement/CourseAddAnnoucement",
           views:{
               'menuContent': {

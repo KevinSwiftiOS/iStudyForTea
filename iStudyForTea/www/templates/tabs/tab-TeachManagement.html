@@ -15,13 +15,12 @@
   </ion-header-bar>
   <ion-content>
     <script id = "my-popover.html" type="text/ng-template">
-      <ion-popover-view style="height: 110px;width: 100px;">
-        <ion-content >
-
-          <ion-list>
+      <ion-popover-view style="height: 100px;width: 115px;background-color: #2c64f0">
+        <ion-content style="margin-top: -5px">
+          <ion-list >
             <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
-              <div align="right">
-                {{popItem.rowName}}
+              <i class="{{popItem.iconName}}"></i>
+              {{popItem.rowName}}
               </div>
             </ion-item>
           </ion-list>

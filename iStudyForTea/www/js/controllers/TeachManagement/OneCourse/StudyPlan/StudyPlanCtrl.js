@@ -48,6 +48,7 @@ app.controller("StudyPlanCtrl",function ($scope,$rootScope,$stateParams,$ionicMo
   promise.then(function (data) {
     items = data;
     $scope.items = items;
+    console.log(items[0]);
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   },function (err) {
@@ -74,8 +75,8 @@ app.controller("StudyPlanCtrl",function ($scope,$rootScope,$stateParams,$ionicMo
     })
   }
     //阅卷的按钮
-    $scope.goOver = function (id) {
-    $state.go("tab.TeachManagement-OneCourseStudyPlanGoOver",({"testid":id}));
+    $scope.goOver = function ($index) {
+    $state.go("tab.TeachManagement-OneCourseStudyPlanGoOver",{"testid":$scope.items[$index].testid});
     }
     //当前是第几个界面 随后界面++
 

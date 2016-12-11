@@ -16,7 +16,6 @@ var height = document.body.scrollHeight;
     "border-width":"1px",
     "border-color":"darkgray",
   }
-  console.log(height);
   $scope.imgsDivStyle = {
     "border-style":"solid",
     "border-width":"1px",
