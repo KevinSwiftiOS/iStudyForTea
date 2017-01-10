@@ -20,7 +20,7 @@ app.controller('LoginCtrl',function ($scope,$state,httpService,$cacheFactory,img
         os:"",
         clienttype:2
       }
-    var promise =   httpService.infoPost("http://dodo.hznu.edu.cn/api/login",param);
+    var promise =   httpService.infoPost("api/login",param);
       promise.then(function (data) {
         var ls = window.localStorage;
         ls.setItem("authtoken",data.authtoken);

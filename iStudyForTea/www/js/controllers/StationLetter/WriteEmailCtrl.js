@@ -146,7 +146,7 @@ swal("提醒","邮件内容未填","warning");
       authtoken:authtoken,
       data: base64.encode(angular.toJson(data)),
     }
-   var promise =  httpService.post("http://dodo.hznu.edu.cn/api/messagesend",param);
+   var promise =  httpService.post("api/messagesend",param);
     promise.then(function (res) {
       $cordovaProgress.hide();
       //删除本次的联系人

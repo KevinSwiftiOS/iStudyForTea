@@ -13,7 +13,7 @@ $scope.submit = function () {
       authtoken: ls.getItem("authtoken"),
       name: stuGroupName,
     }
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/newstudentgroup", param);
+    var promise = httpService.post("apiteach/newstudentgroup", param);
        promise.then(function (data) {
          swal({
              title: "恭喜您",

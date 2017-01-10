@@ -131,7 +131,7 @@ app.controller("CourseAddAnnoucementCtrl",function ($scope,httpService,$cordovaI
        authtoken:authtoken
      }
      console.log(param);
-     var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/newnotify",param);
+     var promise = httpService.post("apiteach/newnotify",param);
     promise.then(function() {
       swal({
           title: "恭喜您",

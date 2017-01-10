@@ -14,7 +14,7 @@ app.controller("ResetPsswordCtrl",function ($scope,$state,httpService,$statePara
        token:token,
        newpassword:newPassword
      }
-     var promise = httpService.infoPost("http://dodo.hznu.edu.cn/api/resetpassowrd",params);
+     var promise = httpService.infoPost("api/resetpassowrd",params);
       promise.then(function (res) {
         var username = res["info"].username;
         var ls = window.localStorage;

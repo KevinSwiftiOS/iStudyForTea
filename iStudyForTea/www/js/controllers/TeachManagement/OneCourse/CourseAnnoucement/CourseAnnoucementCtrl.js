@@ -57,7 +57,7 @@ var param = {
     swal("请求失败", data, "error");
   })
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/courseinfo", param);
+    var promise = httpService.post("api/courseinfo", param);
     promise.then(function (data) {
       items = data;
       for(var i = 0; i < items.length;i++) {

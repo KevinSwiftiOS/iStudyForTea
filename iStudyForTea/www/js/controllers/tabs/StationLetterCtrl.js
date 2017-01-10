@@ -44,7 +44,7 @@ var inItems = [],outItems = [],selectInBox = true;
   $ionicLoading.show({
     template: '请等待'
   });
-  var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagereceivequery", inParam);
+  var promise = httpService.post("api/messagereceivequery", inParam);
   promise.then(function (data) {
    inItems = data;
     for(var i = 0 ; i < inItems.length;i++) {
@@ -71,7 +71,7 @@ var inItems = [],outItems = [],selectInBox = true;
   $scope.doRefresh = function () {
 
     if (selectInBox == true) {
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagereceivequery", inParam);
+      var promise = httpService.post("api/messagereceivequery", inParam);
       promise.then(function (data) {
         inItems = data;
         for (var i = 0; i < inItems.length; i++) {
@@ -96,7 +96,7 @@ var inItems = [],outItems = [],selectInBox = true;
       })
     }
     else {
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagesendquery", outParam);
+      var promise = httpService.post("api/messagesendquery", outParam);
       promise.then(function (data) {
         outItems = data;
         for (var i = 0; i < outItems.length; i++) {
@@ -135,7 +135,7 @@ var inItems = [],outItems = [],selectInBox = true;
           $ionicLoading.show({
             template: '请等待'
           });
-          var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagesendquery", outParam);
+          var promise = httpService.post("api/messagesendquery", outParam);
           promise.then(function (data) {
             outItems = data;
             for (var i = 0; i < outItems.length; i++) {
@@ -171,7 +171,7 @@ var inItems = [],outItems = [],selectInBox = true;
     }
     if(selectInBox == true){
       param["msgid"] = lettersInAndOut.getInItems($index).id;
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagedelete",param);
+      var promise = httpService.post("api/messagedelete",param);
       promise.then(function (res) {
         lettersInAndOut.removeInItems($index);
         $scope.items = lettersInAndOut.getInItemsAll();
@@ -181,7 +181,7 @@ var inItems = [],outItems = [],selectInBox = true;
 
     }else{
       param["msgid"] = lettersInAndOut.getOutItems($index).id;
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagedelete",param);
+      var promise = httpService.post("api/messagedelete",param);
       promise.then(function (res) {
         lettersInAndOut.removeOutItems($index);
         $scope.items = lettersInAndOut.getOutItemsAll();

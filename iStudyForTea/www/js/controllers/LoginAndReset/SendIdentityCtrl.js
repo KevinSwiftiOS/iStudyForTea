@@ -7,11 +7,11 @@ app.controller("SendIdentityCtrl",function ($scope,$timeout,$state,httpService,$
   var email = $stateParams.email;
     var updateClock = function () {
         if(totalTime >= 0) {
-            $scope.clock = totalTime--;
+          $scope.clock = totalTime--;
 
-            $timeout(function () {
-                updateClock();
-            }, 1000);
+          $timeout(function () {
+            updateClock();
+          }, 1000);
         }else{
           $scope.isZero = true;
         }
@@ -26,7 +26,8 @@ app.controller("SendIdentityCtrl",function ($scope,$timeout,$state,httpService,$
          email:email,
          validcode:identityText
        };
-       var promise = httpService.infoPost("http://dodo.hznu.edu.cn/api/validcode",param);
+
+       var promise = httpService.infoPost("api/validcode",param);
        promise.then(function (res) {
          //验证码没有错误后进行跳转
          $state.go('ResetPassword',{token:res["info"].token});

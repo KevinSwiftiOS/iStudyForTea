@@ -136,7 +136,7 @@ var postCode = new RegExp("^[1-9][0-9]{5}$");
             data: base64.encode(angular.toJson(data)),
           }
           console.log(param);
-          var promise = httpService.infoPost("http://dodo.hznu.edu.cn/api/saveprofile", param);
+          var promise = httpService.infoPost("api/saveprofile", param);
           promise.then(function (res) {
             swal("恭喜您", "保存成功", "success");
             ls.setItem("info", angular.toJson(data));
@@ -196,7 +196,7 @@ var postCode = new RegExp("^[1-9][0-9]{5}$");
                        authtoken:ls.getItem("authtoken"),
                        data:base64.encode(angular.toJson(data))
                      }
-                     var pro = httpService.infoPost("http://dodo.hznu.edu.cn/api/saveprofile",params);
+                     var pro = httpService.infoPost("api/saveprofile",params);
                              pro.then(function (res1) {
                                swal("恭喜您","头像上传成功","success");
                                ls.setItem("info",angular.toJson(data));
@@ -253,7 +253,7 @@ var postCode = new RegExp("^[1-9][0-9]{5}$");
                                   authtoken:ls.getItem("authtoken"),
                                   data:base64.encode(angular.toJson(data))
                                 }
-                                var pro = httpService.infoPost("http://dodo.hznu.edu.cn/api/saveprofile",params);
+                                var pro = httpService.infoPost("api/saveprofile",params);
                                 pro.then(function (res1) {
                                   swal("恭喜您","头像上传成功","success");
                                   ls.setItem("info",angular.toJson(data));

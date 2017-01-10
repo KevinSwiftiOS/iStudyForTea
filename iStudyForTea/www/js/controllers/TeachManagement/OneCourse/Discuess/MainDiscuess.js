@@ -54,7 +54,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
         switch ($index){
             case 0:
              //进行跟新
-              url = "http://dodo.hznu.edu.cn/api/forumreplythread";
+              url = "api/forumreplythread";
               param = {
                 authtoken:ls.getItem("authtoken"),
                 courseId:$stateParams.courseid,
@@ -67,7 +67,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
               selPublish = false;
                 break;
             case 1:
-              url = "http://dodo.hznu.edu.cn/api/forumreplythread";
+              url = "api/forumreplythread";
               param = {
                 authtoken:ls.getItem("authtoken"),
                 courseId:$stateParams.courseid,
@@ -80,7 +80,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
               selPublish = true;
                 break;
             case 2:
-              url = "http://dodo.hznu.edu.cn/api/forumquery";
+              url = "api/forumquery";
               param = {
                 authtoken:ls.getItem("authtoken"),
                 count:100,
@@ -109,7 +109,7 @@ app.controller("MainDiscussCtrl",function ($cordovaProgress,$scope,$stateParams,
   $ionicLoading.show({
     template: '请等待'
   });
-  var url = "http://dodo.hznu.edu.cn/api/forumquery";
+  var url = "api/forumquery";
   //刚开始进入的时候选择全部的
   var selTotal = true,selReply = false,selPublish = false;
   //刚开始进入页面的时候

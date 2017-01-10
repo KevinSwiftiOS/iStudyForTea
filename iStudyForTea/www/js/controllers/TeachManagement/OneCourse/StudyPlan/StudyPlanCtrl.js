@@ -44,7 +44,7 @@ app.controller("StudyPlanCtrl",function ($scope,$rootScope,$stateParams,$ionicMo
     template: '请等待'
   });
   console.log(param);
-  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courseplan",param);
+  var promise = httpService.post("apiteach/courseplan",param);
   promise.then(function (data) {
     items = data;
     $scope.items = items;
@@ -60,7 +60,7 @@ app.controller("StudyPlanCtrl",function ($scope,$rootScope,$stateParams,$ionicMo
   })
   //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courseplan",param);
+    var promise = httpService.post("apiteach/courseplan",param);
     promise.then(function (data) {
       items = data;
       $scope.items = items;

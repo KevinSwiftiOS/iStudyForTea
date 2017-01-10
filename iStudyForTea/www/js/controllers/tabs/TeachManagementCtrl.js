@@ -58,7 +58,7 @@ var param = {
       os:"",
       clienttype:2
     }
-    var promise =   httpService.infoPost("http://dodo.hznu.edu.cn/api/login",loginparam);
+    var promise =   httpService.infoPost("api/login",loginparam);
     promise.then(function (data) {
       ls.setItem("authtoken",data.authtoken);
       var info = data["info"];
@@ -72,7 +72,7 @@ var param = {
       ls.setItem("info",angular.toJson(info));
       ls.setItem("username",ls.getItem("username"));
       ls.setItem("password",ls.getItem("password"));
-      var promise1 = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist", param);
+      var promise1 = httpService.post("apiteach/courselist", param);
       promise1.then(function (data1) {
         courseItems = data1;
         $scope.items = courseItems;
@@ -95,7 +95,7 @@ var param = {
   $scope.doRefresh = function () {
 
      if(selectStuList == false) {
-       var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/courselist", param);
+       var promise = httpService.post("apiteach/courselist", param);
        promise.then(function (data) {
          courseItems = data;
          $scope.items = courseItems;
@@ -110,7 +110,7 @@ var param = {
        })
      }
     else{
-       var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentgrouplist", param);
+       var promise = httpService.post("apiteach/studentgrouplist", param);
        promise.then(function (data) {
          stuGroupItems = data;
          $scope.items = stuGroupItems;
@@ -132,7 +132,7 @@ var param = {
    $ionicLoading.show({
      template: '请等待'
    });
-   var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentgrouplist", param);
+   var promise = httpService.post("apiteach/studentgrouplist", param);
    promise.then(function (data) {
      stuGroupItems = data;
      $scope.items = stuGroupItems;

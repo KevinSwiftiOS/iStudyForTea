@@ -48,16 +48,18 @@ appModel.factory('Chats', function() {
     }
   };
 });
+//定义服务器地址
+appModel.constant("hostip","http://dodo.hznu.edu.cn/");
 //定义公有的http服务
 appModel.factory("httpService",
-function($http, $q) {
+function($http, $q,hostip) {
   return {
-    post: function (url,params) {
+    post: function (suburl,params) {
       var defer = $q.defer();
       $http({
         method: 'POST',
         params: params,
-        url: url,
+        url: hostip + suburl,
     }).success(function (data) {
        if(data.retcode == 0) {
          defer.resolve(data.items);
@@ -69,12 +71,12 @@ function($http, $q) {
       });
       return defer.promise;
     },
-    infoPost: function (url,params) {
+    infoPost: function (suburl,params) {
       var defer = $q.defer();
       $http({
         method: 'POST',
         params: params,
-        url: url,
+        url: hostip + suburl,
       }).success(function (data) {
         if(data.retcode == 0) {
           defer.resolve(data);
@@ -90,6 +92,8 @@ function($http, $q) {
   };
 
 });
+//定义服务器的地址
+
 appModel.factory("swalService",function () {
   return {
     cusSwal: function (type, message) {

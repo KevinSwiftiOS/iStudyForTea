@@ -7,7 +7,6 @@
 // 'starter.controllers' is found in controllers.js
 //注入加载动画的服务
 var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']);
-
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

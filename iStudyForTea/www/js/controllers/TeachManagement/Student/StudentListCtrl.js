@@ -53,7 +53,7 @@ app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state
   $ionicLoading.show({
     template: '请等待'
   });
-  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
+  var promise = httpService.post("apiteach/studentlist",param);
   promise.then(function (data) {
     items = data;
     $scope.items = items;
@@ -68,7 +68,7 @@ app.controller("StudentListCtrl",function ($scope,$rootScope,$stateParams,$state
   })
   //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/studentlist",param);
+    var promise = httpService.post("apiteach/studentlist",param);
     promise.then(function (data) {
       items = data;
       $scope.items = items;

@@ -105,7 +105,7 @@ var images = [];
       postype:"1",
       data:base64.encode(angular.toJson(data))
     }
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumpost",param);
+    var promise = httpService.post("api/forumpost",param);
     promise.then(function (res) {
       $cordovaProgress.hide();
       $ionicHistory.goBack();

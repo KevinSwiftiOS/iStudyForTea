@@ -59,7 +59,7 @@ app.controller("ExprementListCtrl",function ($scope,$stateParams,$ionicModal,$io
   $ionicLoading.show({
     template: '请等待'
   });
-  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/exprementqueryteach",param);
+  var promise = httpService.post("apiteach/exprementqueryteach",param);
   promise.then(function (data) {
     items = data;
     $scope.items = items;
@@ -74,7 +74,7 @@ app.controller("ExprementListCtrl",function ($scope,$stateParams,$ionicModal,$io
   })
   //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/exprementqueryteach",param);
+    var promise = httpService.post("apiteach/exprementqueryteach",param);
     promise.then(function (data) {
       items = data;
       $scope.items = items;

@@ -16,7 +16,7 @@ var index = $stateParams.index;
         authtoken:ls.getItem("authtoken"),
         msgid:inItem.id
       }
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagereaded",param);
+      var promise = httpService.post("api/messagereaded",param);
       promise.then(function () {
          //阅读成功
         lettersInAndOut.setReadInItems(index);
@@ -56,7 +56,7 @@ var index = $stateParams.index;
        authtoken:ls.getItem("authtoken"),
        "msgid":id
      }
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagedelete",param);
+    var promise = httpService.post("api/messagedelete",param);
     promise.then(function (res) {
       if(fromIn)
       lettersInAndOut.removeInItems(index);

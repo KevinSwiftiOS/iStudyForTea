@@ -25,7 +25,7 @@ app.controller('PersonalResetPasswordCtrl', function($scope,$ionicHistory,httpSe
           oldpassword:oldPassword,
           newpassword:newPassword
         }
-         var promise =  httpService.post("http://dodo.hznu.edu.cn/api/changepassword",param);
+         var promise =  httpService.post("api/changepassword",param);
         promise.then(function (res) {
             swal({
                 title: "恭喜您",

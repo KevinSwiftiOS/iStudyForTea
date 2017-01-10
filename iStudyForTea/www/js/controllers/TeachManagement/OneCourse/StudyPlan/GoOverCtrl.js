@@ -16,7 +16,7 @@ app.controller("GoOverCtrl",function ($scope,$stateParams,httpService,$ionicLoad
     page: 1
   };
   console.log(param);
-  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/examlist", param);
+  var promise = httpService.post("apiteach/examlist", param);
   promise.then(function (res) {
     items = res;
     console.log(items);
@@ -42,7 +42,7 @@ app.controller("GoOverCtrl",function ($scope,$stateParams,httpService,$ionicLoad
     $scope.$broadcast('scroll.refreshComplete');
   })
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/examlist", param);
+    var promise = httpService.post("apiteach/examlist", param);
     promise.then(function (res) {
       items = res;
       console.log(items);

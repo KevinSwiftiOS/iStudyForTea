@@ -11,7 +11,7 @@ var param = {
   $scope.$on("$ionicView.beforeEnter",function () {
     persons = contactPersons.getAllPersons();
     if(persons.length == []) {
-      var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",param);
+      var promise = httpService.post("api/messagecontact",param);
       promise.then(function (res) {
         persons = res;
         //进行遍历
@@ -54,6 +54,7 @@ var param = {
     };
     //选了一个人的
     $scope.selectPerson = function (id,label) {
+      alert(id,label);
       //数组遍历 寻找
       var persons = contactPersons.getAllPersons();
         var i;
@@ -115,7 +116,7 @@ var param = {
   }
   //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/messagecontact",param);
+    var promise = httpService.post("api/messagecontact",param);
     promise.then(function (res) {
       persons = res;
       //进行遍历

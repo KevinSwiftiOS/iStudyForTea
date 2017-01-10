@@ -79,7 +79,7 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
   $ionicLoading.show({
     template: '请等待'
   });
-  var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/stulistbycourseid",param);
+  var promise = httpService.post("apiteach/stulistbycourseid",param);
   promise.then(function (data) {
     items = data;
     for(var i = 0; i < items.length;i++) {
@@ -98,7 +98,7 @@ app.controller("StuInOneCourseListCtrl",function ($scope,$state,$stateParams,$io
   })
   //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/apiteach/stulistbycourseid",param);
+    var promise = httpService.post("apiteach/stulistbycourseid",param);
     promise.then(function (data) {
       items = data;
       $scope.items = items;

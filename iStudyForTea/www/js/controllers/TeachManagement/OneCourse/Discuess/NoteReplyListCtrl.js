@@ -41,7 +41,7 @@ app.controller("NoteReplyListCtrl",function ($cordovaProgress,$scope,httpService
   $scope.view = {
     title:"回复"
   };
-var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",param);
+var promise = httpService.post("api/forumcommentquery",param);
   promise.then(function (res) {
     var items = res;
     for(var i = 0; i < items.length;i++) {
@@ -69,7 +69,7 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",p
   })
  //刷新的动作
   $scope.doRefresh = function () {
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",param);
+    var promise = httpService.post("api/forumcommentquery",param);
     promise.then(function (res) {
       var items = res;
       for(var i = 0; i < items.length;i++) {
@@ -172,7 +172,7 @@ var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumcommentquery",p
    postype: "2",
    data: base64.encode(angular.toJson(data)),
   }
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/forumpost",param);
+    var promise = httpService.post("api/forumpost",param);
     promise.then(function () {
     $cordovaProgress.hide();
       $scope.doRefresh();

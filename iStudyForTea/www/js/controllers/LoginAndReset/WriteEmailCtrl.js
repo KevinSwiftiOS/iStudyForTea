@@ -12,7 +12,7 @@ $scope.writeEmail = function () {
     var param = {
       email:email
     }
-    var promise = httpService.post("http://dodo.hznu.edu.cn/api/sendvalidcode",param);
+    var promise = httpService.post("api/sendvalidcode",param);
     promise.then(function (res) {
       $state.go('SendIdentity',{email:email});
     },function (err) {
