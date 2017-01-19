@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/22.
  */
-app.controller('systemManagementCtrl', function($scope,$rootScope,$ionicLoading,$state,httpService,httpService,subDate) {
+app.controller('systemManagementCtrl', function($scope,$rootScope,$ionicLoading,$state,httpService,httpService,subDate,NotifyService) {
     //监听进入页面的时候 tabbar显示 进行网络请求
   var items = [];
 var ls = window.localStorage;
@@ -18,12 +18,13 @@ var param = {
 
     }
     $scope.items = items;
-    $scope.items = items;
+    NotifyService.notifyItems = items;
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   }, function (data) {
     items = [];
     $scope.items = items;
+    NotifyService.notifyItems = items;
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
     swal("请求失败", data, "error");
@@ -37,6 +38,7 @@ var param = {
 
       }
       $scope.items = items;
+      NotifyService.notifyItems = items;
 
       $ionicLoading.hide();
       $scope.$broadcast('scroll.refreshComplete');
@@ -44,17 +46,17 @@ var param = {
       items = [];
       $scope.items = items;
       $ionicLoading.hide();
+      NotifyService.notifyItems = items;
       $scope.$broadcast('scroll.refreshComplete');
       swal("请求失败", data, "error");
     })
     }
+   //阅读系统公告
+   $scope.gotoDetail = function ($index) {
+     var id = $scope.items[$index].id;
+     $state.go("tab.SystemManagement-DetailInfo",{id:id});
+   }
 
-
-    // $scope.remove = function(chat) {
-    //     Chats.remove(chat);
-    //
-    //
-    // };
     //增加系统公告的函数
     $scope.addAnnoucement = function () {
         $state.go('tab.SystemManagement-AddAnnoucement');

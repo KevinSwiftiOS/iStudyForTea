@@ -1,10 +1,23 @@
 
 <ion-view view-title="详细公告">
 
+  <ion-nav-buttons side="right">
 
+    <!--写邮件的-->
+    <button class="button" ng-click="edit()">编辑</button>
+</ion-nav-buttons>
 <ion-content>
+   <div style="text-align: center">
+     {{info.title}}
+   </div>
+<div style="max-height: 300px;margin: 5px" ng-bind-html="info.content"></div>
+  <p style="text-align: right;margin: 5px">发布者:{{info.author}}</p>
+  <p style="text-align: right;margin: 5px">访问次数:{{info.viewtimes}}</p>
 
- <input type="text" ng-model="con.htmlField">
+  <p style="text-align: right;margin: 5px">发布日期:{{info.date}}</p>
+
+
+
 
 
   </ion-content>

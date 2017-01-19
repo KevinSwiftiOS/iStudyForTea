@@ -381,7 +381,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
   //第一个模块 详细系统公告的
       .state('tab.SystemManagement-DetailInfo',{
-
+        params:{"id":null},
           url:"/SystemManagement/DetailInfo/:chatid",
           views:{
               'menuContent': {
