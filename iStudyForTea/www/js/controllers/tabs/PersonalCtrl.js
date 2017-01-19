@@ -293,23 +293,23 @@ var postCode = new RegExp("^[1-9][0-9]{5}$");
       destructiveButtonClicked:function () {
         //退出的动作
             swal({ title: "提醒",
-            text: "你确认退出吗?",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "确定",
-            cancelButtonText: "取消",
-            closeOnConfirm: true,
-            closeOnCancel: true },
-          function(isConfirm){
-            if (isConfirm) {
-              //进行缓存的清理和跳转
-              ls.removeItem("info");
-              ls.removeItem("authtoken");
-              ls.removeItem("username");
-              ls.removeItem("password");
-              $state.go('Login');
-            }
+                text: "你确认退出吗?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                cancelButtonText: "取消",
+                closeOnConfirm: true,
+                closeOnCancel: true },
+              function(isConfirm){
+                if (isConfirm) {
+                  //进行缓存的清理和跳转
+                  ls.removeItem("info");
+                  ls.removeItem("authtoken");
+                  ls.removeItem("username");
+                  ls.removeItem("password");
+                  $state.go('Login');
+                }
 
           });
         return true;

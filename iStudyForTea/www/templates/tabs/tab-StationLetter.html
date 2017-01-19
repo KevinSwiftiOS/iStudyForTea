@@ -1,48 +1,48 @@
 <ion-view>
   <ion-nav-title>{{title}}</ion-nav-title>
 
-    <ion-nav-buttons side="right">
+  <ion-nav-buttons side="right">
 
-        <!--写邮件的-->
-        <button class="button ion-compose" ng-click="writeEmail()" style="width: 50px"></button>
-        <!--选择信件的-->
-        <button class="button ion-more" ng-click="openPopover($event)"  style="width: 50px"></button>
-    </ion-nav-buttons>
-        <!--中间的内容-->
+    <!--写邮件的-->
+    <button class="button ion-compose" ng-click="writeEmail()" style="width: 50px"></button>
+    <!--选择信件的-->
+    <button class="button ion-more" ng-click="openPopover($event)" style="width: 50px"></button>
+  </ion-nav-buttons>
+  <!--中间的内容-->
 
-            <ion-content>
-                <!--脚本-->
-                <script id = "station-popover.html" type="text/ng-template">
-                    <ion-popover-view style="height: 100px;width: 100px;background-color: #2c64f0">
-                        <ion-content style="margin-top: -5px">
-                            <ion-list >
-                                <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="selectStation($index)">
-                                    <i class="{{popItem.iconName}}"></i>
-                                        {{popItem.rowName}}
-                                    </div>
-                                </ion-item>
-                            </ion-list>
-                        </ion-content>
-                    </ion-popover-view>
-                </script>
-              <ion-refresher
-                pulling-text="下拉刷新..."
-                on-refresh="doRefresh()">
-              </ion-refresher>
-              <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
-                <ion-list>
-                    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items"
-                              type="item-text-wrap" ng-click="goToRead($index)">
-                        <img src="{{item.img}}">
-                        <h2>{{item.subject}}</h2>
+  <ion-content>
+    <!--脚本-->
+    <script id="station-popover.html" type="text/ng-template">
+      <ion-popover-view style="height: 100px;width: 100px;background-color: #2c64f0">
+        <ion-content style="margin-top: -5px">
+          <ion-list>
+            <ion-item class="item-positive" ng-repeat="popItem in popItems" ng-click="selectStation($index)">
+              <i class="{{popItem.iconName}}"></i>
+              {{popItem.rowName}}
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in items"
+                type="item-text-wrap" ng-click="goToRead($index)">
+        <img src="{{item.img}}">
+        <h2>{{item.subject}}</h2>
 
-                        <p>{{item.sendername}}于{{item.date}} 发表</p>
-                        <!--删除的按钮-->
-                        <ion-option-button class="button-assertive" ng-click="removeLetter($index)">
-                            删除
-                        </ion-option-button>
-                    </ion-item>
-                </ion-list>
-            </ion-content>
+        <p>{{item.sendername}}于{{item.date}} 发表</p>
+        <!--删除的按钮-->
+        <ion-option-button class="button-assertive" ng-click="removeLetter($index)">
+          删除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 
 </ion-view>
