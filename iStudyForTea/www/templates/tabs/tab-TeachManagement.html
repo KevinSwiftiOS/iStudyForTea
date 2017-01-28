@@ -1,24 +1,24 @@
 <ion-view view-title="教学管理">
   <ion-nav-buttons side="right">
     <button class="button ion-plus" ng-click="openPopover($event)"></button>
-    </ion-nav-buttons>
+  </ion-nav-buttons>
   <ion-header-bar>
-  <div class="tabs-striped tabs-top">
-    <div class="tabs">
-      <a ng-class="courseTab" ng-click="selectCourse()">
-       课程列表
-      </a>
-      <a ng-class="stuTab" ng-click="selectStu()">
-        学生库列表</a>
+    <div class="tabs-striped tabs-top">
+      <div class="tabs">
+        <a ng-class="courseTab" ng-click="selectCourse()">
+          课程列表
+        </a>
+        <a ng-class="stuTab" ng-click="selectStu()">
+          学生库列表</a>
+      </div>
     </div>
-</div>
   </ion-header-bar>
   <ion-content>
-    <script id = "my-popover.html" type="text/ng-template">
+    <script id="my-popover.html" type="text/ng-template">
       <ion-popover-view style="height: 100px;width: 115px;background-color: #2c64f0">
         <ion-content style="margin-top: -5px">
-          <ion-list >
-            <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
+          <ion-list>
+            <ion-item class="item-positive" ng-repeat="popItem in popItems" ng-click="addNew($index)">
               <i class="{{popItem.iconName}}"></i>
               {{popItem.rowName}}
               </div>
@@ -27,26 +27,26 @@
         </ion-content>
       </ion-popover-view>
     </script>
-<div class="content has-header">
-  <ion-refresher
-    pulling-text="下拉刷新..."
-    on-refresh="doRefresh()">
-  </ion-refresher>
-  <div ng-include="'templates/Commons/Empty.html'" ng-if = 'items.length > 0 ? false:true'></div>
-  <ion-list>
-    <!--到新的界面去 点击事件有所不同-->
-    <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="goToStuListOrCourse($index)" collection-repeat="item in items">
-        <h2>{{item.name}}</h2>
-
-      <ion-option-button class="button-assertive" ng-click="remove(chat)">
-        删除
-      </ion-option-button>
-      <ion-option-button class="button-balanced" ng-click="remove(chat)">
-        编辑
-      </ion-option-button>
-    </ion-item>
-  </ion-list>
- </div>
-</div>
-</ion-content>
+    <div class="content has-header">
+      <ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="doRefresh()">
+      </ion-refresher>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+      <ion-list>
+        <!--到新的界面去 点击事件有所不同-->
+        <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap"
+                  ng-click="goToStuListOrCourse($index)" collection-repeat="item in items">
+          <h2>{{item.name}}</h2>
+          <ion-option-button class="button-assertive" ng-click="remove(chat)">
+            删除
+          </ion-option-button>
+          <ion-option-button class="button-balanced" ng-click="remove(chat)">
+            编辑
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+    </div>
+  </ion-content>
 </ion-view>

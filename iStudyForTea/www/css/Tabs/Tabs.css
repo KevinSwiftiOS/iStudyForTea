@@ -1,0 +1,14 @@
+.avaturlStyle{
+  margin-left: 20px;
+  margin-top:20px;
+  width: 120px;
+  height:120px;
+  border-radius:60px 60px 60px 60px;
+  text-align: center
+}
+.usernameStyle{
+  height: 30px;
+  width: 120px;
+  margin-left: 20px;
+  text-align: center;
+}

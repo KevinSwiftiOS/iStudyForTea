@@ -26,85 +26,45 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SystemService.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/js/services/SystemManagement/SystemService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetailInfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/SystemManagement/DetailInfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-SystemManagement.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-SystemManagement.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SystemManagementCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/SystemManagementCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tabs/tabs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-              <folding>
-                <element signature="n#style#0;n#ion-list#0;n#ion-content#0;n#ion-side-menu#0;n#ion-side-menus#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab-StationLetter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-StationLetter.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+              <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/LoginCtrl.js">
+      <file leaf-file-name="StudyPlan.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="600">
+              <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoOverCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="goOver.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/goOver.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,114 +72,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11160">
-              <caret line="745" column="3" lean-forward="false" selection-start-line="744" selection-start-column="39" selection-end-line="744" selection-end-column="54" />
-              <folding>
-                <marker date="1484821431000" expanded="true" signature="6622:21927" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="10015:10309" ph="{&quot;url&quot;: &quot;/SystemManagement/DetailInfo/:chatid&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="10115:10300" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="10146:10288" ph="{&quot;templateUrl&quot;: 'templates/SystemManagement/DetailInfo.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="10369:10664" ph="{&quot;url&quot;: &quot;/StationLetter/ReadEmail&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="10475:10655" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="10506:10643" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/ReadEmail.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="10725:11051" ph="{&quot;url&quot;: &quot;/StationLetter/WriteEmail&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="10860:11042" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="10891:11030" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/WriteEmail.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="11061:11100" ph="//..." />
-                <marker date="1484821431000" expanded="true" signature="11144:11392" ph="{&quot;url&quot;: '/StationLetter/ShowBigImage'...}" />
-                <marker date="1484821431000" expanded="true" signature="11237:11385" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="11262:11377" ph="{&quot;templateUrl&quot;: 'templates/Commons/ShowBigImage.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="11456:11718" ph="{&quot;url&quot;: &quot;/StationLetter/ContactPerson&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="11521:11709" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="11552:11697" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/ContactPerson.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="11787:12090" ph="{&quot;url&quot;: &quot;/TeachManagement/StudentList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="11887:12081" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="11918:12069" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/StudentList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="12159:12453" ph="{&quot;url&quot;: &quot;/TeachManagement/StudentInf&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="12252:12444" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="12283:12432" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/StudentInf.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="12539:12856" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewStuToGroup&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="12643:12847" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="12674:12835" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/AddNewStuToGroup.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="12931:13200" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewStuGroup&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="12999:13191" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="13030:13179" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/AddNewStuGroup.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="13270:13533" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewCourse&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="13336:13524" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="13367:13512" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/AddNewCourse.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="13616:13943" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStudyPlan&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="13732:13934" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="13763:13922" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="14046:14360" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStudyPlanGoOver&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="14155:14351" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="14186:14339" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StudyPlan/goOver.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="14445:14771" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseProperty&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="14560:14762" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="14591:14750" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseProperty.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="14863:15216" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseAnnoucement&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="14981:15207" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="15012:15195" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="15320:15700" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseAnnoucementDetainInfo&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="15445:15691" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="15476:15679" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfo.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="15797:16145" ph="{&quot;url&quot;: &quot;/TeachManagement/CourseAddAnnoucement&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="15904:16136" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="15935:16124" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/AddCourseAnnoucement.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="16242:16601" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStuInOneCourseList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="16367:16592" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="16398:16580" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StuInOneCourse/StuInOneCourseList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="16690:17016" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseResource&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="16805:17007" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="16836:16995" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseResource.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="17109:17435" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseHomeWorkList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="17228:17426" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="17259:17414" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/HomeWorkList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="17528:17854" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseExerciseList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="17647:17845" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="17678:17833" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/ExerciseList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="17948:18277" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseExprementList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="18068:18268" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="18099:18256" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/ExprementList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="18378:18711" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseEditHomeWorkDetail&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="18492:18702" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="18523:18690" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/EditHomeWorkDetail.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="18798:19125" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseDiscuss&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="18912:19116" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="18943:19104" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/MainDiscuss.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="19220:19589" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteDetail&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="19378:19580" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="19409:19568" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/DetailNote.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="19687:20030" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="19813:20021" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="19844:20009" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="20129:20426" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyDetail&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="20239:20419" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="20264:20411" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/DetailReplyNote.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="20485:20779" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyWriteTopic&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="20602:20772" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="20627:20764" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/WriteTopic.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="20878:21214" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStuInGradeList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="20993:21205" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="21024:21193" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/GradeList/StuInGradeList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="21314:21642" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseDetailGradeList&quot;...}" />
-                <marker date="1484821431000" expanded="true" signature="21419:21633" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="21450:21621" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/GradeList/DetailGradeList.html'...}" />
-                <marker date="1484821431000" expanded="true" signature="21732:21782" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="21787:21924" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="21995:22109" ph="{...}" />
-                <marker date="1484821431000" expanded="true" signature="22006:22107" ph="{&quot;restrict&quot;: 'A'...}" />
-                <marker date="1484821431000" expanded="true" signature="22174:22293" ph="{&quot;restrict&quot;: 'A'...}" />
-                <marker date="1484821431000" expanded="true" signature="22235:22285" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadEmailCtrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/controllers/StationLetter/ReadEmailCtrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="1096">
+              <caret line="421" column="30" lean-forward="false" selection-start-line="421" selection-start-column="13" selection-end-line="421" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -231,41 +85,32 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hostip</find>
+      <find>console.log</find>
+      <find>rowName</find>
+      <find>goToDifferent</find>
+      <find>courseTab</find>
+      <find>tab.TeachManagement-OneCourseProperty</find>
+      <find>back</find>
+      <find>modalHide</find>
+      <find>inputBack</find>
+      <find>getFileContentAsBase64</find>
+      <find>finish</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/templates/Commons/StuList.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/GradeList/StuInGradeListCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseResourceCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/tabs/TabsCtrl.js" />
-        <option value="$PROJECT_DIR$/www/templates/tabs/tabs.html" />
-        <option value="$PROJECT_DIR$/www/templates/tabs/tab-Personal.html" />
-        <option value="$PROJECT_DIR$/www/templates/Personal/ResetPassword.html" />
-        <option value="$PROJECT_DIR$/www/templates/Commons/Empty.html" />
-        <option value="$PROJECT_DIR$/www/templates/tabs/tab-TeachManagement.html" />
-        <option value="$PROJECT_DIR$/www/templates/StationLetter/ContactPerson.html" />
-        <option value="$PROJECT_DIR$/www/js/services/StationLetter/StationLetterServices.js" />
-        <option value="$PROJECT_DIR$/www/lib/angular-loading/spin.js" />
         <option value="$PROJECT_DIR$/www/lib/imgShowBig/js/hammer.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/tabs/controllers.js" />
         <option value="$PROJECT_DIR$/www/templates/StationLetter/WriteEmail.html" />
         <option value="$PROJECT_DIR$/www/templates/StationLetter/ReadEmail.html" />
-        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/SendIdentity.html" />
-        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/ResetPassword.html" />
-        <option value="$PROJECT_DIR$/www/js/app.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/LoginCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/SendIdentityCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/WriteEmailCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/Personal/ResetPasswordCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/StationLetter/ContactPersonCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/StationLetter/ReadEmailCtrl.js" />
@@ -273,26 +118,46 @@
         <option value="$PROJECT_DIR$/www/js/controllers/SystemManagement/AddAnnoucementCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/tabs/StationLetterCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/tabs/SystemManagementCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/tabs/TeachManagementCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAddAnnoucementCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/StudyPlanCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StuInOneCourse/StuInOneCourseListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/ExerciseListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/ExprementListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/HomeWorkListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/Student/StudentListCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewStuGroupCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/services/CommonServices/services.js" />
         <option value="$PROJECT_DIR$/www/js/controllers/tabs/PersonalCtrl.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/templates/tabs/tab-StationLetter.html" />
-        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/Login.html" />
         <option value="$PROJECT_DIR$/www/templates/tabs/tab-SystemManagement.html" />
+        <option value="$PROJECT_DIR$/www/css/LoginAndReset/LoginAndReset.css" />
+        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/Login.html" />
+        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/WriteEmail.html" />
+        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/ResetPassword.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/WriteEmailCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/LoginAndReset/SendIdentity.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/LoginCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/SendIdentityCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js" />
+        <option value="$PROJECT_DIR$/www/css/tabs/Tabs.css" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/tabs/TabsCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/templates/tabs/tab-TeachManagement.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/tabs/TeachManagementCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/tabs/tabs.html" />
+        <option value="$PROJECT_DIR$/www/templates/TeachManagement/AddNewStuGroup.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewStuGroupCtrl.js" />
+        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewCourseCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/TeachManagement/AddNewCourse.html" />
+        <option value="$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/CourseProperty.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html" />
+        <option value="$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/StudyPlanCtrl.js" />
+        <option value="$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/goOver.html" />
       </list>
     </option>
   </component>
@@ -311,7 +176,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="252" />
+    <option name="y" value="31" />
     <option name="width" value="1440" />
     <option name="height" value="798" />
   </component>
@@ -397,7 +263,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tabs" />
+              <option name="myItemId" value="TeachManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCourse" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,7 +289,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SystemManagement" />
+              <option name="myItemId" value="TeachManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudyPlan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,55 +355,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iStudyForTea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iStudyForTea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iStudyForTea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iStudyForTea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tabs" />
+              <option name="myItemId" value="TeachManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,7 +385,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StationLetter" />
+              <option name="myItemId" value="TeachManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCourse" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -577,7 +415,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Personal" />
+              <option name="myItemId" value="TeachManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudyPlan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,6 +463,8 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="editor.config.accepted" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -616,6 +486,12 @@
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -736,20 +612,26 @@
       <workItem from="1484402013263" duration="200000" />
       <workItem from="1484743626951" duration="393000" />
       <workItem from="1484821721175" duration="486000" />
+      <workItem from="1484900270303" duration="244000" />
+      <workItem from="1484900992756" duration="662000" />
+      <workItem from="1484901936658" duration="446000" />
+      <workItem from="1485418489271" duration="1167000" />
+      <workItem from="1485497126553" duration="4236000" />
+      <workItem from="1485607778454" duration="3684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122969000" />
+    <option name="totallyTimeSpent" value="133408000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="798" extended-state="6" />
+    <frame x="252" y="31" width="1440" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21597221" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10562414" sideWeight="0.50555557" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11659808" sideWeight="0.50555557" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -806,112 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/SystemManagement/DetailInfoCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/SystemManagement/AddNewAccountCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/SystemManagement/AddAnnoucementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="71" lean-forward="false" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/StationLetter/WriteEmailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="148" column="36" lean-forward="false" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/StationLetter/ContactPersonCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/SystemManagement/ManageAccountCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/StationLetterCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1728">
-          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/TabsCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/TeachManagementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="94" column="11" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAddAnnoucementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -944,13 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="266" column="44" lean-forward="false" selection-start-line="266" selection-start-column="44" selection-end-line="266" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/StudyPlanCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="46" column="34" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -989,20 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="116" column="18" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/HomeWorkListCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -1031,25 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewCourseCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewStuGroupCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers/Personal/ResetPasswordCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-Personal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-555">
@@ -1082,155 +814,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tabs/tabs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#ion-list#0;n#ion-content#0;n#ion-side-menu#0;n#ion-side-menus#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/ResetPassword.html">
+    <entry file="file://$PROJECT_DIR$/www/js/services/SystemManagement/SystemService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-StationLetter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/LoginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="37" lean-forward="false" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11160">
-          <caret line="745" column="3" lean-forward="false" selection-start-line="744" selection-start-column="39" selection-end-line="744" selection-end-column="54" />
-          <folding>
-            <marker date="1484821431000" expanded="true" signature="6622:21927" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="10015:10309" ph="{&quot;url&quot;: &quot;/SystemManagement/DetailInfo/:chatid&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="10115:10300" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="10146:10288" ph="{&quot;templateUrl&quot;: 'templates/SystemManagement/DetailInfo.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="10369:10664" ph="{&quot;url&quot;: &quot;/StationLetter/ReadEmail&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="10475:10655" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="10506:10643" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/ReadEmail.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="10725:11051" ph="{&quot;url&quot;: &quot;/StationLetter/WriteEmail&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="10860:11042" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="10891:11030" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/WriteEmail.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="11061:11100" ph="//..." />
-            <marker date="1484821431000" expanded="true" signature="11144:11392" ph="{&quot;url&quot;: '/StationLetter/ShowBigImage'...}" />
-            <marker date="1484821431000" expanded="true" signature="11237:11385" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="11262:11377" ph="{&quot;templateUrl&quot;: 'templates/Commons/ShowBigImage.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="11456:11718" ph="{&quot;url&quot;: &quot;/StationLetter/ContactPerson&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="11521:11709" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="11552:11697" ph="{&quot;templateUrl&quot;: 'templates/StationLetter/ContactPerson.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="11787:12090" ph="{&quot;url&quot;: &quot;/TeachManagement/StudentList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="11887:12081" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="11918:12069" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/StudentList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="12159:12453" ph="{&quot;url&quot;: &quot;/TeachManagement/StudentInf&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="12252:12444" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="12283:12432" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/StudentInf.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="12539:12856" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewStuToGroup&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="12643:12847" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="12674:12835" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/Student/AddNewStuToGroup.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="12931:13200" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewStuGroup&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="12999:13191" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="13030:13179" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/AddNewStuGroup.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="13270:13533" ph="{&quot;url&quot;: &quot;/TeachManagement/AddNewCourse&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="13336:13524" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="13367:13512" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/AddNewCourse.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="13616:13943" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStudyPlan&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="13732:13934" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="13763:13922" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="14046:14360" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStudyPlanGoOver&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="14155:14351" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="14186:14339" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StudyPlan/goOver.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="14445:14771" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseProperty&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="14560:14762" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="14591:14750" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseProperty.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="14863:15216" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseAnnoucement&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="14981:15207" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="15012:15195" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucement.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="15320:15700" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseAnnoucementDetainInfo&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="15445:15691" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="15476:15679" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfo.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="15797:16145" ph="{&quot;url&quot;: &quot;/TeachManagement/CourseAddAnnoucement&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="15904:16136" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="15935:16124" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseAnnoucement/AddCourseAnnoucement.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="16242:16601" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStuInOneCourseList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="16367:16592" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="16398:16580" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/StuInOneCourse/StuInOneCourseList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="16690:17016" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseResource&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="16805:17007" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="16836:16995" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/CourseResource.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="17109:17435" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseHomeWorkList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="17228:17426" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="17259:17414" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/HomeWorkList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="17528:17854" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseExerciseList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="17647:17845" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="17678:17833" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/ExerciseList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="17948:18277" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseExprementList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="18068:18268" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="18099:18256" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/ExprementList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="18378:18711" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseEditHomeWorkDetail&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="18492:18702" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="18523:18690" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/EditHomeWorkDetail.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="18798:19125" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseDiscuss&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="18912:19116" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="18943:19104" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/MainDiscuss.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="19220:19589" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteDetail&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="19378:19580" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="19409:19568" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/DetailNote.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="19687:20030" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="19813:20021" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="19844:20009" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/NoteReplyList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="20129:20426" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyDetail&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="20239:20419" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="20264:20411" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/DetailReplyNote.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="20485:20779" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseNoteReplyWriteTopic&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="20602:20772" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="20627:20764" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/Discuss/WriteTopic.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="20878:21214" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseStuInGradeList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="20993:21205" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="21024:21193" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/GradeList/StuInGradeList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="21314:21642" ph="{&quot;url&quot;: &quot;/TeachManagement/OneCourseDetailGradeList&quot;...}" />
-            <marker date="1484821431000" expanded="true" signature="21419:21633" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="21450:21621" ph="{&quot;templateUrl&quot;: 'templates/TeachManagement/OneCourse/GradeList/DetailGradeList.html'...}" />
-            <marker date="1484821431000" expanded="true" signature="21732:21782" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="21787:21924" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="21995:22109" ph="{...}" />
-            <marker date="1484821431000" expanded="true" signature="22006:22107" ph="{&quot;restrict&quot;: 'A'...}" />
-            <marker date="1484821431000" expanded="true" signature="22174:22293" ph="{&quot;restrict&quot;: 'A'...}" />
-            <marker date="1484821431000" expanded="true" signature="22235:22285" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/StationLetter/ReadEmailCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,15 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/SystemManagementCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,27 +832,258 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/SystemManagementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-StationLetter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/LoginAndReset/LoginAndReset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/WriteEmail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/SendIdentity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/LoginAndReset/ResetPassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="91" lean-forward="false" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/StationLetter/ReadEmailCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/WriteEmailCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/SendIdentityCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/ResetPasswordCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/TabsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tabs/tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ion-content#0;n#ion-side-menu#0;n#ion-side-menus#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-side-menu#0;n#ion-side-menus#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ion-list#0;n#ion-content#0;n#ion-side-menu#0;n#ion-side-menus#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/LoginAndReset/LoginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/AddNewStuGroup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewStuGroupCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/tabs/TeachManagementCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1619">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/tabs/tab-TeachManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/AddNewCourseCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/AddNewCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/Tabs/Tabs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="421" column="30" lean-forward="false" selection-start-line="421" selection-start-column="13" selection-end-line="421" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3495">
+          <caret line="233" column="15" lean-forward="false" selection-start-line="233" selection-start-column="15" selection-end-line="233" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/CourseProperty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="43" column="111" lean-forward="true" selection-start-line="43" selection-start-column="111" selection-end-line="43" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ion-footer-bar#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/StudyPlanCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="85" column="49" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+        <state relative-caret-position="405">
+          <caret line="69" column="78" lean-forward="true" selection-start-line="69" selection-start-column="78" selection-end-line="69" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services/SystemManagement/SystemService.js">
+    <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/StudyPlan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="600">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/TeachManagement/OneCourse/StudyPlan/goOver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#ion-item#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

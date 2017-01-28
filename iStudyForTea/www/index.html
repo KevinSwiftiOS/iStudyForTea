@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style type = "text/css">
+  <style type="text/css">
 
   </style>
-  </head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title></title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<title></title>
 
-  <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json">
 
 <!-- un-comment this code to enable service worker
   <script>
@@ -20,50 +20,54 @@
     }
   </script>-->
 <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
-  <link href="lib/sweetalert/dist/sweetalert.css" rel="stylesheet">
+
+
+
+
+<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+<link href="lib/sweetalert/dist/sweetalert.css" rel="stylesheet">
 
 <link href="lib/ionic-images/dist/ionic-images.min.css" rel="stylesheet">
 
 
 
 
-
-
-
-
+<!--登录与重置密码界面的css-->
+<link href="css/LoginAndReset/LoginAndReset.css" rel="stylesheet" type="text/css">
+<!--主界面tabs的css-->
+<link href="css/Tabs/Tabs.css" rel="stylesheet" type="text/css">
 <!--<link href="lib/timePicker/time-picker.css" rel="stylesheet">-->
-  <!--<link href="lib/datePicker/ionic-datepicker.styles.css" rel="stylesheet">->
-  <!--加载动画的-->
+<!--<link href="lib/datePicker/ionic-datepicker.styles.css" rel="stylesheet">->
+<!--加载动画的-->
 
-  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-  <link href="css/ionic.app.css" rel="stylesheet">
-  -->
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+<link href="css/ionic.app.css" rel="stylesheet">
+-->
 
-  <!-- ionic/angularjs js -->
-  <!--加载弹出框的显示-->
-  <script src="lib/ionic/js/ionic.bundle.js"></script>
+<!-- ionic/angularjs js -->
+<!--加载弹出框的显示-->
+<script src="lib/ionic/js/ionic.bundle.js"></script>
 
-  <script src="lib/sweetalert/dist/sweetalert.min.js"></script>
-  <!--加载动画的-->
-  <script src = "lib/angular-animate/angular-animate.js"></script>
-  <!-- cordova script (this will be a 404 during development) -->
+<script src="lib/sweetalert/dist/sweetalert.min.js"></script>
+<!--加载动画的-->
+<script src="lib/angular-animate/angular-animate.js"></script>
+<!-- cordova script (this will be a 404 during development) -->
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/ionic-images/dist/ionic-images.all.min.js"></script>
 
 
+<script src="lib/ngCordova/dist/ng-cordova.js"></script>
 
-  <script src = "lib/ngCordova/dist/ng-cordova.js"></script>
-
-  <script src="cordova.js"></script>
+<script src="cordova.js"></script>
 <!--base64加密-->
-<script src = "lib/angular-utf8-base64/angular-utf8-base64/angular-utf8-base64.js"></script>
+<script src="lib/angular-utf8-base64/angular-utf8-base64/angular-utf8-base64.js"></script>
 
 
-  <!--&lt;!&ndash;Cordova的引用&ndash;&gt;-->
-  <!--<script src = "lib/datePicker/ionic-datepicker.bundle.min.js"></script>-->
-  <!--<script src = "lib/timePicker/ionic-timepicker.bundle.min.js"></script>-->
+<!--&lt;!&ndash;Cordova的引用&ndash;&gt;-->
+<!--<script src = "lib/datePicker/ionic-datepicker.bundle.min.js"></script>-->
+<!--<script src = "lib/timePicker/ionic-timepicker.bundle.min.js"></script>-->
 </head>
 <body ng-app="starter">
 <!--
@@ -83,17 +87,17 @@
 <script src="js/app.js"></script>
 <script src="js/services/CommonServices/services.js"></script>
 <!--系统管理中的服务-->
-<script src = "js/services/SystemManagement/SystemService.js"></script>
+<script src="js/services/SystemManagement/SystemService.js"></script>
 <!--站内信中的服务-->
-<script src = "js/services/StationLetter/StationLetterServices.js"></script>
+<script src="js/services/StationLetter/StationLetterServices.js"></script>
 <!--教学管理中的讨论区的服务-->
-<script src = "js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js"></script>
+<script src="js/services/TeachManagement/OneCourse/Discuss/DiscussServices.js"></script>
 <!--主ctrl-->
 <!--菜单的ctrl-->
-<script src = "js/controllers/tabs/TabsCtrl.js"></script>
+<script src="js/controllers/tabs/TabsCtrl.js"></script>
 <script src="js/controllers/tabs/controllers.js"></script>
 <!--图片放大的ctrl-->
-<script src = "js/controllers/Commons/ImageShowBigCtrl.js"></script>
+<script src="js/controllers/Commons/ImageShowBigCtrl.js"></script>
 <!--tab里面的ctrl-->
 <script src="js/controllers/tabs/StationLetterCtrl.js"></script>
 <script src="js/controllers/tabs/SystemManagementCtrl.js"></script>
@@ -110,47 +114,47 @@
 <script src="js/controllers/SystemManagement/AddAnnoucementCtrl.js"></script>
 <script src="js/controllers/SystemManagement/ManageAccountCtrl.js"></script>
 <script src="js/controllers/SystemManagement/DetailInfoCtrl.js"></script>
-<script src = "js/controllers/SystemManagement/AddNewAccountCtrl.js"></script>
+<script src="js/controllers/SystemManagement/AddNewAccountCtrl.js"></script>
 <!--站内信模块的-->
 <script src="js/controllers/StationLetter/ReadEmailCtrl.js"></script>
 <script src="js/controllers/StationLetter/WriteEmailCtrl.js"></script>
 <script src="js/controllers/StationLetter/ContactPersonCtrl.js"></script>
 <!--教学管理模块的-->
-<script src ="js/controllers/TeachManagement/AddNewStuGroupCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/AddNewCourseCtrl.js"></script>
+<script src="js/controllers/TeachManagement/AddNewStuGroupCtrl.js"></script>
+<script src="js/controllers/TeachManagement/AddNewCourseCtrl.js"></script>
 <script src="js/controllers/TeachManagement/Student/StudentListCtrl.js"></script>
 <script src="js/controllers/TeachManagement/Student/StudengInfoCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/Student/AddNewStuToGroupCtrl.js"></script>
+<script src="js/controllers/TeachManagement/Student/AddNewStuToGroupCtrl.js"></script>
 
 <!--教学管理模块的一门课程中的8个界面-->
 <!--学习计划模块-->
 <script src="js/controllers/TeachManagement/OneCourse/StudyPlan/StudyPlanCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/StudyPlan/GoOverCtrl.js"></script>
 
 <!--课程属性模块-->
 <script src="js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js"></script>
 <!--课程公告模块-->
 <script src="js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAddAnnoucementCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfoCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/CourseAnnoucement/CourseAddAnnoucementCtrl.js"></script>
 <!--学生列表模块-->
-<script src = "js/controllers/TeachManagement/OneCourse/StuInOneCourse/StuInOneCourseListCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/StuInOneCourse/StuInOneCourseListCtrl.js"></script>
 <!--课程资源模块-->
 <script src="js/controllers/TeachManagement/OneCourse/CourseResourceCtrl.js"></script>
 <!--实验 练习 作业模块-->
 <script src="js/controllers/TeachManagement/OneCourse/HomeWorkListCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/ExerciseListCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/ExprementListCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/EditHomeWorkDetailCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/ExerciseListCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/ExprementListCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/EditHomeWorkDetailCtrl.js"></script>
 
 <!--成绩列表模块-->
 <script src="js/controllers/TeachManagement/OneCourse/GradeList/StuInGradeListCtrl.js"></script>
 <script src="js/controllers/TeachManagement/OneCourse/GradeList/DetailGradeListCtrl.js"></script>
 <!--讨论区模块-->
 <script src="js/controllers/TeachManagement/OneCourse/Discuess/MainDiscuess.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js"></script>
-<script src = "js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyListCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js"></script>
+<script src="js/controllers/TeachManagement/OneCourse/Discuess/WriteTopicCtrl.js"></script>
 </body>
 </html>

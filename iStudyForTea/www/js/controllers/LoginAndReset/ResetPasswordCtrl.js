@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/23.
  */
-app.controller("ResetPsswordCtrl",function ($scope,$state,httpService,$stateParams) {
+app.controller("ResetPsswordCtrl", function ($scope, $state, httpService, $stateParams) {
 
 
   $scope.config = function () {
@@ -10,16 +10,16 @@ app.controller("ResetPsswordCtrl",function ($scope,$state,httpService,$statePara
     var configNewPassword = angular.element(document.querySelector('#configNewPassword')).val();
     var token = $stateParams.token;
     if (newPassword === configNewPassword) {
-     var params = {
-       token:token,
-       newpassword:newPassword
-     }
-     var promise = httpService.infoPost("api/resetpassowrd",params);
+      var params = {
+        token: token,
+        newpassword: newPassword
+      }
+      var promise = httpService.infoPost("api/resetpassowrd", params);
       promise.then(function (res) {
         var username = res["info"].username;
         var ls = window.localStorage;
-        ls.setItem("username",username);
-        ls.setItem("password",newPassword);
+        ls.setItem("username", username);
+        ls.setItem("password", newPassword);
         swal({
             title: "恭喜您",
             text: "修改密码成功成功",
@@ -36,7 +36,7 @@ app.controller("ResetPsswordCtrl",function ($scope,$state,httpService,$statePara
       })
 
     } else {
-      swal("提醒","密码填写不相同","warning");
+      swal("提醒", "密码填写不相同", "warning");
     }
   }
 });
