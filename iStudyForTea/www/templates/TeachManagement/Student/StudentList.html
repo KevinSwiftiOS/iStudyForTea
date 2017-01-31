@@ -1,33 +1,33 @@
 <ion-view view-title="学生列表">
- <!--右上角加一个加的按钮-->
-    <ion-nav-buttons side="right">
-        <button class="button ion-plus" ng-click="openPopover($event)"></button>
+  <!--右上角加一个加的按钮-->
+  <ion-nav-buttons side="right">
+    <button class="button ion-plus" ng-click="openPopover($event)"></button>
 
-    </ion-nav-buttons>
+  </ion-nav-buttons>
 
-    <ion-content>
-      <ion-refresher
-        pulling-text="下拉刷新..."
-        on-refresh="doRefresh()">
+  <ion-content>
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
 
-      </ion-refresher>
-        <!--弹出模框的定义-->
-        <script id = "StuListPopOver.html" type="text/ng-template">
-            <ion-popover-view style="height: 110px;width: 100px;">
-                <ion-content>
-                    <ion-list>
-                        <ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">
-                            <div style="text-align: left;margin-left: -10px">
-                                {{popItem.rowName}}
-                            </div>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-popover-view>
-        </script>
+    </ion-refresher>
+    <!--弹出模框的定义-->
+    <script id="StuListPopOver.html" type="text/ng-template">
+      <ion-popover-view style="height: 100px;width: 115px;background-color: #2c64f0">
+        <ion-content style="margin-top: -2px">
+          <ion-list>
+            <ion-item class="item-positive" ng-repeat="popItem in popItems" ng-click="goToDifferent($index)">
+              <div style="text-align: left;margin-left: -10px">
+                {{popItem.rowName}}
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-popover-view>
+    </script>
 
-       <div ng-include="'templates/Commons/StuList.html'"></div>
-      <div ng-include="'templates/Commons/Empty.html'" ng-if = "'item.length > 0:false:true'"></div>
-    </ion-content>
+    <div ng-include="'templates/Commons/StuList.html'"></div>
+    <div ng-include="'templates/Commons/Empty.html'" ng-if="'item.length > 0:false:true'"></div>
+  </ion-content>
 </ion-view>
 

@@ -1,0 +1,75 @@
+<ion-view title="编辑作业">
+
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="save()">保存</button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+      <div class="item item-icon-right">
+        <p style="float: left">作业名称</p>
+        <p style="float: right">{{data.title}}</p>
+        <i class="icon ion-edit" style="font-size: 10px" ng-click="editTitle()"></i>
+      </div>
+      <div class="item">
+        <p style="float:left;">抽题策略</p>
+        <p style="float: right">{{data.strategy}}</p>
+      </div>
+
+      <label class="item">
+        <div>
+          <p style="float: left">开始时间：</p>
+          <input type="date" ng-model="info.datestart"
+                 placeholder="请输入开始时间" min="2013-01-01" max="2113-12-31" style="float: right;margin-top: -10px"/>
+        </div>
+      </label>
+      <label class="item">
+        <div>
+          <p style="float: left">截止时间：</p>
+          <input type="date" ng-model="info.dateend"
+                 placeholder="请输入截止时间" min="2013-01-01" max="2113-12-31" style="float: right;margin-top: -10px"/>
+        </div>
+      </label>
+
+      <div class="item item-icon-right">
+        <p style="float: left">作业说明</p>
+        <p style="float: right">{{data.memo}}</p>
+        <i class="icon ion-edit" style="font-size: 10px" ng-click="editMemo()"></i>
+      </div>
+      <div class="item">
+        <p style="float:left;">作业总分</p>
+        <p style="float:right;">{{data.score}}</p>
+      </div>
+      <div class="item item-toggle">
+        <p><font size="2.5px">禁止复制题目</font></p>
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model=data.copy>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">
+        <p><font size="2.5px">开启学生端阅卷</font></p>
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model=data.canGoOver>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">
+        <p><font size="2.5px">查卷时标准答案可见</font></p>
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model=data.canSee>
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+
+  </ion-content>
+
+</ion-view>

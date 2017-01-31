@@ -36,7 +36,7 @@ appModel.factory("discussService",function () {
       return{items:publishItems,topItems:publishTopItems,unTopItems:publishUnTopItems};
     },
 
-  courseNames:null,
+     courseNames:null,
     //回复列表的信息
     replyItems:null,
     courseId:null

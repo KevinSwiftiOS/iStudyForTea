@@ -1,40 +1,44 @@
-
 <ion-view view-title="写邮件">
   <ion-content>
-  <div>
- <div class="row">
-   <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto">
-   收件人
-     </div>
-  <div class="col">
-    <button class="button button-light button-full button-stable;" ng-click="showContactPerson()" style = "border-style: solid;border-width: 1px;border-color: darkgray">点击查看收件人</button>
-</div>
-   <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto;" >
-   <i class="ion-plus" style="font-size: 20px;"ng-click="addContactPerson()"></i>
-  </div>
-   </div>
+    <div>
+      <div class="row">
+        <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto">
+          收件人
+        </div>
+        <div class="col">
+          <button class="button button-light button-full button-stable;" ng-click="showContactPerson()"
+                  style="border-style: solid;border-width: 1px;border-color: darkgray">点击查看收件人
+          </button>
+        </div>
+        <div class="col-10" style="text-align: center;margin-top: auto;margin-bottom: auto;">
+          <i class="ion-plus" style="font-size: 20px;" ng-click="addContactPerson()"></i>
+        </div>
+      </div>
     </div>
-    <input placeholder="请输入主题" ng-model="detail.subject" style="width: 98%;margin-left: 5px;margin-right:5px;margin-top: -20px; border-width: 1px;border-color: darkgray">
+    <input placeholder="请输入主题" ng-model="detail.subject"
+           style="width: 98%;margin-left: 5px;margin-right:5px;margin-top: -20px; border-width: 1px;border-color: darkgray">
     <p style="margin-left: 5px;margin-top: 5px">文本区</p>
-    <textarea ng-style="textAreaStyle" ng-model = "detail.content"></textarea>
+    <textarea ng-style="textAreaStyle" ng-model="detail.content"></textarea>
     <p style="margin-left: 5px;margin-top: 5px">图片区</p>
     <div ng-style="imgsDivStyle">
       <div ng-repeat="img in images">
-        <img src = "{{img.src}}" style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px" ng-click="showBigImage($index)">
+        <img src="{{img.src}}"
+             style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px"
+             ng-click="showBigImage($index)">
       </div>
     </div>
-    </ion-content>
-    <ion-footer-bar align-title="center" class="bar-light">
-        <div class="button-bar button-light">
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-light">
+    <div class="button-bar button-light">
 
-            <button class="button" ng-click="selectImage()">
-                <i class="ion-image" style="font-size: 30px"></i>
-            </button>
-            <button class="button" ng-click="writeEmail()">
-                <i class="ion-ios-paperplane" style="font-size: 30px"></i>
-            </button>
+      <button class="button" ng-click="selectImage()">
+        <i class="ion-image" style="font-size: 30px"></i>
+      </button>
+      <button class="button" ng-click="writeEmail()">
+        <i class="ion-ios-paperplane" style="font-size: 30px"></i>
+      </button>
 
-        </div>
-    </ion-footer-bar>
+    </div>
+  </ion-footer-bar>
 </ion-view>
 

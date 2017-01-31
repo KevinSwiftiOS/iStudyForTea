@@ -1,31 +1,31 @@
 /**
  * Created by hcnucai on 2016/12/9.
  */
-app.controller("WriteTopicCtrl",function ($scope,httpService,$cordovaProgress,$cordovaImagePicker,uploadFile,base64,$ionicHistory,showBigImg,$stateParams,$state) {
-$scope.topic = {
-  subject:"",
-  content:""
-};
-var height = document.body.scrollHeight;
+app.controller("WriteTopicCtrl", function ($scope, httpService, $cordovaProgress, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state) {
+  $scope.topic = {
+    subject: "",
+    content: ""
+  };
+  var height = document.body.scrollHeight;
   $scope.textAreaStyle = {
-    "width" :"98%",
+    "width": "98%",
     "height": height * 0.5 + "px",
-    "margin-left":"5px",
+    "margin-left": "5px",
     "margin-right": "5px",
-    "border-style":"solid",
-    "border-width":"1px",
-    "border-color":"darkgray",
+    "border-style": "solid",
+    "border-width": "1px",
+    "border-color": "darkgray",
   }
   $scope.imgsDivStyle = {
-    "border-style":"solid",
-    "border-width":"1px",
-    "border-color":"darkgray",
+    "border-style": "solid",
+    "border-width": "1px",
+    "border-color": "darkgray",
     "width": "98%",
-    "margin-left":"5px",
-    "margin-right":"5px",
+    "margin-left": "5px",
+    "margin-right": "5px",
     "height": height * 0.4 + "px"
   }
-var images = [];
+  var images = [];
   //选择相册的
   //添加图片的操作
   $scope.selectImage = function () {
@@ -38,13 +38,13 @@ var images = [];
     $cordovaImagePicker.getPictures(options)
       .then(function (results) {
         for (var i = 0; i < results.length; i++) {
-          var dic = {src:results[i]};
+          var dic = {src: results[i]};
           images.push(dic);
         }
         $scope.images = images;
         //上传图片拿到url后进行动态加载div
 
-      }, function(error) {
+      }, function (error) {
         // error getting photos
       });
   };
@@ -53,11 +53,11 @@ var images = [];
     var subject = $scope.topic.subject;
     var content = $scope.topic.content;
 
-    if(subject == "")
-    swal("提醒","标题不能为空","warning");
-  else if(content == "" && images.length == 0)
-    swal("提醒","内容不能为空","warning");
-    else{
+    if (subject == "")
+      swal("提醒", "标题不能为空", "warning");
+    else if (content == "" && images.length == 0)
+      swal("提醒", "内容不能为空", "warning");
+    else {
       //先上传图片 再上传内容
       $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发帖中");
       var totalHtml = "";
@@ -94,28 +94,29 @@ var images = [];
   function sendTopic(totalHtml, subject, authtoken) {
     //定义参数
     var data = {
-      subject:subject,
-      parentid:"",
-      content:totalHtml,
-      forumtypeid:"",
-      projectid:$stateParams.courseid
+      subject: subject,
+      parentid: "",
+      content: totalHtml,
+      forumtypeid: "",
+      projectid: $stateParams.courseid
     }
     var param = {
-      authtoken:authtoken,
-      postype:"1",
-      data:base64.encode(angular.toJson(data))
+      authtoken: authtoken,
+      postype: "1",
+      data: base64.encode(angular.toJson(data))
     }
-    var promise = httpService.post("api/forumpost",param);
+    var promise = httpService.post("api/forumpost", param);
     promise.then(function (res) {
       $cordovaProgress.hide();
       $ionicHistory.goBack();
-    },function (err) {
+    }, function (err) {
       $cordovaProgress.hide();
-      swal("发帖失败",err,"error");
+      swal("发帖失败", err, "error");
     })
   }
+
   //图片放大
   $scope.showBigImage = function ($index) {
-    $state.go("tab.StationLette-ShowBigImage",{index:$index,imgs:images});
+    $state.go("tab.StationLette-ShowBigImage", {index: $index, imgs: images});
   }
 })

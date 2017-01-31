@@ -1,42 +1,42 @@
 <ion-view title="成绩列表">
-    <ion-nav-bar class="bar bar-positive">
-        <ion-nav-back-button class="button-clear" ng-click="goBack()">
-            <i class="ion-chevron-left"></i>返回
-        </ion-nav-back-button>
+  <ion-nav-bar class="bar bar-positive">
+    <ion-nav-back-button class="button-clear" ng-click="goBack()">
+      <i class="ion-chevron-left"></i>返回
+    </ion-nav-back-button>
     <ion-nav-buttons side="right">
-        <button class="button ion-more" ng-click="openModal()"></button>
+      <button class="button ion-more" ng-click="openModal()"></button>
     </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-content>
-        <script id = "Menu.html" type="text/ng-template">
-            <ion-modal-view>
-                <ion-header-bar class="bar bar-header bar-stable">
-                    <h1 class="title"></h1>
-                    <button class="button button-clear" ng-click="modalHide()">
-                        <i class="icon ion-close"></i>
-                    </button>
-                </ion-header-bar>
-                <ion-content style="background-color: #F6F6F6">
-                    <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
-                </ion-content>
-        </script>
-        <div class="item-input">
+  </ion-nav-bar>
+  <ion-content>
+    <script id="Menu.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-stable">
+          <h1 class="title"></h1>
+          <button class="button button-clear" ng-click="modalHide()">
+            <i class="icon ion-close"></i>
+          </button>
+        </ion-header-bar>
+        <ion-content style="background-color: #F6F6F6">
+          <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
+        </ion-content>
+    </script>
+    <div class="item-input">
 
-            <label class="item-input-wrapper">
-                <i class="icon ion-ios-search placeholder-icon"></i>
-                <input type="text" placeholder="搜索" ng-model="user.search">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="text" placeholder="搜索" ng-model="user.search">
 
-            </label>
-            <button class="button button-outline" ng-click="removeSearch()">
-                <font color="blue">取消</font>
-            </button>
-        </div>
-        <div class="list">
-            <div class="item item-avatar-left" ng-repeat="item in items" ng-click="goToDetailGradeList('{{item.id}}')">
-                <img src = {{item.image}}/>
-                <p>{{item.userno}}</p>
-                <p>{{item.username}}</p>
-            </div>
-        </div>
-    </ion-content>
+      </label>
+      <button class="button button-outline" ng-click="removeSearch()">
+        <font color="blue">取消</font>
+      </button>
+    </div>
+    <div class="list">
+      <div class="item item-avatar-left" ng-repeat="item in items" ng-click="goToDetailGradeList(item.id)">
+        <img src={{item.image}}/>
+        <p>{{item.userno}}</p>
+        <p>{{item.username}}</p>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>

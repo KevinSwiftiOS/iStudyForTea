@@ -389,7 +389,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/TeachManagement/OneCourseHomeWorkList",
       views: {
         'menuContent': {
-          templateUrl: 'templates/TeachManagement/OneCourse/HomeWorkList.html',
+          templateUrl: 'templates/TeachManagement/OneCourse/HomeWorks/HomeWorkList.html',
           controller: 'HomeWorkListCtrl',
         }
       }
@@ -401,7 +401,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/TeachManagement/OneCourseExerciseList",
       views: {
         'menuContent': {
-          templateUrl: 'templates/TeachManagement/OneCourse/ExerciseList.html',
+          templateUrl: 'templates/TeachManagement/OneCourse/HomeWorks/ExerciseList.html',
           controller: 'ExerciseListCtrl',
         }
       }
@@ -413,7 +413,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/TeachManagement/OneCourseExprementList",
       views: {
         'menuContent': {
-          templateUrl: 'templates/TeachManagement/OneCourse/ExprementList.html',
+          templateUrl: 'templates/TeachManagement/OneCourse/HomeWorks/ExprementList.html',
           controller: 'ExprementListCtrl',
         }
       }
@@ -425,7 +425,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/TeachManagement/OneCourseEditHomeWorkDetail",
       views: {
         'menuContent': {
-          templateUrl: 'templates/TeachManagement/OneCourse/EditHomeWorkDetail.html',
+          templateUrl: 'templates/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetail.html',
           controller: 'EditHomeWorkDetailCtrl',
         }
       }
@@ -495,7 +495,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
     //第二个模块中 教学管理中的一门课程中的成绩列表学生列表界面
     .state('tab.TeachManagement-OneCourseStuInGradeList', {
-      params: {id: null, index: null},
+      params: {courseid: null, index: null},
       url: "/TeachManagement/OneCourseStuInGradeList",
       views: {
         'menuContent': {

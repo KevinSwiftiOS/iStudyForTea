@@ -10,7 +10,10 @@
    <div style="text-align: center">
      {{info.title}}
    </div>
-<div style="max-height: 300px;margin: 5px" ng-bind-html="info.content"></div>
+  <ion-scroll zooming="true" direction="xy" style="width: 100%; max-height: 300px;margin-left: 10px;margin-right: 10px"
+              delegate-handle="content" on-double-tap="zoomFunction()">
+<div ng-bind-html="info.content"></div>
+  </ion-scroll>
   <p style="text-align: right;margin: 5px">发布者:{{info.author}}</p>
   <p style="text-align: right;margin: 5px">访问次数:{{info.viewtimes}}</p>
 

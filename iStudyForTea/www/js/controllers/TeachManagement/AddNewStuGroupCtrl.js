@@ -30,5 +30,5 @@ app.controller("AddNewStuGroupCtrl", function ($scope, $ionicHistory, httpServic
         swal("提醒", data, "创建失败");
       })
     }
-   }
+  }
 });

@@ -31,12 +31,6 @@ app.controller("HomeWorkListCtrl",function ($scope,$stateParams,$ionicModal,$ion
         $scope.user.search = "";
     }
   $scope.courseid = $stateParams.courseid;
-  var param = {
-    authtoken:window.localStorage.getItem("authtoken"),
-    courseid:$stateParams.courseid,
-    page:1,
-    count:100,
-  }
     //当前是第几个界面 随后界面++
     var index = $stateParams.index;
     index++;
@@ -46,10 +40,6 @@ app.controller("HomeWorkListCtrl",function ($scope,$stateParams,$ionicModal,$ion
   var items = [];
   $scope.items = items;
   //第一次进入的时候拿数据
-  var index = $stateParams.index;
-  index++;
-  $scope.index = index;
-  $scope.courseid = $stateParams.courseid;
   var param = {
     authtoken:window.localStorage.getItem("authtoken"),
     courseid:$stateParams.courseid,
@@ -63,6 +53,7 @@ app.controller("HomeWorkListCtrl",function ($scope,$stateParams,$ionicModal,$ion
   promise.then(function (data) {
     items = data;
     $scope.items = items;
+    console.log($scope.items);
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   },function (err) {
@@ -88,10 +79,7 @@ app.controller("HomeWorkListCtrl",function ($scope,$stateParams,$ionicModal,$ion
       swal("提醒",err,"error");
     })
   }
-
-
-
-    //回退的事件
+  //回退的事件
     $scope.goBack = function () {
         $ionicHistory.goBack(-1 * index);
     }

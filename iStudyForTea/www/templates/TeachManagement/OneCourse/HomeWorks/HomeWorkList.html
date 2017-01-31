@@ -1,14 +1,20 @@
-<ion-view title="课程公告">
+<ion-view title="作业列表">
   <ion-nav-bar class="bar bar-positive">
     <ion-nav-back-button class="button-clear" ng-click="goBack()">
       <i class="ion-chevron-left"></i>返回
     </ion-nav-back-button>
     <ion-nav-buttons side="right">
-      <button class="button ion-plus" ng-click="addAnnoucement()"></button>
+      <button class="button ion-plus" ng-click="addHomeWork()"></button>
       <button class="button ion-more" ng-click="openModal()"></button>
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content>
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+
+    </ion-refresher>
+
     <script id="Menu.html" type="text/ng-template">
       <ion-modal-view>
         <ion-header-bar class="bar bar-header bar-stable">
@@ -21,29 +27,7 @@
           <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
         </ion-content>
     </script>
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
-    </ion-refresher>
+    <div ng-include="'templates/Commons/HomeWorkList.html'"></div>
     <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
-    <!--没有列表信息的时候显示 其余界面均可使用-->
-    <ion-list>
-      <ion-item ng-repeat="item in items" ng-click="courseAnnDetailInfo($index)">
-        <div class="row" style="height: 30px;margin-top: -20px">
-          <div class="col">
-            <p style="float:left">{{item.title}}
-            </p>
-          </div>
-
-        </div>
-        <div class="row" style="height: 25px;margin-top: 5px;margin-bottom: -10px">
-          <i class="icon ion-android-star"></i>
-          <p><font size="2px">{{item.date}}</font></p>
-        </div>
-
-
-      </ion-item>
-    </ion-list>
-
   </ion-content>
 </ion-view>
