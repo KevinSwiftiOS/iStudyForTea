@@ -129,7 +129,6 @@ app.controller("AddAnnoucementCtrl",function ($scope,httpService,$cordovaImagePi
       istop:isTop,
       authtoken:authtoken
     }
-    console.log(param);
 
     var promise = httpService.post("apiteach/newnotify",param);
     promise.then(function () {

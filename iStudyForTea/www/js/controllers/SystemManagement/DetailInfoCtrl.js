@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/27.
  */
-app.controller("DetailInfoCtrl",function (httpService,$ionicLoading,$scope,$stateParams,$rootScope,$timeout,NotifyService,subDate,showBigImg,$ionicScrollDelegate) {
+app.controller("DetailInfoCtrl",function (httpService,$ionicLoading,$scope,$stateParams,$rootScope,$timeout,NotifyService,subDate,showBigImg,$ionicScrollDelegate,$state) {
   //请求数据
   var ls = window.localStorage;
   var param = {
@@ -25,7 +25,7 @@ app.controller("DetailInfoCtrl",function (httpService,$ionicLoading,$scope,$stat
    })
 
   $scope.edit = function () {
-
+   $state.go("tab.SystemManagement-EditAnnoucement",{info:$scope.info,id:$stateParams.id});
 
 }
 // $scope.$watch('myHtml',function (newValue,oldValue) {

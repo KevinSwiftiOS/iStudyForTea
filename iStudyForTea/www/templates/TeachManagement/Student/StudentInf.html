@@ -1,70 +1,44 @@
 <ion-view view-title="学生信息">
-    <ion-nav-buttons side="right">
-        <button class="button" ng-click="save()">完成</button>
-    </ion-nav-buttons>
     <ion-content>
         <div style="background-color: #0c60ee;height:150px ";align="center" >
             <!--头像的基本信息-->
             <div  style="background-color: #0c60ee" align=center>
-                <img src={{avatar}} style="margin-top:20px;width: 100px;height:100px;border-radius:50px 50px 50px 50px;text-align: center;" ng-click="selectHead()">
+                <img src={{stu.image}} style="margin-top:20px;width: 100px;height:100px;border-radius:50px 50px 50px 50px;text-align: center;" ng-click="selectHead()">
             </div>
         </div>
         <div class="list">
 
             <div class="item item-input">
                 <span class="input-label">用户名</span>
-                <input type="text" ng-model="stu.username" ng-disabled="true">
+                <input type="text" ng-model="stu.userno" ng-disabled="true">
 
             </div>
             <div class="item item-input">
                 <span class="input-label">姓名：</span>
-                <input type="text" ng-model="stu.name">
+                <input type="text" ng-model="stu.username" ng-disabled="true">
 
             </div>
-            <div class="item item-input">
-                <span class="input-label">校区：</span>
-                <input type="text" ng-model="stu.compus">
 
-            </div>
             <div class="item item-input">
                 <span class="input-label">院系：</span>
-                <input type="text" ng-model="stu.xy">
+                <input type="text" ng-model="stu.college" ng-disabled="true">
 
             </div>
-            <div class="item item-input" style="font-size: 14px">
-        <span class="input-label">性别</span>
-        <span style="font-size: 25px;text-align: right;top: 14px; ">
-            <i class="ion-woman" ng-click="selectWoman()"></i>
-            <label style="font-size: 14px" ng-if="woman.show">选中女</label>
-            <i class="ion-man" ng-style="man.icon" ng-click="selectMan()"></i>
-            <label style="font-size: 14px;margin-left: 0px" ng-if="man.show">选中男</label>
-        </span>
-            </div>
-            <label class="item item-input">
-                <span class="input-label">生日：</span>
-                <!--应当弄一个日期选择器-->
-                <input type="date"  ng-model="stu.birth"
-                       placeholder="请输入开始时间" min="2013-01-01" max="2113-12-31" style="float: right"/>
-            </label>
+          <div class="item item-input">
+            <span class="input-label">性别：</span>
+            <input type="text" ng-model="stu.sex" ng-disabled="true">
+
+          </div>
 
             <div class="item item-input">
                 <span class="input-label">邮箱：</span>
-                <input type="email" ng-model="stu.email">
+                <input type="email" ng-model="stu.email" ng-disabled="true">
             </div>
             <div class="item item-input">
                 <span class="input-label">电话：</span>
-                <input type="tel" ng-model="stu.tel">
+                <input type="tel" ng-model="stu.number" ng-disabled="true">
 
             </div>
-            <div class="item item-input">
-                <span class="input-label">住址：</span>
-                <input type="text" ng-model="stu.address">
-
-            </div>
-            <div class="item item-input">
-                <span class="input-label">邮编：</span>
-                <input type="number" ng-model="stu.postcode">
-
-            </div>
+        </div>
     </ion-content>
 </ion-view>

@@ -27,7 +27,7 @@
     </script>
 
     <div ng-include="'templates/Commons/StuList.html'"></div>
-    <div ng-include="'templates/Commons/Empty.html'" ng-if="'item.length > 0:false:true'"></div>
+    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
   </ion-content>
 </ion-view>
 

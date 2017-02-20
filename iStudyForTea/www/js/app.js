@@ -166,11 +166,23 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     //第一个模块 详细系统公告的
     .state('tab.SystemManagement-DetailInfo', {
       params: {"id": null},
-      url: "/SystemManagement/DetailInfo/:chatid",
+      url: "/SystemManagement/DetailInfo",
       views: {
         'menuContent': {
           templateUrl: 'templates/SystemManagement/DetailInfo.html',
           controller: 'DetailInfoCtrl',
+        }
+      }
+
+    })
+      //第三个模块 编辑系统公告
+    .state('tab.SystemManagement-EditAnnoucement', {
+      params: {"id": null,"info":null},
+      url: "/SystemManagement/EditAnnoucement",
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/SystemManagement/EditAnnoucement.html',
+          controller: 'EditAnnoucementCtrl',
         }
       }
 
@@ -241,7 +253,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
     //第二个模块 教学管理中的学生信息
     .state('tab.TeachManagement-StudentInf', {
-      params: {"id": null},
+      params: {"groupid": null,"userno":null},
       url: "/TeachManagement/StudentInf",
       views: {
         'menuContent': {

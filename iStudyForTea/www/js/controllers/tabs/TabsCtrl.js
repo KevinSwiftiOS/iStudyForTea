@@ -21,6 +21,7 @@ app.controller("tabsCtrl", function ($scope, $state, img) {
   var ls = window.localStorage;
   $scope.username = ls.getItem("username");
   $scope.img = img;
+  console.log(img.avtarurl);
   $scope.$watch('img', function (newV, oldV) {
     if (newV != oldV)
       $scope.img = newV;
