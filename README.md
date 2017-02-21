@@ -1,2 +1,2 @@
 # iStudyForTea
-第二次创建iStudy的教师版
+istudy的教师端 用的是ionic + angular js来搭建
