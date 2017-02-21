@@ -17,12 +17,12 @@
     </ion-refresher>
     <!--弹出模框的定义-->
     <script id="StuListInOneCoursePopOver.html" type="text/ng-template">
-      <ion-popover-view style="height:55px;width: 100px;">
+      <ion-popover-view style="height:50px;width: 100px;">
         <ion-content>
           <ion-list>
             <ion-item class="item-positive" ng-repeat="popItem in popItems" ng-click="goToDifferent($index)">
-              <div style="text-align: left;margin-left: -10px">
-                {{popItem.rowName}}
+              <div style="text-align: center;margin-top: -10px;">
+                <p style="font-size: 16px;color: white">{{popItem.rowName}}</p>
               </div>
             </ion-item>
           </ion-list>

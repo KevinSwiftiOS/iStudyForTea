@@ -104,18 +104,18 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
   //列表刷新
 
   //重置密码的操作
-  $scope.resetPassword = function (id, userno) {
+  $scope.resetPassword = function (userno) {
     //重置密码的操作
     alert(userno);
   }
   //编辑的操作
-  $scope.edit = function (id, userno) {
+  $scope.edit = function (userno) {
     //到学生信息界面
     $state.go("tab.TeachManagement-StudentInf", {userno: userno,groupid:$stateParams.groupid});
 
   }
   //删除的操作
-  $scope.remove = function (id, userno) {
-    alert(id);
+  $scope.remove = function (userno) {
+    alert(userno);
   }
 })
