@@ -67,6 +67,7 @@ app.controller("ExerciseListCtrl", function ($scope, $stateParams, $ionicModal, 
     var promise = httpService.post("apiteach/exercisequeryteach", param);
     promise.then(function (data) {
       items = data;
+      //还未定义分割时间日期的字符串
       $scope.items = items;
       $ionicLoading.hide();
       $scope.$broadcast('scroll.refreshComplete');

@@ -92,15 +92,6 @@ function($http, $q,hostip) {
   };
 
 });
-//定义服务器的地址
-
-appModel.factory("swalService",function () {
-  return {
-    cusSwal: function (type, message) {
-
-    }
-  }
-});
 appModel.factory("uploadFile",function ($q) {
   return {
     upload: //上传文件
@@ -157,6 +148,7 @@ appModel.factory("subDate",function () {
       var year = date.substr(0,4);
       var month = date.substr(4,2);
       var day = date.substr(6,2);
+      //还有精确到秒
       return year + "-" + month + "-" + day;
     }
   }
