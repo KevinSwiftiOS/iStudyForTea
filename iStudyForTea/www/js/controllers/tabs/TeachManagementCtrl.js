@@ -46,6 +46,7 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
     count: 100,
     page: 1
   }
+  console.log(param);
 //第一次加载
   //监听服务
   $ionicLoading.show({

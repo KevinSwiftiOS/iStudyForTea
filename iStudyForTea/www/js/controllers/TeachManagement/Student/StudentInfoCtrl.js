@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/28.
  */
-app.controller("StudentInfCtrl",function ($scope,$state,$ionicHistory,$ionicActionSheet,$stateParams,httpService) {
+app.controller("StudentInfoCtrl",function ($scope,$state,$ionicHistory,$ionicActionSheet,$stateParams,httpService) {
   console.log($stateParams.userno);
   console.log($stateParams.groupid);
   var ls = window.localStorage;
@@ -14,7 +14,6 @@ app.controller("StudentInfCtrl",function ($scope,$state,$ionicHistory,$ionicActi
   }
 var promise = httpService.post("apiteach/searchstudent",param);
   promise.then(function (res) {
-    var data = res[0];
      if(data.image == null || data.image == "")
        data.image = "img/head.png";
      $scope.stu = data;

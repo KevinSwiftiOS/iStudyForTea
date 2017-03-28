@@ -252,13 +252,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
     })
     //第二个模块 教学管理中的学生信息
-    .state('tab.TeachManagement-StudentInf', {
-      params: {"groupid": null,"userno":null},
+    .state('tab.TeachManagement-StudentInfo', {
       url: "/TeachManagement/StudentInf",
+      params: {"groupid": null,"userno":null},
       views: {
         'menuContent': {
           templateUrl: 'templates/TeachManagement/Student/StudentInf.html',
-          controller: 'StudentInfCtrl',
+          controller: 'StudentInfoCtrl',
         }
       }
 

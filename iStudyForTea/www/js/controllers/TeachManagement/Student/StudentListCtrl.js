@@ -64,7 +64,6 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
         items[i].image = "img/head.png";
     }
     $scope.items = items;
-    console.log($scope.items);
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   }, function (err) {
@@ -111,7 +110,8 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
   //编辑的操作
   $scope.edit = function (userno) {
     //到学生信息界面
-    $state.go("tab.TeachManagement-StudentInf", {userno: userno,groupid:$stateParams.groupid});
+    console.log(userno);
+    $state.go("tab.TeachManagement-StudentInfo", {userno: userno,groupid:$stateParams.groupid});
 
   }
   //删除的操作
