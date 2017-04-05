@@ -49,6 +49,7 @@ app.controller("HomeWorkListCtrl",function ($scope,$stateParams,$ionicModal,$ion
   $ionicLoading.show({
     template: '请等待'
   });
+  console.log(param);
   var promise = httpService.post("apiteach/homeworkqueryteach",param);
   promise.then(function (data) {
     items = data;

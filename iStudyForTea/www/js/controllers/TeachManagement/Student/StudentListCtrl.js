@@ -52,6 +52,7 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
     count: 100,
     page: 1
   }
+  console.log(param);
   $ionicLoading.show({
     template: '请等待'
   });
