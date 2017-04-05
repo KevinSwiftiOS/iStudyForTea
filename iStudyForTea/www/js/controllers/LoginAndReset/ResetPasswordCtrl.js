@@ -30,8 +30,6 @@ app.controller("ResetPsswordCtrl", function ($scope, $state, httpService, $state
           function () {
             $state.go('tab.TeachManagement');
             return true;
-
-
           });
       })
 
