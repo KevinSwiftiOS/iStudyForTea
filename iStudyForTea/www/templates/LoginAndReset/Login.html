@@ -1,40 +1,40 @@
 <ion-view view-title="登录">
-  <ion-content>
-    <h1 align="center" style="margin-top: 10px">iStudy</h1>
-    <!--范围缩小 来进行登录-->
-    <div class="list-inset listStyle">
-      <div class="row">
-        <div class="col">
-          <label class="item item-input-inset">
-            <i class="ion-person"></i>&nbsp;
-            <input type="text" placeholder="用户名" id="username">
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label class="item item-input-inset">
-            <i class="ion-android-lock"></i>&nbsp;
-            <input type="password" placeholder="密码" id="password">
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <button
+    <ion-content>
+        <h1 align="center" style="margin-top: 10px">iStudy</h1>
+        <!--范围缩小 来进行登录-->
+        <div class="list-inset listStyle">
+            <div class="row">
+                <div class="col">
+                    <label class="item item-input-inset">
+                        <i class="ion-person"></i>&nbsp;
+                        <input type="text" placeholder="用户名" id="username">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="item item-input-inset">
+                        <i class="ion-android-lock"></i>&nbsp;
+                        <input type="password" placeholder="密码" id="password">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button
 
-            class="button button-positive button-full loginAndForBtn"
-            ng-click="login()">登录
-          </button>
+                            class="button button-positive button-full loginAndForBtn"
+                            ng-click="login()">登录
+                    </button>
+                </div>
+                <div class="col">
+                    <button
+                            class="button button-assertive button-full loginAndForBtn"
+                            ui-sref="WriteEmail">忘记密码
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="col">
-          <button
-            class="button button-assertive button-full loginAndForBtn"
-            ui-sref="WriteEmail">忘记密码
-          </button>
-        </div>
-      </div>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>
 

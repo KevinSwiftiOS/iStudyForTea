@@ -26,41 +26,28 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
   });
   //定义属性
   //模板框数据的定义
-  $scope.popItems = [
-    {
-      "rowName": "新建学生",
-    },
-  ]
-  $scope.popOver = $ionicPopover.fromTemplateUrl("StuListPopOver.html", {
-    scope: $scope
-  });
-  //fromTemplateUrl的方法
-  $ionicPopover.fromTemplateUrl("StuListInOneCoursePopOver.html", {
-    scope: $scope
-  }).then(function (popover) {
-    $scope.popOver = popover;
-  });
+
 //打开的动作
-  $scope.openPopover = function ($event) {
-    $scope.popOver.show($event);
+  $scope.openPopover = function () {
+      $state.go("tab.TeachManagement-AddNewStuToGroup", ({groupid: 0}));
   }
   //清除浮动框
   $scope.$on("$destroy", function () {
     $scope.popOver.remove();
   })
-  //popItem的一些动作 跳转到不同的界面
-  $scope.goToDifferent = function ($index) {
-    //首先隐藏popOver
-    $scope.popOver.hide();
-    switch ($index) {
-      case 0:
-        //学生库的id要传过去
-        $state.go("tab.TeachManagement-AddNewStuToGroup", ({groupid: 1}));
-      case 1:
-      default:
-        break;
-    }
-  }
+  // //popItem的一些动作 跳转到不同的界面
+  // $scope.goToDifferent = function ($index) {
+  //   //首先隐藏popOver
+  //   $scope.popOver.hide();
+  //   switch ($index) {
+  //     case 0:
+  //       //学生库的id要传过去
+  //
+  //     case 1:
+  //     default:
+  //       break;
+  //   }
+  // }
   //搜索框的初始化 避免后面点取消按钮时一直找不到值
   $scope.user = {};
   $scope.removeSearch = function () {
@@ -121,19 +108,83 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
 
 
   //重置密码的操作
-  $scope.resetPassword = function (id,userno) {
-   alert(id);
+  $scope.resetPassword = function (id) {
+
     //重置密码的操作
+    swal({
+        title: "提醒",
+        text: "您确认重置该学生的密码吗?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        closeOnConfirm: true,
+        closeOnCancel: true
+      },
+
+      function (isConfirm) {
+        if (isConfirm) {
+
+          //进行缓存的清理和跳转
+          var param = {
+            authtoken:window.localStorage.getItem("authtoken"),
+            stuid:id
+          };
+          var promise = httpService.infoPost("apiteach/resetPwd",param);
+          promise.then(function () {
+          alert("重置密码成功");
+          },function (err) {
+            swal("重置失败",err,"error");
+          })
+        }
+
+      });
   }
   //编辑的操作
-  $scope.edit = function (id,userno) {
+  $scope.edit = function (id) {
     //到学生信息界面
     // $state.go("tab.TeachManagement-StudentInf",{id:id});
-  alert(id);
+
   }
   //删除的操作
-  $scope.remove = function (id,userno) {
-    alert(id);
+  $scope.remove = function (id) {
+    swal({
+        title: "提醒",
+        text: "您确认删除该学生吗?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        closeOnConfirm: true,
+        closeOnCancel: true
+      },
+
+      function (isConfirm) {
+        if (isConfirm) {
+
+          //进行缓存的清理和跳转
+          var param = {
+            authtoken:window.localStorage.getItem("authtoken"),
+            stuid:id
+          };
+          var promise = httpService.infoPost("apiteach/delstudent",param);
+          promise.then(function () {
+            alert("删除成功");
+
+            for (var i = 0; i < $scope.items.length; i++) {
+              if (items[i].id == id) {
+                $scope.items.splice(i, 1);
+                break;
+              }
+                }
+          },function (err) {
+            swal("删除失败",err,"error");
+          })
+        }
+
+      });
   }
   //回退的事件
   $scope.goBack = function () {

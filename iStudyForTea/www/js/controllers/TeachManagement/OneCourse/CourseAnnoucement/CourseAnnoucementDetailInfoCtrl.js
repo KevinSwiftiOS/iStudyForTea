@@ -1,11 +1,12 @@
 /**
  * Created by hcnucai on 2016/11/14.
  */
-app.controller("CourseAnnoucementDetailInfoCtrl",function ($scope,$stateParams,$ionicLoading,httpService,subDate,showBigImg,$ionicScrollDelegate) {
+app.controller("CourseAnnoucementDetailInfoCtrl",function ($scope,$stateParams,$ionicLoading,httpService,subDate,showBigImg,$ionicScrollDelegate,$state) {
  var index = $stateParams.index;
-  var items = $stateParams.items;
+  var item = $stateParams.item;
+  console.log(item);
   var param = {
-    id:items[index].id,
+    id:item.id,
   }
   $ionicLoading.show({
     template: '请等待'
@@ -25,7 +26,7 @@ app.controller("CourseAnnoucementDetailInfoCtrl",function ($scope,$stateParams,$
   })
 
   $scope.edit = function () {
-     alert("编辑");
+      $state.go("tab.SystemManagement-EditAnnoucement",{info:$scope.info,id:item.id,istop:item.istop});
   }
   //图片放大的动作
   var zoomed = true;

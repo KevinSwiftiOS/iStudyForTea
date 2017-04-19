@@ -1,18 +1,19 @@
 <ion-view view-title="编辑公告">
-  <ion-nav-buttons side="right">
-    <button class="button" ng-click="finish()">完成</button>
-  </ion-nav-buttons>
-  <ion-content>
-    <p style="margin-left: 5px;margin-top: 5px">标题为</p>
-    <input placeholder="请输入标题" ng-model="ann.title" style="width: 98%;margin-left: 5px;margin-right:5px;border-width: 1px;border-color: darkgray">
-    <p style="margin-left: 5px;margin-top: 5px">内容为:</p>
-    <textarea ng-style="textAreaStyle" ng-model = "ann.content"></textarea>
-  </ion-content>
-  <ion-footer-bar align-title="center" class="bar-light">
-    <div class="button-bar button-light">
-      <button class="button" ng-click="selectTop()">
-        <i class="ion-pin" ng-style="pinStyle"></i>
-      </button>
-    </div>
-  </ion-footer-bar>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="finish()">完成</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <p style="margin-left: 5px;margin-top: 5px">标题为</p>
+        <input placeholder="请输入标题" ng-model="ann.title"
+               style="width: 98%;margin-left: 5px;margin-right:5px;border-width: 1px;border-color: darkgray">
+        <p style="margin-left: 5px;margin-top: 5px">内容为:</p>
+        <textarea ng-style="textAreaStyle" ng-model="ann.content"></textarea>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-light">
+        <div class="button-bar button-light">
+            <button class="button" ng-click="selectTop()">
+                <i class="ion-pin" ng-style="pinStyle"></i>
+            </button>
+        </div>
+    </ion-footer-bar>
 </ion-view>

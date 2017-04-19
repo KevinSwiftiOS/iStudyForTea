@@ -1,67 +1,31 @@
 /**
  * Created by hcnucai on 2016/11/13.
  */
-app.controller("AddNewStuToGroupCtrl",function ($scope,$stateParams,$ionicHistory) {
+app.controller("AddNewStuToGroupCtrl",function ($scope,$stateParams,$ionicHistory,httpService) {
     console.log($stateParams.groupid);
-    $scope.stu = {
-        name:"ckq",
-        no:2014211081,
-        compus:"仓前校区",
-        xy:"杭州国际服务工程学院",
-        class:"软工142",
-        tea:"张量",
-        sex:"女",
-        birth:new Date(1995,9,3),
-        email:"17816869731@163.com",
-        tel:"88811222",
-        address:"杭州"
+    $scope.info = {
+        name:"",
+        id:"",
     }
     $scope.save = function () {
-        $ionicHistory.goBack();
-    }
-    //性别的使用
-    if($scope.stu.sex == "男") {
-       $scope.woman = {
-           show:false
-       }
-       $scope.man = {
-           icon:{
-               "margin-left":"50px",
-           },
-           show:true
-       }
-    }else{
-        $scope.woman = {
-            show:true
-        }
-        $scope.man = {
-            icon:{
-                "margin-left":"80px",
-            },
-            show:false
-        }
-    }
-    //选择男女性别
-    $scope.selectWoman = function() {
-        $scope.woman = {
-            show:true
-        }
-        $scope.man = {
-            icon:{
-                "margin-left":"80px",
-            },
-            show:false
-        }
-    }
-    $scope.selectMan = function(){
-        $scope.woman = {
-            show:false
-        }
-        $scope.man = {
-            icon:{
-                "margin-left":"50px",
-            },
-            show:true
+        var info = $scope.info;
+        if(info.name == "")
+            swal("提醒","请填写学生的姓名","warning");
+      else  if(info.id == "")
+            swal("提醒","请填写学生的学号","warning");
+        else {
+            var param = {
+                authtoken:window.localStorage.getItem("authtoken"),
+                id:info.id,
+                name:info.name
+            };
+            var promise = httpService.infoPost("apiteach/newstud",param);
+            promise.then(function (data) {
+                console.log(data);
+                swal("恭喜您","新建成功","success");
+            },function (err) {
+                swal("提醒","新建失败","error");
+            })
         }
     }
 })

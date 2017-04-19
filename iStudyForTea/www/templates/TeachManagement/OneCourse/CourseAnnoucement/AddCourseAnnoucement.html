@@ -1,46 +1,34 @@
 <ion-view view-title="添加公告">
-  <ion-nav-buttons side="right">
-    <button class="button" ng-click="finish()">完成</button>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="finish()">完成</button>
 
-  </ion-nav-buttons>
+    </ion-nav-buttons>
     <ion-content>
-      <p style="margin-left: 5px;margin-top: 5px">标题为</p>
-      <input placeholder="请输入标题" ng-model="ann.subject" style="width: 98%;margin-left: 5px;margin-right:5px;border-width: 1px;border-color: darkgray">
+        <p style="margin-left: 5px;margin-top: 5px">标题为</p>
+        <input placeholder="请输入标题" ng-model="ann.subject"
+               style="width: 98%;margin-left: 5px;margin-right:5px;border-width: 1px;border-color: darkgray">
 
-      <p style="margin-left: 5px;margin-top: 5px">文本区</p>
-      <textarea ng-style="textAreaStyle" ng-model = "ann.content"></textarea>
-      <p style="margin-left: 5px;margin-top: 5px">图片区</p>
-      <div ng-style="imgsDivStyle">
-        <div ng-repeat="img in images">
-          <img src = "{{img.src}}" style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px" ng-click="showBigImage($index)">
+        <p style="margin-left: 5px;margin-top: 5px">文本区</p>
+        <textarea ng-style="textAreaStyle" ng-model="ann.content"></textarea>
+        <p style="margin-left: 5px;margin-top: 5px">图片区</p>
+        <div ng-style="imgsDivStyle">
+            <div ng-repeat="img in images">
+                <img src="{{img.src}}"
+                     style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px"
+                     ng-click="showBigImage($index)">
+            </div>
         </div>
-      </div>
-      <p style="margin-left: 20px">创建时间{{year}}年{{month}}月{{day}}日</p>
-
+        <p style="margin-left: 20px">创建时间{{year}}年{{month}}月{{day}}日</p>
 
     </ion-content>
     <ion-footer-bar align-title="center" class="bar-light">
         <div class="button-bar button-light">
-          <button class="button" ng-click="selectImage()">
+            <button class="button" ng-click="selectImage()">
                 <i class="ion-image" style="font-size: 30px"></i>
             </button>
-            <button class="button" ng-click = "selectTop()">
+            <button class="button" ng-click="selectTop()">
                 <i class="ion-pin" ng-style="pinStyle"></i>
             </button>
         </div>
-        <!--定义脚本-->
-        <!--<script id = "AddAnnoucement.html" type="text/ng-template">-->
-            <!--<ion-popover-view style="height: 110px;width: 100px;">-->
-                <!--<ion-content>-->
-                    <!--<ion-list>-->
-                        <!--<ion-item  class="item-positive" ng-repeat="popItem in popItems"  ng-click="goToDifferent($index)">-->
-                            <!--<div align="right">-->
-                                <!--{{popItem.rowName}}-->
-                            <!--</div>-->
-                        <!--</ion-item>-->
-                    <!--</ion-list>-->
-                <!--</ion-content>-->
-            <!--</ion-popover-view>-->
-        <!--</script>-->
     </ion-footer-bar>
 </ion-view>

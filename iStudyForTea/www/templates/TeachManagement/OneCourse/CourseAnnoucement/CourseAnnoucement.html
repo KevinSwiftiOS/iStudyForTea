@@ -1,49 +1,52 @@
 <ion-view title="课程公告">
-  <ion-nav-bar class="bar bar-positive">
-    <ion-nav-back-button class="button-clear" ng-click="goBack()">
-      <i class="ion-chevron-left"></i>返回
-    </ion-nav-back-button>
-    <ion-nav-buttons side="right">
-      <button class="button ion-plus" ng-click="addAnnoucement()"></button>
-      <button class="button ion-more" ng-click="openModal()"></button>
-    </ion-nav-buttons>
-  </ion-nav-bar>
-  <ion-content>
-    <script id="Menu.html" type="text/ng-template">
-      <ion-modal-view>
-        <ion-header-bar class="bar bar-header bar-stable">
-          <h1 class="title"></h1>
-          <button class="button button-clear" ng-click="modalHide()">
-            <i class="icon ion-close"></i>
-          </button>
-        </ion-header-bar>
-        <ion-content style="background-color: #F6F6F6">
-          <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
-        </ion-content>
-    </script>
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
-    </ion-refresher>
-    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
-    <!--没有列表信息的时候显示 其余界面均可使用-->
-    <ion-list>
-      <ion-item ng-repeat="item in items" ng-click="courseAnnDetailInfo($index)">
-        <div class="row" style="height: 30px;margin-top: -20px">
-          <div class="col">
-            <p style="float:left">{{item.title}}
-            </p>
-          </div>
+    <ion-nav-bar class="bar bar-positive">
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>返回
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button ion-plus" ng-click="addAnnoucement()"></button>
+            <button class="button ion-more" ng-click="openModal()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <script id="Menu.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-stable">
+                    <h1 class="title"></h1>
+                    <button class="button button-clear" ng-click="modalHide()">
+                        <i class="icon ion-close"></i>
+                    </button>
+                </ion-header-bar>
+                <ion-content style="background-color: #F6F6F6">
+                    <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
+                </ion-content>
+        </script>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+        <!--没有列表信息的时候显示 其余界面均可使用-->
+        <ion-list>
+            <ion-item ng-repeat="item in items" ng-click="courseAnnDetailInfo($index)">
+                <div class="row" style="height: 30px;margin-top: -20px">
+                    <div class="col">
+                        <p style="float:left">{{item.title}}
+                        </p>
+                    </div>
 
-        </div>
-        <div class="row" style="height: 25px;margin-top: 5px;margin-bottom: -10px">
-          <i class="icon ion-android-star"></i>
-          <p><font size="2px">{{item.date}}</font></p>
-        </div>
+                </div>
+                <div class="row" style="height: 25px;margin-top: 5px;margin-bottom: -10px">
+                    <i class="icon ion-android-star"></i>
+                    <p><font size="2px">{{item.date}}</font></p>
+                </div>
+                <ion-option-button class="button-assertive" ng-click="remove(item)">
+                    删除
+                </ion-option-button>
 
 
-      </ion-item>
-    </ion-list>
+            </ion-item>
+        </ion-list>
 
-  </ion-content>
+    </ion-content>
 </ion-view>

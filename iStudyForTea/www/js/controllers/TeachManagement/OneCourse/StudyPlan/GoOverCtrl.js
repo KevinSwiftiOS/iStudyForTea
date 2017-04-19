@@ -3,7 +3,6 @@
  */
 //定义阅卷的ctrl
 app.controller("GoOverCtrl",function ($scope,$stateParams,httpService,$ionicLoading) {
-  console.log($stateParams.testid);
   $ionicLoading.show({
     template: '请等待'
   });
@@ -15,11 +14,9 @@ app.controller("GoOverCtrl",function ($scope,$stateParams,httpService,$ionicLoad
     count: 100,
     page: 1
   };
-  console.log(param);
   var promise = httpService.post("apiteach/examlist", param);
   promise.then(function (res) {
     items = res;
-    console.log(items);
     for (var i = 0; i < items.length; i++) {
       items[i].img = "img/head.png";
       if (items[i].issubmit == 1)
@@ -45,7 +42,6 @@ app.controller("GoOverCtrl",function ($scope,$stateParams,httpService,$ionicLoad
     var promise = httpService.post("apiteach/examlist", param);
     promise.then(function (res) {
       items = res;
-      console.log(items);
       for (var i = 0; i < items.length; i++) {
         items[i].img = "img/head.png";
         if (items[i].issubmit == 1)

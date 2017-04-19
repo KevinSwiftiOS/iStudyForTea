@@ -134,8 +134,7 @@ app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionic
       var param = {
         authtoken: ls.getItem("authtoken"),
         data: base64.encode(angular.toJson(data)),
-      }
-      console.log(param);
+      };
       var promise = httpService.infoPost("api/saveprofile", param);
       promise.then(function (res) {
         swal("恭喜您", "保存成功", "success");

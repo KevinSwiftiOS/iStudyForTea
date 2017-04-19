@@ -1,1 +1,32 @@
-<ion-view title="成绩详情"></ion-view>
+<ion-view title="成绩详情">
+    <ion-content>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="item-input">
+
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="text" placeholder="搜索" ng-model="user.search">
+
+            </label>
+            <button class="button button-outline" ng-click="removeSearch()">
+                <font color="blue">取消</font>
+            </button>
+        </div>
+        <ion-list>
+
+            <ion-item
+                    ng-repeat="item in items | filter:user.search">
+
+
+                <h2 style="float: left">{{item.UserTestNo}}
+                    {{item.truename}}</h2>
+                <p style="float: right">分数:{{item.score}}</p>
+
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

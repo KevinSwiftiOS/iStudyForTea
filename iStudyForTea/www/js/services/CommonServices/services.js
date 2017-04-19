@@ -153,6 +153,53 @@ appModel.factory("subDate",function () {
     }
   }
 });
+//时间日期的分割 分割精确到分
+appModel.factory("subDateToMin",function () {
+  return {
+
+    divedeToDay:function (date) {
+
+      var year = date.substr(0,4);
+      var month = date.substr(4,2);
+      var day = date.substr(6,2);
+      var hour = date.substr(8,2);
+      var min = date.substr(10,2);
+      //还有精确到秒
+      return year + "-" + month + "-" + day + " " + hour + ":" + min;
+    }
+  }
+});
+//时间返回date形式的
+appModel.factory("subDateToDate",function () {
+  return {
+
+    divedeToDay:function (date) {
+
+      var year = date.substr(0,4);
+      var month = date.substr(4,2);
+      var day = date.substr(6,2);
+      var hour = date.substr(8,2);
+      var min = date.substr(10,2);
+      //还有精确到秒
+      return new Date(year,month - 1,day,hour,min);
+    }
+  }
+});
+appModel.factory("subDateToDateToMin",function () {
+  return {
+
+    divedeToDay:function (date) {
+
+      var year = date.substr(0,4);
+      var month = date.substr(4,2);
+      var day = date.substr(6,2);
+      var hour = date.substr(8,2);
+      var min = date.substr(10,2);
+      //还有精确到秒
+      return new Date(year,month - 1,day,hour,min);
+    }
+  }
+});
 appModel.factory("showBigImg",function () {
   function getPosition(element) {
     var xPosition = 0;

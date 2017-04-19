@@ -1,75 +1,124 @@
 <ion-view title="编辑作业">
 
-  <ion-nav-buttons side="right">
-    <button class="button" ng-click="save()">保存</button>
-  </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="save()">保存</button>
+    </ion-nav-buttons>
 
-  <ion-content>
-    <div class="list">
-      <div class="item item-icon-right">
-        <p style="float: left">作业名称</p>
-        <p style="float: right">{{data.title}}</p>
-        <i class="icon ion-edit" style="font-size: 10px" ng-click="editTitle()"></i>
-      </div>
-      <div class="item">
-        <p style="float:left;">抽题策略</p>
-        <p style="float: right">{{data.strategy}}</p>
-      </div>
+    <ion-content>
+        <!--抽题策略列表-->
+        <!--颜色列表-->
 
-      <label class="item">
-        <div>
-          <p style="float: left">开始时间：</p>
-          <input type="date" ng-model="info.datestart"
-                 placeholder="请输入开始时间" min="2013-01-01" max="2113-12-31" style="float: right;margin-top: -10px"/>
+        <div class="list">
+            <div class="item item-icon-right">
+                <p style="float: left">作业名称</p>
+                <p style="float: right">{{info.title}}</p>
+                <i class="icon ion-edit" style="font-size: 10px" ng-click="editTitle()"></i>
+            </div>
+            <div class="item item-icon-right">
+                <p style="float:left;">抽题策略</p>
+                <p style="float: right">{{info.drawplotname}}</p>
+                <i class="icon ion-edit" style="font-size: 10px" ng-click="editdrawplot()"></i>
+            </div>
+            <div ng-if="hasHuping">
+                <div class="item item-toggle">
+                    <p><font size="2.5px">开启互评</font></p>
+                    <label class="toggle toggle-balanced">
+                        <input type="checkbox" ng-model=info.enableMutualJudge>
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </div>
+                <label class="item">
+                    <div>
+                        <p style="float: left">互评截止时间：</p>
+                        <input type="datetime-local" ng-model="info.enableMutualJudgeEndTime"
+                               placeholder="请输入互评截止时间" min="2013-01-01" max="2113-12-31"
+                               style="float: right;margin-top: -10px"/>
+                    </div>
+                </label>
+            </div>
+            <label class="item">
+                <div>
+                    <p style="float: left">开始时间：</p>
+                    <input type="datetime-local" ng-model="info.datestart"
+                           placeholder="请输入开始时间" min="2013-01-01" max="2113-12-31"
+                           style="float: right;margin-top: -10px"/>
+                </div>
+            </label>
+            <label class="item">
+                <div>
+                    <p style="float: left">截止时间：</p>
+                    <input type="datetime-local" ng-model="info.dateend"
+                           placeholder="请输入截止时间" min="2013-01-01" max="2113-12-31"
+                           style="float: right;margin-top: -10px"/>
+                </div>
+            </label>
+
+            <div class="item item-icon-right">
+                <p style="float: left">作业说明</p>
+                <p style="float: right">{{info.memo}}</p>
+                <i class="icon ion-edit" style="font-size: 10px" ng-click="editMemo()"></i>
+            </div>
+            <div class="item item-icon-right" ng-if="hasScore">
+                <p style="float:left;">作业总分</p>
+                <p style="float:right;">{{info.score}}</p>
+                <i class="icon ion-edit" style="font-size: 10px" ng-click="editScore()"></i>
+            </div>
+            <div class="item item-toggle">
+                <p><font size="2.5px">禁止右键</font></p>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model=info.forbiddenMouseRightMenu>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle">
+                <p><font size="2.5px">禁止复制题目</font></p>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model=info.forbiddenCopy>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle">
+                <p><font size="2.5px">开启学生端阅卷</font></p>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model=info.enableClientJudge>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle" ng-if="info.enableClientJudge">
+                <p><font size="2.5px">学生端阅卷后标准答案可见</font></p>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model=info.keyVisible>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle">
+                <p><font size="2.5px">查卷时标准答案可见</font></p>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model=info.viewOneWithAnswerKey>
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
         </div>
-      </label>
-      <label class="item">
-        <div>
-          <p style="float: left">截止时间：</p>
-          <input type="date" ng-model="info.dateend"
-                 placeholder="请输入截止时间" min="2013-01-01" max="2113-12-31" style="float: right;margin-top: -10px"/>
-        </div>
-      </label>
+        <script id="Drawpolet.html" type="text/ng-template">
+            <div class="list" style="height: 100px">
+                <ion-item ng-click="selectDrawplot($index)" ng-repeat="item in drawplotItems">
+                    {{item.name}}
+                </ion-item>
+            </div>
+        </script>
 
-      <div class="item item-icon-right">
-        <p style="float: left">作业说明</p>
-        <p style="float: right">{{data.memo}}</p>
-        <i class="icon ion-edit" style="font-size: 10px" ng-click="editMemo()"></i>
-      </div>
-      <div class="item">
-        <p style="float:left;">作业总分</p>
-        <p style="float:right;">{{data.score}}</p>
-      </div>
-      <div class="item item-toggle">
-        <p><font size="2.5px">禁止复制题目</font></p>
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model=data.copy>
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <div class="item item-toggle">
-        <p><font size="2.5px">开启学生端阅卷</font></p>
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model=data.canGoOver>
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <div class="item item-toggle">
-        <p><font size="2.5px">查卷时标准答案可见</font></p>
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model=data.canSee>
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-    </div>
-
-
-  </ion-content>
+    </ion-content>
 
 </ion-view>

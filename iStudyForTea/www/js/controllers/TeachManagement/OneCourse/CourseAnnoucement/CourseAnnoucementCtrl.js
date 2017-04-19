@@ -45,7 +45,6 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
 
     }
     $scope.items = items;
-    $scope.items = items;
     $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   }, function (data) {
@@ -78,7 +77,7 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
 
   //定义跳转的动作
   $scope.courseAnnDetailInfo = function ($index) {
-    $state.go("tab.TeachManagement-OneCourseAnnoucementDetailInfo", {index: $index, items: $scope.items});
+    $state.go("tab.TeachManagement-OneCourseAnnoucementDetailInfo", {index: $index, item: $scope.items[$index]});
   }
   //当前是第几个界面 随后界面++
   var index = $stateParams.index;
@@ -88,6 +87,46 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
   $scope.goBack = function () {
     $ionicHistory.goBack(-1 * index);
   }
+  //删除系统公告
+    //删除账号的管理
+    $scope.remove = function (item) {
+        swal({
+                title: "提醒",
+                text: "您确认删除该条公告吗?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                cancelButtonText: "取消",
+                closeOnConfirm: true,
+                closeOnCancel: true
+            },
+
+            function (isConfirm) {
+                if (isConfirm) {
+
+                    //进行缓存的清理和跳转
+                    var param = {
+                        authtoken:window.localStorage.getItem("authtoken"),
+                        id:item.id
+                    };
+                    var promise = httpService.infoPost("apiteach/delnotify",param);
+                    promise.then(function () {
+                        alert("删除成功");
+
+                        for (var i = 0; i < $scope.items.length; i++) {
+                            if (items[i].id == item.id) {
+                                $scope.items.splice(i, 1);
+                                break;
+                            }
+                        }
+                    },function (err) {
+                        swal("删除失败",err,"error");
+                    })
+                }
+
+            });
+    }
   //增加系统公告界面
   $scope.addAnnoucement = function () {
     $state.go("tab.TeachManagement-OneCourseAddAnnoucement", {courseid: $stateParams.courseid});

@@ -1,43 +1,43 @@
 <ion-view>
-  <ion-nav-title>
-    {{view.title}}
-  </ion-nav-title>
-  <ion-content>
-    <textarea ng-style="textAreaStyle" ng-model="reply.content"></textarea>
-    <div ng-if='images.length > 0 ? true:false'>
-      <p style="margin-left: 5px;margin-top: 5px">图片区</p>
-      <div ng-style="imgsDivStyle">
-        <div ng-repeat="img in images">
-          <img src="{{img.src}}"
-               style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px"
-               ng-click="showBigImage($index)">
+    <ion-nav-title>
+        {{view.title}}
+    </ion-nav-title>
+    <ion-content>
+        <textarea ng-style="textAreaStyle" ng-model="reply.content"></textarea>
+        <div ng-if='images.length > 0 ? true:false'>
+            <p style="margin-left: 5px;margin-top: 5px">图片区</p>
+            <div ng-style="imgsDivStyle">
+                <div ng-repeat="img in images">
+                    <img src="{{img.src}}"
+                         style="width: 30%;height: 95px;float: left;margin-right: 5px;margin-top: 5px;margin-left: 5px"
+                         ng-click="showBigImage($index)">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
-    </ion-refresher>
-    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
-    <div class="list">
-      <div class="item item-avatar-left" ng-repeat="item in items" ng-click="seeDetailRepyNote($index)">
-        <img src="{{item.avatar_url}}">
-        <h2>{{item.author}}</h2>
-        <p>{{item.date}}</p>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+        <div class="list">
+            <div class="item item-avatar-left" ng-repeat="item in items" ng-click="seeDetailRepyNote($index)">
+                <img src="{{item.avatar_url}}">
+                <h2>{{item.author}}</h2>
+                <p>{{item.date}}</p>
 
-        <div ng-bind-html="item.content" style="width: 100%;height: 40px"></div>
-      </div>
-    </div>
-  </ion-content>
-  <ion-footer-bar>
-    <div class="button-bar button-light">
+                <div ng-bind-html="item.content" style="width: 100%;height: 40px"></div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar>
+        <div class="button-bar button-light">
 
-      <button class="button" ng-click="selectImage()">
-        <i class="ion-image" style="font-size: 30px"></i>
-      </button>
-      <button class="button" ng-click="send()">
-        <i class="ion-android-send" style="font-size: 30px"></i>
-      </button>
-    </div>
-  </ion-footer-bar>
+            <button class="button" ng-click="selectImage()">
+                <i class="ion-image" style="font-size: 30px"></i>
+            </button>
+            <button class="button" ng-click="send()">
+                <i class="ion-android-send" style="font-size: 30px"></i>
+            </button>
+        </div>
+    </ion-footer-bar>
 </ion-view>

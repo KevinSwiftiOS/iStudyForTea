@@ -11,8 +11,8 @@
 </div>
 <div class="list">
     <ion-item class="item-icon-right"
-              collection-repeat="item in items | filter:user.search" ng-click= "editHomeWorkDetail(item.id)">
-        <p><font color="blue">{{item.title}}</font> </p>
+              collection-repeat="item in items | filter:user.search" ng-click="editHomeWorkDetail(item)">
+        <p><font color="blue">{{item.title}}</font></p>
         <P><font size="1px">开始时间:{{item.datestart}}</font></P>
         <p><font size="1px">截止时间:{{item.dateend}}</font></p>
     </ion-item>

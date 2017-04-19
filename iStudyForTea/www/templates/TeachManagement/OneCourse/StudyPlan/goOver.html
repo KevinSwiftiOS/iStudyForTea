@@ -1,41 +1,41 @@
 <ion-view title="阅卷">
-  <ion-content>
-    <div class="item-input">
+    <ion-content>
+        <div class="item-input">
 
-      <label class="item-input-wrapper">
-        <i class="icon ion-ios-search placeholder-icon"></i>
-        <input type="text" placeholder="搜索" ng-model="user.search">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="text" placeholder="搜索" ng-model="user.search">
 
-      </label>
-      <button class="button button-outline" ng-click="removeSearch()">
-        <font color="blue">取消</font>
-      </button>
-    </div>
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
-    </ion-refresher>
-    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
-    <ion-list>
-      <ion-item class="item-avatar item-remove-animate"
-                ng-repeat="item in items | filter:user.search">
-        <img src="{{item.img}}">
+            </label>
+            <button class="button button-outline" ng-click="removeSearch()">
+                <font color="blue">取消</font>
+            </button>
+        </div>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+        <ion-list>
+            <ion-item class="item-avatar item-remove-animate"
+                      ng-repeat="item in items | filter:user.search">
+                <img src="{{item.img}}">
 
-        <h2>{{item.UserTestNo}}</h2>
-        <p>{{item.UserTrueName}}
+                <h2>{{item.UserTestNo}}</h2>
+                <p>{{item.UserTrueName}}
 
-      <span style = "margin-left: 20px">{{item.submit}}
+                    <span style="margin-left: 20px">{{item.submit}}
         {{item.check}}</span></p>
 
-        <!--删除的按钮-->
-        <ion-option-button class="button-assertive">
-          查卷
-        </ion-option-button>
-        <ion-option-button class="button-stable">
-          手动阅卷
-        </ion-option-button>
+                <!--删除的按钮-->
+                <ion-option-button class="button-assertive">
+                    查卷
+                </ion-option-button>
+                <ion-option-button class="button-stable">
+                    手动阅卷
+                </ion-option-button>
 
-      </ion-item>
-    </ion-list>
-  </ion-content>
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>

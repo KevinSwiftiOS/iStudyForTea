@@ -1,37 +1,37 @@
 <ion-view view-title="密码找回">
-  <ion-content>
-    <div class="list-inset listStyle">
-      <div class="row">
-        <div class="col">
-          <label class="item item-input-inset">
-            <input type="text" placeholder="验证码" id="identityText">
-          </label>
-        </div>
-      </div>
-      <!--增加一个定时器-->
-      <div class="row" ng-if="!isZero">
-        <div class="col" align="center">
-          <p>{{clock}}秒
-          <p></div>
+    <ion-content>
+        <div class="list-inset listStyle">
+            <div class="row">
+                <div class="col">
+                    <label class="item item-input-inset">
+                        <input type="text" placeholder="验证码" id="identityText">
+                    </label>
+                </div>
+            </div>
+            <!--增加一个定时器-->
+            <div class="row" ng-if="!isZero">
+                <div class="col" align="center">
+                    <p>{{clock}}秒
+                    <p></div>
 
-      </div>
-      <div class="row" ng-if="isZero">
-        <div class="col">
-          <button
-            class="button button-positive button-full loginAndForBtn"
-            ng-click="sendAgain()">再发一次
-          </button>
+            </div>
+            <div class="row" ng-if="isZero">
+                <div class="col">
+                    <button
+                            class="button button-positive button-full loginAndForBtn"
+                            ng-click="sendAgain()">再发一次
+                    </button>
+                </div>
+            </div>
+            <div class="row" ng-if="!isZero">
+                <div class="col">
+                    <button
+                            class="button button-positive button-full loginAndForBtn"
+                            ng-click="makeSure()">确认
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row" ng-if="!isZero">
-        <div class="col">
-          <button
-            class="button button-positive button-full loginAndForBtn"
-            ng-click="makeSure()">确认
-          </button>
-        </div>
-      </div>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-view>
 

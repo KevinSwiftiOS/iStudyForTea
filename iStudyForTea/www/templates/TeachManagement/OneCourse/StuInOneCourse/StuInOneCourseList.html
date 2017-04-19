@@ -1,49 +1,50 @@
 <ion-view view-title="学生列表">
-  <ion-nav-bar class="bar bar-positive">
-    <ion-nav-back-button class="button-clear" ng-click="goBack()">
-      <i class="ion-chevron-left"></i>返回
-    </ion-nav-back-button>
-    <!--右上角加一个加的按钮-->
-    <ion-nav-buttons side="right">
-      <button class="button ion-plus" ng-click="openPopover($event)"></button>
-      <button class="button ion-more" ng-click="openModal()"></button>
-    </ion-nav-buttons>
-  </ion-nav-bar>
-  <ion-content>
-    <ion-refresher
-      pulling-text="下拉刷新..."
-      on-refresh="doRefresh()">
+    <ion-nav-bar class="bar bar-positive">
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>返回
+        </ion-nav-back-button>
+        <!--右上角加一个加的按钮-->
+        <ion-nav-buttons side="right">
+            <button class="button ion-plus" ng-click="openPopover($event)"></button>
+            <button class="button ion-more" ng-click="openModal()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
 
-    </ion-refresher>
-    <!--弹出模框的定义-->
-    <script id="StuListInOneCoursePopOver.html" type="text/ng-template">
-      <ion-popover-view style="height:50px;width: 100px;">
-        <ion-content>
-          <ion-list>
-            <ion-item class="item-positive" ng-repeat="popItem in popItems" ng-click="goToDifferent($index)">
-              <div style="text-align: center;margin-top: -10px;">
-                <p style="font-size: 16px;color: white">{{popItem.rowName}}</p>
-              </div>
-            </ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-popover-view>
-    </script>
-    <script id="Menu.html" type="text/ng-template">
-      <ion-modal-view>
-        <ion-header-bar class="bar bar-header bar-stable">
-          <h1 class="title"></h1>
-          <button class="button button-clear" ng-click="modalHide()">
-            <i class="icon ion-close"></i>
-          </button>
-        </ion-header-bar>
-        <ion-content style="background-color: #F6F6F6">
-          <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
-        </ion-content>
+        </ion-refresher>
+        <!--弹出模框的定义-->
+        <script id="StuListInOneCoursePopOver.html" type="text/ng-template">
+            <ion-popover-view style="height:50px;width: 100px;">
+                <ion-content>
+                    <ion-list>
+                        <ion-item class="item-positive" ng-repeat="popItem in popItems"
+                                  ng-click="goToDifferent($index)">
+                            <div style="text-align: center;margin-top: -10px;">
+                                <p style="font-size: 16px;color: white">{{popItem.rowName}}</p>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-popover-view>
+        </script>
+        <script id="Menu.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-stable">
+                    <h1 class="title"></h1>
+                    <button class="button button-clear" ng-click="modalHide()">
+                        <i class="icon ion-close"></i>
+                    </button>
+                </ion-header-bar>
+                <ion-content style="background-color: #F6F6F6">
+                    <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
+                </ion-content>
 
-    </script>
-    <div ng-include="'templates/Commons/StuList.html'"></div>
-    <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
-  </ion-content>
+        </script>
+        <div ng-include="'templates/Commons/StuList.html'"></div>
+        <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
+    </ion-content>
 </ion-view>
 

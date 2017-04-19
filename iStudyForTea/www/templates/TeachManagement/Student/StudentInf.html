@@ -1,9 +1,11 @@
 <ion-view view-title="学生信息">
     <ion-content>
-        <div style="background-color: #0c60ee;height:150px ";align="center" >
+        <div style="background-color: #0c60ee;height:150px " ;align="center">
             <!--头像的基本信息-->
-            <div  style="background-color: #0c60ee" align=center>
-                <img src={{stu.image}} style="margin-top:20px;width: 100px;height:100px;border-radius:50px 50px 50px 50px;text-align: center;" ng-click="selectHead()">
+            <div style="background-color: #0c60ee" align=center>
+                <img src={{stu.image}}
+                     style="margin-top:20px;width: 100px;height:100px;border-radius:50px 50px 50px 50px;text-align: center;"
+                     ng-click="selectHead()">
             </div>
         </div>
         <div class="list">
@@ -24,11 +26,11 @@
                 <input type="text" ng-model="stu.college" ng-disabled="true">
 
             </div>
-          <div class="item item-input">
-            <span class="input-label">性别：</span>
-            <input type="text" ng-model="stu.sex" ng-disabled="true">
+            <div class="item item-input">
+                <span class="input-label">性别：</span>
+                <input type="text" ng-model="stu.sex" ng-disabled="true">
 
-          </div>
+            </div>
 
             <div class="item item-input">
                 <span class="input-label">邮箱：</span>

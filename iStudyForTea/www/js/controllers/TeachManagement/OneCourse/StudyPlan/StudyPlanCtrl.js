@@ -36,7 +36,7 @@ app.controller("StudyPlanCtrl", function ($scope, $rootScope, $stateParams, $ion
     courseid: $stateParams.courseid,
     count: 100,
     page: 1
-  }
+  };
   $ionicLoading.show({
     template: '请等待'
   });

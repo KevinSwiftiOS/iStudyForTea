@@ -1,28 +1,25 @@
-
 <ion-view view-title="详细公告">
 
-  <ion-nav-buttons side="right">
+    <ion-nav-buttons side="right">
 
-    <!--写邮件的-->
-    <button class="button" ng-click="edit()">编辑</button>
-</ion-nav-buttons>
-<ion-content>
-   <div style="text-align: center">
-     {{info.title}}
-   </div>
-  <ion-scroll zooming="true" direction="xy" style="width: 100%; max-height:200px;margin-left: 10px;margin-right: 10px"
-              delegate-handle="content" on-double-tap="zoomFunction()">
-<div ng-bind-html="info.content"></div>
-  </ion-scroll>
-  <p style="text-align: right;margin: 5px">发布者:{{info.author}}</p>
-  <p style="text-align: right;margin: 5px">访问次数:{{info.viewtimes}}</p>
+        <!--写邮件的-->
+        <button class="button" ng-click="edit()">编辑</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div style="text-align: center">
+            {{info.title}}
+        </div>
+        <ion-scroll zooming="true" direction="xy"
+                    style="width: 100%; max-height:200px;margin-left: 10px;margin-right: 10px"
+                    delegate-handle="content" on-double-tap="zoomFunction()">
+            <div ng-bind-html="info.content"></div>
+        </ion-scroll>
+        <p style="text-align: right;margin: 5px">发布者:{{info.author}}</p>
+        <p style="text-align: right;margin: 5px">访问次数:{{info.viewtimes}}</p>
 
-  <p style="text-align: right;margin: 5px">发布日期:{{info.date}}</p>
-
-
-
+        <p style="text-align: right;margin: 5px">发布日期:{{info.date}}</p>
 
 
-  </ion-content>
+    </ion-content>
 </ion-view>
 

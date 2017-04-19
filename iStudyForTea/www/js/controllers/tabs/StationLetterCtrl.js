@@ -80,7 +80,6 @@ app.controller('stationLetterCtrl', function ($scope, Chats, $state, $rootScope,
         inItems = data;
         for (var i = 0; i < inItems.length; i++) {
           inItems[i].date = subDate.divedeToDay(inItems[i].date);
-          console.log(inItems[i].isread)
           if (inItems[i].isread == true)
             inItems[i].img = "img/hasRead.png";
           else
