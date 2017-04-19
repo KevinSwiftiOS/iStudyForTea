@@ -35,6 +35,7 @@
                 <font color="blue">取消</font>
             </button>
         </div>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if='homeWortkItems.length > 0 || experWortkItems.length > 0 ? false:true'></div>
         作业:
         <div class="list">
             <div class="item" ng-repeat="item in homeWortkItems  | filter:user.search"

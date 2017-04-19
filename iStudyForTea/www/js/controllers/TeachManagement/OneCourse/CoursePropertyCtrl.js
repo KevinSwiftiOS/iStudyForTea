@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/29.
  */
-app.controller("CoursePropertyCtrl", function ($scope, httpService, $rootScope, $state, $stateParams, $ionicModal, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaCamera, $cordovaImagePicker) {
+app.controller("CoursePropertyCtrl", function ($cordovaProgress,uploadFile,$scope, httpService, $rootScope, $state, $stateParams, $ionicModal, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaCamera, $cordovaImagePicker) {
     //定义颜色popView
     var listPopup;
     //监听事件 加载菜单栏
@@ -151,44 +151,7 @@ app.controller("CoursePropertyCtrl", function ($scope, httpService, $rootScope, 
         {
             "background-color": "#6b46e5"
         }
-
-
-    ]
-    var encodeImageUri = function (imageUri, callback) {
-        var c = document.createElement('canvas');
-        var ctx = c.getContext("2d");
-        var img = new Image();
-        img.onload = function () {
-            c.width = this.width;
-            c.height = this.height;
-            ctx.drawImage(img, 0, 0);
-            if (typeof callback === 'function') {
-                var dataURL = c.toDataURL("image/jpeg");
-                callback(dataURL.slice(22, dataURL.length));
-            }
-        };
-        img.src = imageUri;
-    }
-
-    function getFileContentAsBase64(path, callback) {
-        window.resolveLocalFileSystemURL(path, gotFile, fail);
-
-        function fail(e) {
-            alert('Cannot found requested file');
-        }
-
-        function gotFile(fileEntry) {
-            fileEntry.file(function (file) {
-                var reader = new FileReader();
-                reader.onloadend = function (e) {
-                    var content = this.result;
-                    callback(content);
-                };
-                // The most important point, use the readAsDatURL Method from the file plugin
-                reader.readAsDataURL(file);
-            });
-        }
-    }
+        ];
 
     //制作课程封面的背景颜色
     $scope.editpicbg = function () {
@@ -221,7 +184,7 @@ app.controller("CoursePropertyCtrl", function ($scope, httpService, $rootScope, 
                             var options = {
                                 quality: 50,
                                 destinationType: Camera.DestinationType.DATA_URI,
-                                sourceType: Camera.PictureSourceType.CAMERA,
+                                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
                                 allowEdit: true,
                                 encodingType: Camera.EncodingType.JPEG,
                                 targetWidth: 50,
@@ -232,11 +195,17 @@ app.controller("CoursePropertyCtrl", function ($scope, httpService, $rootScope, 
                             };
 
                             $cordovaCamera.getPicture(options).then(function (imageData) {
-
-
-                                upload(imageData, function (name, res) {
-                                    if (name == "success") {
-                                        $scope.info.logo1 = res;
+                              var param = {
+                                authtoken: window.localStorage.getItem("authtoken"),
+                                type: 1
+                              };
+                              $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发送中");
+                              //首先上传头像 随后保存个人信息
+                              var promise = uploadFile.upload(imageData, param);
+                              promise.then(function (res) {
+                                $cordovaProgress.hide();
+                                console.log(res["uploadedurl"]);
+                                        $scope.info.logo1 = res["uploadedurl"];
                                         $scope.info.isDiv = false;
                                         $scope.info.isImg = true;
                                         $scope.info.logoText = "";
@@ -246,11 +215,12 @@ app.controller("CoursePropertyCtrl", function ($scope, httpService, $rootScope, 
                                                 $scope.info = newValue;
                                             }
                                         }, true);
-                                    }
+
                                 });
                                 //将base64字符串转化为二进制
 
                             }, function (err) {
+                              $cordovaProgress.hide();
                                 //错误的信息
                                 swal("上传封面失败", err, "error");
                             });
