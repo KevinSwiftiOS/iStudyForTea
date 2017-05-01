@@ -4,7 +4,6 @@
 app.controller("CourseAnnoucementDetailInfoCtrl",function ($scope,$stateParams,$ionicLoading,httpService,subDate,showBigImg,$ionicScrollDelegate,$state) {
  var index = $stateParams.index;
   var item = $stateParams.item;
-  console.log(item);
   var param = {
     id:item.id,
   }

@@ -9,6 +9,7 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
         subject: "",
         content: ""
     };
+    console.log($stateParams.courseid);
     var height = document.body.scrollHeight;
     $scope.textAreaStyle = {
         "width": "98%",
@@ -123,13 +124,17 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
         }
     }
     function sendAnn(totalHtml, subject, authtoken) {
-        var param = {
-            title: subject,
-            content: totalHtml,
-            istop: isTop,
-            authtoken: authtoken
-        }
+      var param = {
+        title: subject,
+        content: totalHtml,
+        istop: isTop,
+        authtoken: authtoken,
+        type:$stateParams.type
+      };
+      if($stateParams.type == 1) {
+              param.courseid = $stateParams.courseid
 
+      };
         var promise = httpService.post("apiteach/newnotify", param);
         promise.then(function () {
             swal({

@@ -20,9 +20,13 @@ app.controller("EditAnnoucementCtrl", function ($scope, httpService, base64, $io
         "border-width": "1px",
         "border-color": "darkgray",
     };
+    //看是否是置顶的
+  var color = "gray";
+    if($stateParams.istop)
+      color = "blue";
     $scope.pinStyle = {
         "font-size": "30px",
-        "color": "gray"
+        "color": color
     };
     //选择是否置顶
     var isTop = $stateParams.istop;

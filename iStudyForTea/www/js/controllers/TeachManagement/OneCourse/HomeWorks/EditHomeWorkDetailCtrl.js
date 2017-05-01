@@ -9,6 +9,11 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
 //根据作业种类来请求不同的url
     $scope.hasHuping = false;
     $scope.hasScore = true;
+    $scope.temp = {
+      title:"",
+      score:"",
+      memo:"",
+    }
     if ($stateParams.type == 3) {
         $scope.hasHuping = true;
     }
@@ -49,6 +54,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                 info.dateend = subDateToDateToMin.divedeToDay(info.dateend);
             }
             $scope.info = info;
+
             $ionicLoading.hide();
             $scope.$broadcast('scroll.refreshComplete');
         }, function (err) {
@@ -81,6 +87,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
             $scope.info.enableMutualJudgeEndTime = new Date();
             $scope.info.enableMutualJudge = false;
         }
+      console.log($scope.temp);
     }
     //获取抽题策略
     $scope.editdrawplot = function () {
@@ -110,10 +117,14 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
         $scope.info.drawplotid = $scope.drawplotItems[$index].id;
         listPopup.close();
     }
-
+    //输入框中暂时的分数 名称和描述
     $scope.editTitle = function () {
+      $scope.temp.title = $scope.info.title;
+      $scope.temp.score = $scope.info.score;
+      $scope.temp.memo = $scope.info.memo;
+      console.log($scope.temp);
         var myPopup = $ionicPopup.show({
-            template: "<input type = 'text' ng-model = 'info.title'>",
+            template: "<input type = 'text' ng-model = 'temp.title'>",
             title: "请输入作业名称",
             scope: $scope,
             buttons: [
@@ -122,14 +133,14 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                     text: '<b>保存</b>',
                     type: "button-positive",
                     onTap: function (e) {
-                        var title = $scope.info.title;
+                        var title = $scope.temp.title;
                         //要保证作业名字不能为空
                         if (title == "") {
                             swal("提醒", "请填写作业名称", "warning");
                             e.preventDefault();
                         }
                         else
-                            $scope.info.title = title;
+                            $scope.info.title = $scope.temp.title;
                     }
                 }
             ]
@@ -140,9 +151,11 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
     }
     //编辑分数
     $scope.editScore = function () {
-
+      $scope.temp.title = $scope.info.title;
+      $scope.temp.score = $scope.info.score;
+      $scope.temp.memo = $scope.info.memo;
         var myPopup = $ionicPopup.show({
-            template: "<input type = 'text' ng-model = 'info.score'>",
+            template: "<input type = 'text' ng-model = 'temp.score'>",
             title: "请输入分数",
             scope: $scope,
             buttons: [
@@ -151,14 +164,14 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                     text: '<b>保存</b>',
                     type: "button-positive",
                     onTap: function (e) {
-                        var score = $scope.info.score;
+                        var score = $scope.temp.score;
                         //要保证作业名字不能为空
                         if (score == "") {
                             swal("提醒", "请填写作业分数", "warning");
                             e.preventDefault();
                         }
                         else
-                            $scope.info.score = score;
+                            $scope.info.score = $scope.temp.score;
                     }
                 }
             ]
@@ -169,9 +182,11 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
     }
     //编辑作业说明
     $scope.editMemo = function () {
-
+      $scope.temp.title = $scope.info.title;
+      $scope.temp.score = $scope.info.score;
+      $scope.temp.memo = $scope.info.memo;
         var myPopup = $ionicPopup.show({
-            template: "<textarea  style='height: 200px;width: 100%;' ng-model = 'info.memo'></textarea>",
+            template: "<textarea  style='height: 200px;width: 100%;' ng-model = 'temp.memo'></textarea>",
             title: "请输入作业说明",
             scope: $scope,
             buttons: [
@@ -180,7 +195,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                     text: '<b>保存</b>',
                     type: "button-positive",
                     onTap: function (e) {
-                        $scope.info.memo = $scope.info.memo;
+                        $scope.info.memo = $scope.temp.memo;
                     }
                 }
             ]
@@ -191,6 +206,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
         });
     }
     $scope.save = function () {
+      console.log($scope.temp);
         //保存修改后的数据
         var info = $scope.info;
         var starttime = info.datestart;
@@ -240,19 +256,19 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                     break;
                 case 4:
                     param = {
-                        authtoken: window.localStorage.getItem("authtoken"),
-                        id: $stateParams.id,
-                        name: $scope.info.title,
-                        drawplotid: $scope.info.drawplotid,
-                        memo: $scope.info.memo,
-                        starttime: starttimeStr,
-                        endtime: endTimeStr,
-                        score: $scope.info.score,
-                        bancopy: $scope.info.forbiddenCopy,
-                        banright: $scope.info.forbiddenMouseRightMenu,
-                        enableClient: $scope.info.enableClientJudge,
-                        keyVisible: $scope.info.keyVisible,
-                        viewOneWithAnswerKey: $scope.info.viewOneWithAnswerKey,
+                      authtoken: window.localStorage.getItem("authtoken"),
+                      id: $stateParams.id,
+                      name: $scope.info.title,
+                      drawplotid: $scope.info.drawplotid,
+                      memo: $scope.info.memo,
+                      starttime: starttimeStr,
+                      endtime: endTimeStr,
+                      score: $scope.info.score,
+                      bancopy: $scope.info.forbiddenCopy,
+                      banright: $scope.info.forbiddenMouseRightMenu,
+                      enableClient: $scope.info.enableClientJudge,
+                      keyVisible: $scope.info.keyVisible,
+                      viewWithOneAnswerKey: $scope.info.viewOneWithAnswerKey,
                     }
                     suburl = "apiteach/updateexprement";
                     break;
@@ -269,12 +285,13 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                         banright: $scope.info.forbiddenMouseRightMenu,
                         enableClientJudge: $scope.info.enableClientJudge,
                         keyVisible: $scope.info.keyVisible,
-                        viewOneWithAnswerKey: $scope.info.viewOneWithAnswerKey,
+                      viewOneWithAnswerKey: $scope.info.viewOneWithAnswerKey,
                     }
                     suburl = "apiteach/updateExer";
                     break;
-            }
-
+              default:break;
+            };
+               console.log(param);
             var promise = httpService.post(suburl, param);
             promise.then(function (data) {
                 swal({

@@ -129,6 +129,7 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
     }
   //增加系统公告界面
   $scope.addAnnoucement = function () {
-    $state.go("tab.TeachManagement-OneCourseAddAnnoucement", {courseid: $stateParams.courseid});
+    $state.go("tab.SystemManagement-AddAnnoucement", {courseid: $stateParams.courseid,type:1});
+
   }
 })

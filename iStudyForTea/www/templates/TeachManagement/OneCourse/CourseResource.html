@@ -20,7 +20,6 @@
                     <div ng-include="'templates/TeachManagement/OneCourse/Menu.html'"></div>
                 </ion-content>
         </script>
-        <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
         <div class="item-input">
 
             <label class="item-input-wrapper">
@@ -32,6 +31,7 @@
                 <font color="blue">取消</font>
             </button>
         </div>
+      <div ng-include="'templates/Commons/Empty.html'" ng-if='items.length > 0 ? false:true'></div>
         <ion-list>
             <ion-item
                     ng-repeat="item in items | filter:user.search" ng-click="download($index)">

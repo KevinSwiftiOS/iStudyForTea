@@ -60,13 +60,9 @@ app.controller('systemManagementCtrl', function ($scope, $rootScope, $ionicLoadi
 
     //增加系统公告的函数
     $scope.addAnnoucement = function () {
-        $state.go('tab.SystemManagement-AddAnnoucement');
+        $state.go('tab.SystemManagement-AddAnnoucement',{type:0});
     }
-    //增加账号管理的函数
-    $scope.ManageAccount = function () {
-        $state.go('tab.SystemManagement-ManageAccount')
-    }
-    //删除账号的管理
+  //删除公告的管理
     $scope.remove = function (item) {
         swal({
                 title: "提醒",

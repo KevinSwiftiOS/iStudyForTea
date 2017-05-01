@@ -7,19 +7,12 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
     //搜索框的初始化 避免后面点取消按钮时一直找不到值
     $scope.user = {};
     //模板框数据的定义
-    $scope.popItems = [
-        {
-            "rowName": "新建学生",
-        },
-        {
-            "rowName": "添加现有学生",
-        },
-    ]
+
 
 
 //打开的动作
     $scope.openPopover = function ($event) {
-        $state.go("tab.TeachManagement-AddNewStuToGroup", ({groupid: 0}));
+        $state.go("tab.TeachManagement-AddNewStuToGroup", ({groupid: $stateParams.groupid,type:1}));
     }
     var param = {
         authtoken: window.localStorage.getItem("authtoken"),
@@ -54,6 +47,7 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
         var promise = httpService.post("apiteach/studentlist", param);
         promise.then(function (data) {
             items = data;
+            console.log(items);
             for (var i = 0; i < items.length; i++) {
                 if (items[i].image == null || items[i].image == "")
                     items[i].image = "img/head.png";
@@ -102,9 +96,9 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
 
                     var promise = httpService.post("apiteach/resetPwd", param);
                     promise.then(function (data) {
-                        swal("恭喜您", "重置成功", "success");
+                    alert("重置成功");
                     }, function (err) {
-                        swal("重置失败", err, "error");
+                      alert(err);
                     })
                 }
 
@@ -112,11 +106,11 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
     }
 
     //删除的操作
-    $scope.remove = function (id) {
+    $scope.remove = function (id,itemid) {
         //重置密码的操作
         swal({
                 title: "提醒",
-                text: "您确认重置该学生的密码吗?",
+                text: "您确认删除该学生吗?",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
@@ -132,13 +126,20 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
                     //进行缓存的清理和跳转
                     var param = {
                         authtoken: window.localStorage.getItem("authtoken"),
-                        stuid: id
+                        itemid: itemid
                     };
-                    var promise = httpService.infoPost("apiteach/resetPwd", param);
+                    console.log(param);
+                    var promise = httpService.infoPost("apiteach/delstuInGroup", param);
                     promise.then(function () {
-                        alert("重置密码成功");
+                        alert("删除成功");
+                      for (var i = 0; i < $scope.items.length; i++) {
+                        if (items[i].id == id) {
+                          $scope.items.splice(i, 1);
+                          break;
+                        }
+                      }
                     }, function (err) {
-                        swal("重置失败", err, "error");
+                       alert(err);
                     })
                 }
             })

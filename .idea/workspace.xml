@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c32c1ab-1d1f-4196-9f00-6c401139b8dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/LoginAndReset/LoginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/GradeList/DetailGradeList.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/GradeList/DetailGradeList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/GradeList/StuInGradeList.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/GradeList/StuInGradeList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/index.html" afterPath="$PROJECT_DIR$/iStudyForTea/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetailCtrl.js" afterPath="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetailCtrl.js" />
     </list>
     <ignored path="iStudyForTea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="165">
+              <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -49,11 +46,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ExprementListCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/ExprementListCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditHomeWorkDetailCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetailCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding>
+                <marker date="1492999221000" expanded="true" signature="5715:5741" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WriteEmailCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="117" column="48" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="48" />
+            <state relative-caret-position="1755">
+              <caret line="117" column="48" lean-forward="false" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -62,7 +81,7 @@
       <file leaf-file-name="PersonalCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/PersonalCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="2685">
               <caret line="179" column="40" lean-forward="false" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="40" />
               <folding />
             </state>
@@ -107,8 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/ContactPersonCtrl.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailNote.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/DetailNoteCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/TeachManagement/OneCourse/Discuss/DetailReplyNote.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/Discuess/NoteReplyDetailCtrl.js" />
@@ -155,9 +172,11 @@
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/HomeWorkListCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/templates/Commons/StuList.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/Student/StudentListCtrl.js" />
-        <option value="$PROJECT_DIR$/iStudyForTea/www/index.html" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/PersonalCtrl.js" />
         <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/CoursePropertyCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/index.html" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/ExprementListCtrl.js" />
+        <option value="$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetailCtrl.js" />
       </list>
     </option>
   </component>
@@ -171,8 +190,8 @@
     <handled-path value="$PROJECT_DIR$/iStudyForTea/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
-    <option name="y" value="24" />
+    <option name="x" value="12" />
+    <option name="y" value="41" />
     <option name="width" value="1440" />
     <option name="height" value="798" />
   </component>
@@ -573,6 +592,44 @@
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeachManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneCourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomeWorks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iStudyForTea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -823,14 +880,15 @@
       <workItem from="1492610270275" duration="1000" />
       <workItem from="1492610719984" duration="109000" />
       <workItem from="1492611033003" duration="1096000" />
+      <workItem from="1492999159721" duration="376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68551000" />
+    <option name="totallyTimeSpent" value="68927000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="24" width="1440" height="798" extended-state="6" />
+    <frame x="12" y="41" width="1440" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -887,14 +945,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/SystemManagement/AddNewAccount.html" />
-    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/SystemManagement/DetailInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/templates/tabs/tab-SystemManagement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1160,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
           <caret line="130" column="25" lean-forward="false" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,9 +1231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <marker date="1492577681000" expanded="true" signature="3291:3294" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,9 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding>
-            <marker date="1492604251000" expanded="true" signature="1384:1387" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1209,21 +1252,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/StationLetter/WriteEmailCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="117" column="48" lean-forward="true" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="48" />
+        <state relative-caret-position="1755">
+          <caret line="117" column="48" lean-forward="false" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/tabs/PersonalCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="2685">
           <caret line="179" column="40" lean-forward="false" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="40" />
           <folding />
         </state>
@@ -1237,11 +1279,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/ExprementListCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/iStudyForTea/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iStudyForTea/www/js/controllers/TeachManagement/OneCourse/HomeWorks/EditHomeWorkDetailCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <marker date="1492999221000" expanded="true" signature="5715:5741" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

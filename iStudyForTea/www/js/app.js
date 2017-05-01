@@ -133,6 +133,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         //第一个模块 系统管理中的增加系统公告模块
         .state('tab.SystemManagement-AddAnnoucement', {
             url: '/SystemManagement/AddAnnoucement',
+          params: {courseid: null,type:null},
             views: {
                 'menuContent': {
                     templateUrl: 'templates/SystemManagement/AddAnnoucement.html',
@@ -243,7 +244,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         //第二个模块 教学管理中的新建学生到一个学生库中
         .state('tab.TeachManagement-AddNewStuToGroup', {
-            params: {"groupid": null},
+            params: {"groupid": null,courseid:null,type:null},
             url: "/TeachManagement/AddNewStuToGroup",
             views: {
                 'menuContent': {
@@ -333,18 +334,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 'menuContent': {
                     templateUrl: 'templates/TeachManagement/OneCourse/CourseAnnoucement/CourseAnnoucementDetailInfo.html',
                     controller: 'CourseAnnoucementDetailInfoCtrl',
-                }
-            }
-
-        })
-        //第二个模块中 教学管理中的一门课程中的增加课程公告界面
-        .state('tab.TeachManagement-OneCourseAddAnnoucement', {
-            params: {courseid: null},
-            url: "/TeachManagement/CourseAddAnnoucement",
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/TeachManagement/OneCourse/CourseAnnoucement/AddCourseAnnoucement.html',
-                    controller: 'CourseAddAnnoucementCtrl',
                 }
             }
 

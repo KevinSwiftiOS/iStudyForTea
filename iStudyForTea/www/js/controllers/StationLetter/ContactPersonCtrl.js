@@ -6,7 +6,7 @@ app.controller("ContactPersonCtrl", function ($scope, $ionicListDelegate, httpSe
     var param = {
         authtoken: ls.getItem("authtoken")
     }, persons = [], list = [];
-
+    console.log(param);
     //监听页面进入的时候
     $scope.$on("$ionicView.beforeEnter", function () {
         persons = contactPersons.getAllPersons();

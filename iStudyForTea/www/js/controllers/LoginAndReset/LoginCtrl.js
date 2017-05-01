@@ -9,7 +9,6 @@ app.controller('LoginCtrl', function ($scope, $state, httpService, img) {
     //登录服务
     var username = angular.element(document.querySelector('#username')).val();
     var password = angular.element(document.querySelector('#password')).val();
-
     //启动界面
     var param = {
       username: username,

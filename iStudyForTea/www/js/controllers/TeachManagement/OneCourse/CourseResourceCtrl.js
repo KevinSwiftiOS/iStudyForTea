@@ -79,7 +79,7 @@ app.controller("CourseResourceCtrl", function ($cordovaFileTransfer,$scope, $sta
             //             $scope.downloadProgress = (progress.loaded / progress.total) * 100;
             //         })
             //     });
-     alert("不支持下载,请到电脑上操作");
+     swal("提醒","不支持下载,请到电脑上操作","warning");
     }
     //显示菜单的事件
     $scope.openModal = function () {

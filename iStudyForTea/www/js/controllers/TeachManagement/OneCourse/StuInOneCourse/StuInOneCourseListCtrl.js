@@ -29,7 +29,7 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
 
 //打开的动作
   $scope.openPopover = function () {
-      $state.go("tab.TeachManagement-AddNewStuToGroup", ({groupid: 0}));
+      $state.go("tab.TeachManagement-AddNewStuToGroup", ({type:0,courseid:$stateParams.courseid}));
   }
   //清除浮动框
   $scope.$on("$destroy", function () {
@@ -135,7 +135,7 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
           promise.then(function () {
           alert("重置密码成功");
           },function (err) {
-            swal("重置失败",err,"error");
+          alert(err);
           })
         }
 
@@ -167,9 +167,11 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
           //进行缓存的清理和跳转
           var param = {
             authtoken:window.localStorage.getItem("authtoken"),
-            stuid:id
+            id:id,
+            courseid:$stateParams.courseid
           };
-          var promise = httpService.infoPost("apiteach/delstudent",param);
+          console.log(param);
+          var promise = httpService.infoPost("apiteach/delstudInCourse",param);
           promise.then(function () {
             alert("删除成功");
 
@@ -180,7 +182,7 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
               }
                 }
           },function (err) {
-            swal("删除失败",err,"error");
+          alert(err);
           })
         }
 

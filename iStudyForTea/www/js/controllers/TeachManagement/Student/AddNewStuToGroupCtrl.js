@@ -2,7 +2,6 @@
  * Created by hcnucai on 2016/11/13.
  */
 app.controller("AddNewStuToGroupCtrl",function ($scope,$stateParams,$ionicHistory,httpService) {
-    console.log($stateParams.groupid);
     $scope.info = {
         name:"",
         id:"",
@@ -19,12 +18,31 @@ app.controller("AddNewStuToGroupCtrl",function ($scope,$stateParams,$ionicHistor
                 id:info.id,
                 name:info.name
             };
-            var promise = httpService.infoPost("apiteach/newstud",param);
+            var suburl = "";
+            if($stateParams.type == 0) {
+              param.courseid = $stateParams.courseid;
+              suburl = "apiteach/newstudInCourse";
+            }
+            else {
+              param.groupid = $stateParams.groupid;
+               suburl = "apiteach/newstuInGroup";
+            }
+            console.log(param);
+            var promise = httpService.infoPost(suburl,param);
             promise.then(function (data) {
-                console.log(data);
-                swal("恭喜您","新建成功","success");
+              swal({
+                  title: "恭喜您",
+                  text: "添加成功",
+                  type: "success",
+                  height: 10000,
+                  width: 100,
+                },
+                function () {
+                  $ionicHistory.goBack();
+                  return true;
+                });
             },function (err) {
-                swal("提醒","新建失败","error");
+                swal("新建失败",err,"error");
             })
         }
     }
