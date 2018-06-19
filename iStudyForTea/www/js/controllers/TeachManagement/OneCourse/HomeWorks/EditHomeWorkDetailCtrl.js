@@ -87,7 +87,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
             $scope.info.enableMutualJudgeEndTime = new Date();
             $scope.info.enableMutualJudge = false;
         }
-      console.log($scope.temp);
+
     }
     //获取抽题策略
     $scope.editdrawplot = function () {
@@ -122,7 +122,7 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
       $scope.temp.title = $scope.info.title;
       $scope.temp.score = $scope.info.score;
       $scope.temp.memo = $scope.info.memo;
-      console.log($scope.temp);
+
         var myPopup = $ionicPopup.show({
             template: "<input type = 'text' ng-model = 'temp.title'>",
             title: "请输入作业名称",
@@ -206,7 +206,6 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
         });
     }
     $scope.save = function () {
-      console.log($scope.temp);
         //保存修改后的数据
         var info = $scope.info;
         var starttime = info.datestart;
@@ -291,7 +290,6 @@ app.controller("EditHomeWorkDetailCtrl", function ($ionicModal, $scope, $ionicPo
                     break;
               default:break;
             };
-               console.log(param);
             var promise = httpService.post(suburl, param);
             promise.then(function (data) {
                 swal({

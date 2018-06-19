@@ -41,16 +41,12 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
     $scope.courseTab = "tab-item active";
     $scope.stuTab = "tab-item";
     //参数
-    var param = {
-        authtoken: window.localStorage.getItem("authtoken"),
-        count: 100,
-        page: 1
-    }
 //第一次加载
     //监听服务
     $ionicLoading.show({
         template: '请等待'
     });
+
     var ls = window.localStorage;
     var loginparam = {
         username: ls.getItem("username"),
@@ -59,7 +55,7 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
         number: "",
         os: "",
         clienttype: 2
-    }
+    };
     var promise = httpService.infoPost("api/login", loginparam);
     promise.then(function (data) {
         ls.setItem("authtoken", data.authtoken);
@@ -72,8 +68,11 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
             img.avtarurl = info.avtarurl;
         }
         ls.setItem("userInfo", angular.toJson(info));
-        ls.setItem("username", ls.getItem("username"));
-        ls.setItem("password", ls.getItem("password"));
+      var param = {
+        authtoken: window.localStorage.getItem("authtoken"),
+        count: 100,
+        page: 1
+      };
         var coursesPromise = httpService.post("apiteach/courselist", param);
         coursesPromise.then(function (data1) {
             courseItems = data1;
@@ -91,10 +90,15 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
         $ionicLoading.hide();
         $scope.$broadcast('scroll.refreshComplete');
         swal("请求失败", data, "error");
-    })
+    });
 
 //刷新按钮
     $scope.doRefresh = function () {
+      var param = {
+        authtoken: window.localStorage.getItem("authtoken"),
+        count: 100,
+        page: 1
+      };
         if (selectStuList == false) {
             var promise = httpService.post("apiteach/courselist", param);
             promise.then(function (data) {
@@ -133,6 +137,11 @@ app.controller('teachManagementCtrl', function (img, $scope, $ionicPopover, $tim
             $ionicLoading.show({
                 template: '请等待'
             });
+          var param = {
+            authtoken: window.localStorage.getItem("authtoken"),
+            count: 100,
+            page: 1
+          };
             var promise = httpService.post("apiteach/studentgrouplist", param);
             promise.then(function (data) {
                 stuGroupItems = data;

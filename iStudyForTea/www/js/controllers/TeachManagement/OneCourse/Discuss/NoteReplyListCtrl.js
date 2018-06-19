@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/11/19.
  */
-app.controller("NoteReplyListCtrl", function ($cordovaProgress, $scope, httpService, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state, discussService, $ionicLoading, subDate) {
+app.controller("NoteReplyListCtrl", function ($scope, httpService, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state, discussService, $ionicLoading, subDate) {
   //样式高度
   var height = document.body.scrollHeight, images = [];
   $scope.textAreaStyle = {
@@ -126,7 +126,9 @@ app.controller("NoteReplyListCtrl", function ($cordovaProgress, $scope, httpServ
       swal("提醒", "未添加回复内容", "warning");
     else {
       //先上传图片 再上传内容
-      $cordovaProgress.showSimpleWithLabel(true, "请等待,正在回帖中");
+      $ionicLoading.show({
+        template:"请等待，正在发送中",
+      })
       var totalHtml = "";
       var ls = window.localStorage;
       var authtoken = ls.getItem("authtoken");
@@ -149,7 +151,7 @@ app.controller("NoteReplyListCtrl", function ($cordovaProgress, $scope, httpServ
               sendFinal(totalHtml, authtoken);
             }
           }, function (err) {
-            $cordovaProgress.hide();
+       $ionicLoading.hide();
             swal("图片上传失败", err, "error");
           })
         }
@@ -173,10 +175,10 @@ app.controller("NoteReplyListCtrl", function ($cordovaProgress, $scope, httpServ
     }
     var promise = httpService.post("api/forumpost", param);
     promise.then(function () {
-      $cordovaProgress.hide();
+     $ionicLoading.hide();
       $scope.doRefresh();
     }, function (err) {
-      $cordovaProgress.hide();
+      $ionicLoading.hide();
       swal("回帖失败", err, "error");
     })
 

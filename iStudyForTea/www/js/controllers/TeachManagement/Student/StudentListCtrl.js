@@ -31,7 +31,6 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
             if (items[i].image == null || items[i].image == "")
                 items[i].image = "img/head.png";
         }
-        console.log(data);
         $scope.items = items;
         $ionicLoading.hide();
         $scope.$broadcast('scroll.refreshComplete');
@@ -47,7 +46,6 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
         var promise = httpService.post("apiteach/studentlist", param);
         promise.then(function (data) {
             items = data;
-            console.log(items);
             for (var i = 0; i < items.length; i++) {
                 if (items[i].image == null || items[i].image == "")
                     items[i].image = "img/head.png";
@@ -128,7 +126,6 @@ app.controller("StudentListCtrl", function ($scope, $rootScope, $stateParams, $s
                         authtoken: window.localStorage.getItem("authtoken"),
                         itemid: itemid
                     };
-                    console.log(param);
                     var promise = httpService.infoPost("apiteach/delstuInGroup", param);
                     promise.then(function () {
                         alert("删除成功");

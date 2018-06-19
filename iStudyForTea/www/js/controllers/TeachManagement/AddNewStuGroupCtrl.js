@@ -13,7 +13,6 @@ app.controller("AddNewStuGroupCtrl", function ($scope, $ionicHistory, httpServic
         authtoken: ls.getItem("authtoken"),
         name: stuGroupName,
       }
-     console.log(param);
       var promise = httpService.post("apiteach/newstudentgroup", param);
       promise.then(function (data) {
         swal({

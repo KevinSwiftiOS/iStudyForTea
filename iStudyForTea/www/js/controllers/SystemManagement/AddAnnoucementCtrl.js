@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/11/15.
  */
-app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state) {
+app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state,$ionicLoading) {
     $scope.$on("$ionicView.beforeEnter", function () {
     });
 //popView的一些事件代理x
@@ -9,7 +9,6 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
         subject: "",
         content: ""
     };
-    console.log($stateParams.courseid);
     var height = document.body.scrollHeight;
     $scope.textAreaStyle = {
         "width": "98%",
@@ -91,7 +90,9 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
             swal("提醒", "公告内容未填", "warning");
         else {
             //先上传图片 再上传内容
-            // $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发公告中");
+          $ionicLoading.show({
+            template: '请等待'
+          });
             var totalHtml = "";
             var ls = window.localStorage;
             var authtoken = ls.getItem("authtoken");
@@ -114,7 +115,8 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
                             sendAnn(totalHtml, subject, authtoken);
                         }
                     }, function (err) {
-                        //  $cordovaProgress.hide();
+
+                      $ionicLoading.hide();
                         swal("图片上传失败", err, "error");
                     })
                 }
@@ -124,9 +126,10 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
         }
     }
     function sendAnn(totalHtml, subject, authtoken) {
+    //  var tamp = "<img src = 'http://dodo.hznu.edu.cn/Upload/editor/115e9de2-2e5f-4e90-97f5-a76f0082d999.png'>";
       var param = {
         title: subject,
-        content: totalHtml,
+        content: base64.encode(totalHtml),
         istop: isTop,
         authtoken: authtoken,
         type:$stateParams.type
@@ -135,8 +138,10 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
               param.courseid = $stateParams.courseid
 
       };
+      console.log(param);
         var promise = httpService.post("apiteach/newnotify", param);
         promise.then(function () {
+          $ionicLoading.hide();
             swal({
                     title: "恭喜您",
                     text: "发送公告成功",
@@ -145,10 +150,13 @@ app.controller("AddAnnoucementCtrl", function ($scope, httpService, $cordovaImag
                     width: 100,
                 },
                 function () {
+
+                  $ionicLoading.hide();
                     $ionicHistory.goBack();
                     return true;
                 });
         }, function (data) {
+
             swal("提醒", data, "创建失败");
         })
     }

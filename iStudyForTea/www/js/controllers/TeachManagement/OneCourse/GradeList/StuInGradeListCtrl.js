@@ -59,7 +59,6 @@ app.controller("StuInGradeListCtrl", function ($scope, $ionicModal, $state, $sta
         var experPromise = httpService.post("apiteach/homeworkqueryteach", experWorkParam);
         experPromise.then(function (experData) {
             $scope.experWortkItems = experData;
-            console.log(experData);
         }, function (expererr) {
             swal("请求失败", expererr, "error");
         })

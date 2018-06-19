@@ -266,18 +266,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
 
         })
-        //第二个模块 教学管理中的新建课程
-        .state('tab.TeachManagement-AddNewCourse', {
-
-            url: "/TeachManagement/AddNewCourse",
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/TeachManagement/AddNewCourse.html',
-                    controller: 'AddNewCourseCtrl',
-                }
-            }
-
-        })
         //第二个模块 教学管理中的一门课程中的学习计划界面
         .state('tab.TeachManagement-OneCourseStudyPlan', {
             url: "/TeachManagement/OneCourseStudyPlan",

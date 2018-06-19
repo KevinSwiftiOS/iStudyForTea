@@ -33,7 +33,6 @@ app.controller("CourseResourceCtrl", function ($cordovaFileTransfer,$scope, $sta
     var promise = httpService.post("api/courseresoure", param);
     promise.then(function (data) {
         $scope.items = data;
-         console.log(data);
          $ionicLoading.hide();
     }, function (data) {
         $ionicLoading.hide();

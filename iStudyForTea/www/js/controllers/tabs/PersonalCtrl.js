@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/25.
  */
-app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionicHistory, $ionicActionSheet, $cordovaCamera, httpService, uploadFile, base64) {
+app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionicHistory, $ionicActionSheet, $cordovaCamera, httpService, uploadFile, base64,$cordovaImagePicker) {
   //初始化值
   $scope.tea = {};
   var ls = window.localStorage;
@@ -157,27 +157,21 @@ app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionic
         //根据不同的情况来进行选择
         switch (index) {
           case 0:
-            document.addEventListener("deviceready", function () {
               //调取相册
               var options = {
-                quality: 50,
-                destinationType: Camera.DestinationType.DATA_URI,
-                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-                allowEdit: true,
-                encodingType: Camera.EncodingType.JPEG,
-                targetWidth: 100,
-                targetHeight: 100,
-                popoverOptions: CameraPopoverOptions,
-                saveToPhotoAlbum: false,
-                correctOrientation: true
+                maximumImagesCount: 1,
+                width: 400,
+                height: 400,
+                quality: 80,
               };
-              $cordovaCamera.getPicture(options).then(function (imageData) {
+              $cordovaImagePicker.getPictures(options)
+                .then(function (imageData) {
                 var param = {
                   authtoken: ls.getItem("authtoken"),
                   type: 1
-                }
+                };
                 //首先上传头像 随后保存个人信息
-                var promise = uploadFile.upload(imageData, param);
+                var promise = uploadFile.upload(imageData[0], param);
                 promise.then(function (res) {
                   //保存个人信息
                   var data = {
@@ -191,6 +185,7 @@ app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionic
                     addr: $scope.tea.addr,
                     zipcode: $scope.tea.zipcode,
                   };
+
                   var params = {
                     authtoken: ls.getItem("authtoken"),
                     data: base64.encode(angular.toJson(data))
@@ -202,16 +197,13 @@ app.controller('PersonalCtrl', function (img, $scope, $rootScope, $state, $ionic
                     img.avtarurl = res["uploadedurl"];
                     $scope.tea.avtarurl = res["uploadedurl"];
 
+                  },function (err) {
+                    swal("头像上传失败",err,"error");
                   });
                 }, function (err) {
                   swal("头像上传失败", err, "error");
-                }, function (err1) {
-                  swal("头像上传失败", err1, "error");
                 })
-              }, function (e) {
-
-              })
-            });
+              });
             break;
           case 1:
             document.addEventListener("deviceready", function () {

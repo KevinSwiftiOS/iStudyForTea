@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/29.
  */
-app.controller("CoursePropertyCtrl", function ($cordovaProgress,uploadFile,$scope, httpService, $rootScope, $state, $stateParams, $ionicModal, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaCamera, $cordovaImagePicker) {
+app.controller("CoursePropertyCtrl", function (uploadFile,$scope, httpService,$ionicLoading, $rootScope, $state, $stateParams, $ionicModal, $ionicHistory, $ionicActionSheet, $ionicPopup, $cordovaCamera, $cordovaImagePicker) {
     //定义颜色popView
     var listPopup;
     //监听事件 加载菜单栏
@@ -179,32 +179,26 @@ app.controller("CoursePropertyCtrl", function ($cordovaProgress,uploadFile,$scop
                         });
                         break;
                     case 1:
-                        document.addEventListener("deviceready", function () {
                             //调取相册
-                            var options = {
-                                quality: 50,
-                                destinationType: Camera.DestinationType.DATA_URI,
-                                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-                                allowEdit: true,
-                                encodingType: Camera.EncodingType.JPEG,
-                                targetWidth: 50,
-                                targetHeight: 50,
-                                popoverOptions: CameraPopoverOptions,
-                                saveToPhotoAlbum: false,
-                                correctOrientation: true
-                            };
-
-                            $cordovaCamera.getPicture(options).then(function (imageData) {
+                          var options = {
+                            maximumImagesCount: 1,
+                            width: 400,
+                            height: 400,
+                            quality: 80,
+                          };
+                          $cordovaImagePicker.getPictures(options)
+                            .then(function (imageData) {
                               var param = {
                                 authtoken: window.localStorage.getItem("authtoken"),
                                 type: 1
                               };
-                              $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发送中");
-                              //首先上传头像 随后保存个人信息
-                              var promise = uploadFile.upload(imageData, param);
+                              $ionicLoading.show({
+                                template: '请等待'
+                              });
+                              //首先上传封面 随后保存个人信息
+                              var promise = uploadFile.upload(imageData[0], param);
                               promise.then(function (res) {
-                                $cordovaProgress.hide();
-                                console.log(res["uploadedurl"]);
+                             $ionicLoading.hide();
                                         $scope.info.logo1 = res["uploadedurl"];
                                         $scope.info.isDiv = false;
                                         $scope.info.isImg = true;
@@ -220,11 +214,10 @@ app.controller("CoursePropertyCtrl", function ($cordovaProgress,uploadFile,$scop
                                 //将base64字符串转化为二进制
 
                             }, function (err) {
-                              $cordovaProgress.hide();
+                              $ionicLoading.hide();
                                 //错误的信息
                                 swal("上传封面失败", err, "error");
                             });
-                        })
                         break;
                     default:
                         break;

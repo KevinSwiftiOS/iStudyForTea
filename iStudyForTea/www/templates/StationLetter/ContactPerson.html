@@ -9,9 +9,9 @@
         <div class="list">
             <div class="item item-checkbox-right" ng-repeat="class in items">
                 <div ng-click="hide($index)">
-                    <p><font size="3px">{{class.Label}}</font></p>
+                    <p><font size="5px">{{class.Label}}</font></p>
                 </div>
-                <font size="5px"><i class="{{class.icon}}" style="float: right;margin-top: -20px;margin-right: -4px"
+                <font size="10px"><i class="{{class.icon}}" style="float: right;margin-top: -20px;margin-right: -4px"
                                     ng-click="selectGroup(class.Label)"></i>
 
                 </font>
@@ -20,10 +20,10 @@
                          ng-if="class.isShow">
 
                         <img src="{{person.Face}}"/>
-                        <p style="margin-top: 10px"><font size="3px"> {{person.Name}}</font></p>
+                        <p style="margin-top: 10px"><font size="5px"> {{person.Name}}</font></p>
                         <div style="float: right;margin-top: -25px">
-                            <font size="5px">
-                                <i class="{{person.icon}}" ng-click="selectPerson(person.Id,class.Label)"></i>
+                            <font size="10px">
+                                <i class="{{person.icon}} buttonWidth" ng-click="selectPerson(person.Id,class.Label)"></i>
                             </font>
                         </div>
                     </div>

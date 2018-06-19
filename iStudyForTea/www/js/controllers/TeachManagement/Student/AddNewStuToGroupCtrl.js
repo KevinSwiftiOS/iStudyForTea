@@ -27,7 +27,6 @@ app.controller("AddNewStuToGroupCtrl",function ($scope,$stateParams,$ionicHistor
               param.groupid = $stateParams.groupid;
                suburl = "apiteach/newstuInGroup";
             }
-            console.log(param);
             var promise = httpService.infoPost(suburl,param);
             promise.then(function (data) {
               swal({

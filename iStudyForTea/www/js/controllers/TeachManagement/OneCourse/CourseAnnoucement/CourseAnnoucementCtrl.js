@@ -39,23 +39,25 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
   var items = [];
   var promise = httpService.post("api/courseinfo", param);
   promise.then(function (data) {
+    $ionicLoading.hide();
     items = data;
     for (var i = 0; i < items.length; i++) {
       items[i].date = "发布日期 " + subDate.divedeToDay(items[i].date);
 
     }
     $scope.items = items;
-    $ionicLoading.hide();
     $scope.$broadcast('scroll.refreshComplete');
   }, function (data) {
+    $ionicLoading.hide();
     items = [];
     $scope.items = items;
-    $ionicLoading.hide();
+
     $scope.$broadcast('scroll.refreshComplete');
     swal("请求失败", data, "error");
   })
   $scope.doRefresh = function () {
     var promise = httpService.post("api/courseinfo", param);
+    $ionicLoading.hide();
     promise.then(function (data) {
       items = data;
       for (var i = 0; i < items.length; i++) {
@@ -64,7 +66,7 @@ app.controller("CourseAnnoucementCtrl", function ($scope, $stateParams, $ionicMo
       }
       $scope.items = items;
 
-      $ionicLoading.hide();
+
       $scope.$broadcast('scroll.refreshComplete');
     }, function (data) {
       items = [];

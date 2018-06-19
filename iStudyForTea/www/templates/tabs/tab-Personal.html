@@ -1,6 +1,6 @@
 <ion-view view-title="个人中心">
     <ion-nav-buttons side="right">
-        <button class="button" ng-click="save()">保存</button>
+        <button class="button buttonWidth" ng-click="save()">保存</button>
     </ion-nav-buttons>
     <ion-content>
 
@@ -29,9 +29,9 @@
             <div class="item item-input" style="font-size: 14px">
                 <span class="input-label">性别</span>
                 <span style="font-size: 25px;text-align: right;top: 14px; ">
-            <i class="ion-woman" ng-click="selectWoman()"></i>
+            <i class="ion-woman" ng-click="selectWoman()" style="font-size: 40px"></i>
             <label style="font-size: 14px" ng-if="woman.show">选中女</label>
-            <i class="ion-man" ng-style="man.icon" ng-click="selectMan()"></i>
+            <i class="ion-man" ng-style="man.icon" ng-click="selectMan()" style="font-size: 40px;"></i>
             <label style="font-size: 14px;margin-left: 0px" ng-if="man.show">选中男</label>
         </span>
             </div>

@@ -170,7 +170,6 @@ app.controller("StuInOneCourseListCtrl", function ($scope, $state, $stateParams,
             id:id,
             courseid:$stateParams.courseid
           };
-          console.log(param);
           var promise = httpService.infoPost("apiteach/delstudInCourse",param);
           promise.then(function () {
             alert("删除成功");

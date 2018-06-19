@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/10/27.
  */
-app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParams, $state, $ionicLoading, contactPersons, $cordovaImagePicker, httpService, uploadFile, base64, $ionicHistory, showBigImg) {
+app.controller("WriteEmailCtrl", function ( $scope, $stateParams, $state, $ionicLoading, contactPersons, $cordovaImagePicker, httpService, uploadFile, base64, $ionicHistory, showBigImg) {
     var code = $stateParams.code;
     var subject = $stateParams.subject;
     var senderid = $stateParams.senderid;
@@ -73,6 +73,7 @@ app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParam
         };
         $cordovaImagePicker.getPictures(options)
             .then(function (results) {
+
                 for (var i = 0; i < results.length; i++) {
                     var dic = {src: results[i]};
                     images.push(dic);
@@ -92,7 +93,9 @@ app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParam
             swal("提醒", "邮件内容未填", "warning");
         }
         else {
-            $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发送中");
+          $ionicLoading.show({
+            template: '请等待,正在发送中'
+          });
             var totalHtml = "";
             var ls = window.localStorage;
             var authtoken = ls.getItem("authtoken");
@@ -115,7 +118,7 @@ app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParam
                             sendWithPerson(totalHtml, $scope.detail.subject, authtoken);
                         }
                     }, function (err) {
-                        $cordovaProgress.hide();
+                        $ionicLoading.hide();
                         swal("图片上传失败", err, "error");
                     })
                 }
@@ -147,7 +150,8 @@ app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParam
         }
         var promise = httpService.post("api/messagesend", param);
         promise.then(function (res) {
-            $cordovaProgress.hide();
+          $ionicLoading.hide();
+
             //删除本次的联系人
             contactPersons.removeSelPersons();
             //重组联系人
@@ -167,7 +171,7 @@ app.controller("WriteEmailCtrl", function ($cordovaProgress, $scope, $stateParam
             contactPersons.setAllPersons(persons);
             $ionicHistory.goBack();
         }, function (err) {
-            $cordovaProgress.hide();
+           $ionicLoading.hide();
             swal("发送失败", err, "error");
         })
     }

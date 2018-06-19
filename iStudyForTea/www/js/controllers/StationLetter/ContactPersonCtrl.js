@@ -6,7 +6,6 @@ app.controller("ContactPersonCtrl", function ($scope, $ionicListDelegate, httpSe
     var param = {
         authtoken: ls.getItem("authtoken")
     }, persons = [], list = [];
-    console.log(param);
     //监听页面进入的时候
     $scope.$on("$ionicView.beforeEnter", function () {
         persons = contactPersons.getAllPersons();
@@ -54,7 +53,6 @@ app.controller("ContactPersonCtrl", function ($scope, $ionicListDelegate, httpSe
     };
     //选了一个人的
     $scope.selectPerson = function (id, label) {
-        alert(id, label);
         //数组遍历 寻找
         var persons = contactPersons.getAllPersons();
         var i;

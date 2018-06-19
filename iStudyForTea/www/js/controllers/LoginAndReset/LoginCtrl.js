@@ -17,7 +17,7 @@ app.controller('LoginCtrl', function ($scope, $state, httpService, img) {
       number: "",
       os: "",
       clienttype: 2
-    }
+    };
     var promise = httpService.infoPost("api/login", param);
     promise.then(function (data) {
       var ls = window.localStorage;

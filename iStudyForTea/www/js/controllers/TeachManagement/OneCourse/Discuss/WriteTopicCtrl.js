@@ -1,7 +1,7 @@
 /**
  * Created by hcnucai on 2016/12/9.
  */
-app.controller("WriteTopicCtrl", function ($scope, httpService, $cordovaProgress, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state) {
+app.controller("WriteTopicCtrl", function ($ionicLoading, $scope, httpService, $cordovaImagePicker, uploadFile, base64, $ionicHistory, showBigImg, $stateParams, $state) {
   $scope.topic = {
     subject: "",
     content: ""
@@ -59,7 +59,10 @@ app.controller("WriteTopicCtrl", function ($scope, httpService, $cordovaProgress
       swal("提醒", "内容不能为空", "warning");
     else {
       //先上传图片 再上传内容
-      $cordovaProgress.showSimpleWithLabel(true, "请等待,正在发帖中");
+      $ionicLoading.show({
+        template: '请等待'
+      });
+
       var totalHtml = "";
       var ls = window.localStorage;
       var authtoken = ls.getItem("authtoken");
@@ -82,7 +85,7 @@ app.controller("WriteTopicCtrl", function ($scope, httpService, $cordovaProgress
               sendTopic(totalHtml, subject, authtoken);
             }
           }, function (err) {
-            $cordovaProgress.hide();
+            $ionicLoading.hide();
             swal("图片上传失败", err, "error");
           })
         }
@@ -107,10 +110,10 @@ app.controller("WriteTopicCtrl", function ($scope, httpService, $cordovaProgress
     }
     var promise = httpService.post("api/forumpost", param);
     promise.then(function (res) {
-      $cordovaProgress.hide();
+      $ionicLoading.hide();
       $ionicHistory.goBack();
     }, function (err) {
-      $cordovaProgress.hide();
+      $ionicLoading.hide();
       swal("发帖失败", err, "error");
     })
   }

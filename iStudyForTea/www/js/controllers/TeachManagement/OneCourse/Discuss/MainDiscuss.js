@@ -2,7 +2,7 @@
  * Created by hcnucai on 2016/10/29.
  */
 //讨论区的主界面
-app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $stateParams, $ionicModal, $ionicHistory, $ionicPopover, httpService, $ionicLoading, discussService, subDate, $state) {
+app.controller("MainDiscussCtrl", function ( $scope, $stateParams, $ionicModal, $ionicHistory, $ionicPopover, httpService, $ionicLoading, discussService, subDate, $state) {
   //监听事件 加载菜单栏
   $ionicModal.fromTemplateUrl("Menu.html", {
     scope: $scope,
@@ -96,7 +96,9 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
         break;
 
     }
-    $cordovaProgress.showSimpleWithLabel(true, "正在刷新中");
+    $ionicLoading.show({
+      template: '正在刷新中'
+    });
     headRefresh();
   }
   var ls = window.localStorage;
@@ -153,7 +155,7 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
         $scope.unTopItems = dic.unTopItems;
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-        $cordovaProgress.hide();
+
       }
     }
     if (selReply == true) {
@@ -165,7 +167,7 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
         $scope.unTopItems = dic.unTopItems;
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-        $cordovaProgress.hide();
+
       }
     }
     if (selPublish == true) {
@@ -177,8 +179,6 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
         $scope.unTopItems = dic.unTopItems;
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-
-        $cordovaProgress.hide();
       }
     }
     if (needPost) {
@@ -204,7 +204,7 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
           discussService.setPublishItems(items, topItems, unTopItems);
         $ionicLoading.hide();
         $scope.$broadcast('scroll.refreshComplete');
-        $cordovaProgress.hide();
+
 
       }, function (err) {
         var items = [], topItems = [], unTopItems = [];
@@ -220,7 +220,6 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
           discussService.setPublishItems(items, topItems, unTopItems);
         $scope.$broadcast('scroll.refreshComplete');
         $ionicLoading.hide();
-        $cordovaProgress.hide();
       })
     }
   }
@@ -229,7 +228,7 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
   $scope.doRefresh = function () {
     var promise = httpService.post(url, param);
     promise.then(function (res) {
-      $cordovaProgress.hide();
+    $ionicLoading.hide();
       var items = res, topItems = [], unTopItems = [];
       for (var i = 0; i < items.length; i++) {
         //时间的分割
@@ -252,7 +251,7 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
       $scope.$broadcast('scroll.refreshComplete');
 
     }, function (err) {
-      $cordovaProgress.hide();
+      $ionicLoading.hide();
       var items = [], topItems = [], unTopItems = [];
       swal("请求失败", err, "error");
       $scope.items = items;
@@ -270,7 +269,9 @@ app.controller("MainDiscussCtrl", function ($cordovaProgress, $scope, $statePara
   }
   //底部的按钮
   $scope.footerRefresh = function () {
-    $cordovaProgress.showSimpleWithLabel(true, "正在刷新中");
+    $ionicLoading.show({
+      template: '正在刷新中'
+    });
     $scope.doRefresh();
   }
 //查看置顶消息详情
